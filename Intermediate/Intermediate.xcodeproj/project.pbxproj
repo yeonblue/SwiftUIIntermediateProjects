@@ -12,6 +12,10 @@
 		45C8B79B295EB78C0041B9FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C8B79A295EB78C0041B9FE /* Assets.xcassets */; };
 		45C8B79E295EB78C0041B9FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C8B79D295EB78C0041B9FE /* Preview Assets.xcassets */; };
 		45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7A6295EB9A70041B9FE /* 1. LongPressGesturePractice.swift */; };
+		45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7A8295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift */; };
+		45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7AA295ED4B90041B9FE /* 3. RotationGesturePractice.swift */; };
+		45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7AC295EDC000041B9FE /* 4. DragGesturePractice.swift */; };
+		45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7AE295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		45C8B79A295EB78C0041B9FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45C8B79D295EB78C0041B9FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45C8B7A6295EB9A70041B9FE /* 1. LongPressGesturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1. LongPressGesturePractice.swift"; sourceTree = "<group>"; };
+		45C8B7A8295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2. MagnificationGesturePractice.swift"; sourceTree = "<group>"; };
+		45C8B7AA295ED4B90041B9FE /* 3. RotationGesturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3. RotationGesturePractice.swift"; sourceTree = "<group>"; };
+		45C8B7AC295EDC000041B9FE /* 4. DragGesturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4. DragGesturePractice.swift"; sourceTree = "<group>"; };
+		45C8B7AE295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4.1 DragGesturePractice2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 				45C8B79A295EB78C0041B9FE /* Assets.xcassets */,
 				45C8B79C295EB78C0041B9FE /* Preview Content */,
 				45C8B7A6295EB9A70041B9FE /* 1. LongPressGesturePractice.swift */,
+				45C8B7A8295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift */,
+				45C8B7AA295ED4B90041B9FE /* 3. RotationGesturePractice.swift */,
+				45C8B7AC295EDC000041B9FE /* 4. DragGesturePractice.swift */,
+				45C8B7AE295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -140,6 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
+				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
+				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
+				45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */,
 				45C8B799295EB7890041B9FE /* ContentView.swift in Sources */,
 				45C8B797295EB7890041B9FE /* IntermediateApp.swift in Sources */,
 				45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */,
