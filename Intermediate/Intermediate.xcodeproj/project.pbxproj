@@ -16,6 +16,8 @@
 		45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7AA295ED4B90041B9FE /* 3. RotationGesturePractice.swift */; };
 		45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7AC295EDC000041B9FE /* 4. DragGesturePractice.swift */; };
 		45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7AE295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift */; };
+		45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7B0295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift */; };
+		45C8B7B3295FC2A30041B9FE /* 6. GeometryReaderPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7B2295FC2A30041B9FE /* 6. GeometryReaderPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		45C8B7AA295ED4B90041B9FE /* 3. RotationGesturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3. RotationGesturePractice.swift"; sourceTree = "<group>"; };
 		45C8B7AC295EDC000041B9FE /* 4. DragGesturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4. DragGesturePractice.swift"; sourceTree = "<group>"; };
 		45C8B7AE295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4.1 DragGesturePractice2.swift"; sourceTree = "<group>"; };
+		45C8B7B0295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5. ScrollViewReaderPractice.swift"; sourceTree = "<group>"; };
+		45C8B7B2295FC2A30041B9FE /* 6. GeometryReaderPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6. GeometryReaderPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				45C8B7AA295ED4B90041B9FE /* 3. RotationGesturePractice.swift */,
 				45C8B7AC295EDC000041B9FE /* 4. DragGesturePractice.swift */,
 				45C8B7AE295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift */,
+				45C8B7B0295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift */,
+				45C8B7B2295FC2A30041B9FE /* 6. GeometryReaderPractice.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -153,12 +159,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
+				45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
 				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
 				45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */,
 				45C8B799295EB7890041B9FE /* ContentView.swift in Sources */,
 				45C8B797295EB7890041B9FE /* IntermediateApp.swift in Sources */,
 				45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */,
+				45C8B7B3295FC2A30041B9FE /* 6. GeometryReaderPractice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
