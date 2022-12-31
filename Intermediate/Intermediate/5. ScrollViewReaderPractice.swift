@@ -27,7 +27,7 @@ struct ScrollViewReaderPractice: View {
                     scrollToIndex = index
                 }
             } label: {
-                Text("Go to row #40")
+                Text("Go to row #")
             }
             
             ScrollView(.vertical, showsIndicators: false) {
