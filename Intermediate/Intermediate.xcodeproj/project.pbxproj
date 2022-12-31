@@ -23,6 +23,10 @@
 		45C8B7B9295FD34E0041B9FE /* 8. MaskPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7B8295FD34E0041B9FE /* 8. MaskPractice.swift */; };
 		45C8B7BB295FDC270041B9FE /* 9. SoundPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7BA295FDC270041B9FE /* 9. SoundPractice.swift */; };
 		45C8B7BD295FDE090041B9FE /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45C8B7BC295FDE090041B9FE /* ding.mp3 */; };
+		45C8B7C0295FDFA90041B9FE /* 10. HapticPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7BF295FDFA90041B9FE /* 10. HapticPractice.swift */; };
+		45C8B7C2295FF3200041B9FE /* 11. LocalNotificationPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7C1295FF3200041B9FE /* 11. LocalNotificationPractice.swift */; };
+		45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */; };
+		45C8B7C6296008740041B9FE /* 13. ArraysPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		45C8B7B8295FD34E0041B9FE /* 8. MaskPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8. MaskPractice.swift"; sourceTree = "<group>"; };
 		45C8B7BA295FDC270041B9FE /* 9. SoundPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9. SoundPractice.swift"; sourceTree = "<group>"; };
 		45C8B7BC295FDE090041B9FE /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
+		45C8B7BF295FDFA90041B9FE /* 10. HapticPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10. HapticPractice.swift"; sourceTree = "<group>"; };
+		45C8B7C1295FF3200041B9FE /* 11. LocalNotificationPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11. LocalNotificationPractice.swift"; sourceTree = "<group>"; };
+		45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "12. HashablePractice.swift"; sourceTree = "<group>"; };
+		45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13. ArraysPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,10 @@
 				45C8B7B6295FCEED0041B9FE /* 7.1 MultipleSheetPractice.swift */,
 				45C8B7B8295FD34E0041B9FE /* 8. MaskPractice.swift */,
 				45C8B7BA295FDC270041B9FE /* 9. SoundPractice.swift */,
+				45C8B7BF295FDFA90041B9FE /* 10. HapticPractice.swift */,
+				45C8B7C1295FF3200041B9FE /* 11. LocalNotificationPractice.swift */,
+				45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */,
+				45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -185,15 +197,19 @@
 				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
 				45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */,
 				45C8B7B5295FCB730041B9FE /* 7. MultipleSheetPractice.swift in Sources */,
+				45C8B7C2295FF3200041B9FE /* 11. LocalNotificationPractice.swift in Sources */,
+				45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
 				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
 				45C8B7B7295FCEED0041B9FE /* 7.1 MultipleSheetPractice.swift in Sources */,
 				45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */,
+				45C8B7C0295FDFA90041B9FE /* 10. HapticPractice.swift in Sources */,
 				45C8B799295EB7890041B9FE /* ContentView.swift in Sources */,
 				45C8B7B9295FD34E0041B9FE /* 8. MaskPractice.swift in Sources */,
 				45C8B797295EB7890041B9FE /* IntermediateApp.swift in Sources */,
 				45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */,
 				45C8B7BB295FDC270041B9FE /* 9. SoundPractice.swift in Sources */,
+				45C8B7C6296008740041B9FE /* 13. ArraysPractice.swift in Sources */,
 				45C8B7B3295FC2A30041B9FE /* 6. GeometryReaderPractice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
