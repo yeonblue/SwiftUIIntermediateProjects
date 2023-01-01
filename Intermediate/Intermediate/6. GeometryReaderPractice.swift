@@ -9,6 +9,11 @@ import SwiftUI
 
 struct GeometryReaderPractice: View {
     
+    // compact, regular를 알 수 있음 verticalSizeclass
+    // 하지만 iPhone+나, iPad 모두 landscape일때는 regular라 정확한 정보가 필요할 때가 있음
+    // 이 때는 GeometryReader를 사용
+    @Environment(\.horizontalSizeClass) var sizeClass
+    
     func getPercentage(geo: GeometryProxy) -> Double {
         let maxDistance = UIScreen.main.bounds.width / 2 // 중간
         
@@ -17,6 +22,7 @@ struct GeometryReaderPractice: View {
     }
     
     var body: some View {
+        
         // GeometryReader { geometry in
         //     HStack(spacing: 0) { // 기본적으로 spacing이 존재하므로 0으로 설정 필요
         //         Rectangle()

@@ -27,6 +27,10 @@
 		45C8B7C2295FF3200041B9FE /* 11. LocalNotificationPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7C1295FF3200041B9FE /* 11. LocalNotificationPractice.swift */; };
 		45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */; };
 		45C8B7C6296008740041B9FE /* 13. ArraysPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */; };
+		45C8B7E7296151B20041B9FE /* 14. CoreDataPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7E6296151B20041B9FE /* 14. CoreDataPractice.swift */; };
+		45C8B7EB296153680041B9FE /* FruitsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7E9296153680041B9FE /* FruitsContainer.xcdatamodeld */; };
+		45C8B7ED29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7EC29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift */; };
+		45C8B7F0296178FC0041B9FE /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7EE296178FC0041B9FE /* CoreDataContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		45C8B7C1295FF3200041B9FE /* 11. LocalNotificationPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11. LocalNotificationPractice.swift"; sourceTree = "<group>"; };
 		45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "12. HashablePractice.swift"; sourceTree = "<group>"; };
 		45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13. ArraysPractice.swift"; sourceTree = "<group>"; };
+		45C8B7E6296151B20041B9FE /* 14. CoreDataPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14. CoreDataPractice.swift"; sourceTree = "<group>"; };
+		45C8B7EA296153680041B9FE /* FruitsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitsContainer.xcdatamodel; sourceTree = "<group>"; };
+		45C8B7EC29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "15. CoreDataRelationshipPractice.swift"; sourceTree = "<group>"; };
+		45C8B7EF296178FC0041B9FE /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 				45C8B7C1295FF3200041B9FE /* 11. LocalNotificationPractice.swift */,
 				45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */,
 				45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */,
+				45C8B7E8296152F10041B9FE /* 14. CoreData */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -121,6 +130,17 @@
 				45C8B7BC295FDE090041B9FE /* ding.mp3 */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		45C8B7E8296152F10041B9FE /* 14. CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				45C8B7E6296151B20041B9FE /* 14. CoreDataPractice.swift */,
+				45C8B7E9296153680041B9FE /* FruitsContainer.xcdatamodeld */,
+				45C8B7EC29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift */,
+				45C8B7EE296178FC0041B9FE /* CoreDataContainer.xcdatamodeld */,
+			);
+			path = "14. CoreData";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,13 +215,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
+				45C8B7E7296151B20041B9FE /* 14. CoreDataPractice.swift in Sources */,
 				45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */,
+				45C8B7F0296178FC0041B9FE /* CoreDataContainer.xcdatamodeld in Sources */,
 				45C8B7B5295FCB730041B9FE /* 7. MultipleSheetPractice.swift in Sources */,
 				45C8B7C2295FF3200041B9FE /* 11. LocalNotificationPractice.swift in Sources */,
 				45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
 				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
 				45C8B7B7295FCEED0041B9FE /* 7.1 MultipleSheetPractice.swift in Sources */,
+				45C8B7EB296153680041B9FE /* FruitsContainer.xcdatamodeld in Sources */,
 				45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */,
 				45C8B7C0295FDFA90041B9FE /* 10. HapticPractice.swift in Sources */,
 				45C8B799295EB7890041B9FE /* ContentView.swift in Sources */,
@@ -209,6 +232,7 @@
 				45C8B797295EB7890041B9FE /* IntermediateApp.swift in Sources */,
 				45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */,
 				45C8B7BB295FDC270041B9FE /* 9. SoundPractice.swift in Sources */,
+				45C8B7ED29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift in Sources */,
 				45C8B7C6296008740041B9FE /* 13. ArraysPractice.swift in Sources */,
 				45C8B7B3295FC2A30041B9FE /* 6. GeometryReaderPractice.swift in Sources */,
 			);
@@ -413,6 +437,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		45C8B7E9296153680041B9FE /* FruitsContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45C8B7EA296153680041B9FE /* FruitsContainer.xcdatamodel */,
+			);
+			currentVersion = 45C8B7EA296153680041B9FE /* FruitsContainer.xcdatamodel */;
+			path = FruitsContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		45C8B7EE296178FC0041B9FE /* CoreDataContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45C8B7EF296178FC0041B9FE /* CoreDataContainer.xcdatamodel */,
+			);
+			currentVersion = 45C8B7EF296178FC0041B9FE /* CoreDataContainer.xcdatamodel */;
+			path = CoreDataContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 45C8B78B295EB7890041B9FE /* Project object */;
 }
