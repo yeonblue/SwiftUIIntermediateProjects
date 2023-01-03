@@ -31,6 +31,11 @@
 		45C8B7EB296153680041B9FE /* FruitsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7E9296153680041B9FE /* FruitsContainer.xcdatamodeld */; };
 		45C8B7ED29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7EC29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift */; };
 		45C8B7F0296178FC0041B9FE /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7EE296178FC0041B9FE /* CoreDataContainer.xcdatamodeld */; };
+		45C8B7F22962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7F12962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift */; };
+		45C8B7F42962B1010041B9FE /* 17. WeakSelfPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7F32962B1010041B9FE /* 17. WeakSelfPractice.swift */; };
+		45C8B7F62962B7120041B9FE /* 18. TypeAliasePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7F52962B7120041B9FE /* 18. TypeAliasePractice.swift */; };
+		45C8B7F82963BC770041B9FE /* 19. EscapingClsourePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7F72963BC770041B9FE /* 19. EscapingClsourePractice.swift */; };
+		45C8B7FB2963C6F10041B9FE /* 20. CodablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7FA2963C6F10041B9FE /* 20. CodablePractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +64,11 @@
 		45C8B7EA296153680041B9FE /* FruitsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitsContainer.xcdatamodel; sourceTree = "<group>"; };
 		45C8B7EC29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "15. CoreDataRelationshipPractice.swift"; sourceTree = "<group>"; };
 		45C8B7EF296178FC0041B9FE /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
+		45C8B7F12962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "16. BackgroundThreadPractice.swift"; sourceTree = "<group>"; };
+		45C8B7F32962B1010041B9FE /* 17. WeakSelfPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "17. WeakSelfPractice.swift"; sourceTree = "<group>"; };
+		45C8B7F52962B7120041B9FE /* 18. TypeAliasePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "18. TypeAliasePractice.swift"; sourceTree = "<group>"; };
+		45C8B7F72963BC770041B9FE /* 19. EscapingClsourePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "19. EscapingClsourePractice.swift"; sourceTree = "<group>"; };
+		45C8B7FA2963C6F10041B9FE /* 20. CodablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20. CodablePractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,11 @@
 				45C8B7C3296003F80041B9FE /* 12. HashablePractice.swift */,
 				45C8B7C5296008740041B9FE /* 13. ArraysPractice.swift */,
 				45C8B7E8296152F10041B9FE /* 14. CoreData */,
+				45C8B7F12962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift */,
+				45C8B7F32962B1010041B9FE /* 17. WeakSelfPractice.swift */,
+				45C8B7F52962B7120041B9FE /* 18. TypeAliasePractice.swift */,
+				45C8B7F72963BC770041B9FE /* 19. EscapingClsourePractice.swift */,
+				45C8B7FA2963C6F10041B9FE /* 20. CodablePractice.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -217,13 +232,17 @@
 				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
 				45C8B7E7296151B20041B9FE /* 14. CoreDataPractice.swift in Sources */,
 				45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */,
+				45C8B7FB2963C6F10041B9FE /* 20. CodablePractice.swift in Sources */,
 				45C8B7F0296178FC0041B9FE /* CoreDataContainer.xcdatamodeld in Sources */,
 				45C8B7B5295FCB730041B9FE /* 7. MultipleSheetPractice.swift in Sources */,
 				45C8B7C2295FF3200041B9FE /* 11. LocalNotificationPractice.swift in Sources */,
 				45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */,
+				45C8B7F62962B7120041B9FE /* 18. TypeAliasePractice.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
+				45C8B7F22962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift in Sources */,
 				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
 				45C8B7B7295FCEED0041B9FE /* 7.1 MultipleSheetPractice.swift in Sources */,
+				45C8B7F82963BC770041B9FE /* 19. EscapingClsourePractice.swift in Sources */,
 				45C8B7EB296153680041B9FE /* FruitsContainer.xcdatamodeld in Sources */,
 				45C8B7AD295EDC000041B9FE /* 4. DragGesturePractice.swift in Sources */,
 				45C8B7C0295FDFA90041B9FE /* 10. HapticPractice.swift in Sources */,
@@ -231,6 +250,7 @@
 				45C8B7B9295FD34E0041B9FE /* 8. MaskPractice.swift in Sources */,
 				45C8B797295EB7890041B9FE /* IntermediateApp.swift in Sources */,
 				45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */,
+				45C8B7F42962B1010041B9FE /* 17. WeakSelfPractice.swift in Sources */,
 				45C8B7BB295FDC270041B9FE /* 9. SoundPractice.swift in Sources */,
 				45C8B7ED29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift in Sources */,
 				45C8B7C6296008740041B9FE /* 13. ArraysPractice.swift in Sources */,
