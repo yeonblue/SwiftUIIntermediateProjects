@@ -36,6 +36,9 @@
 		45C8B7F62962B7120041B9FE /* 18. TypeAliasePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7F52962B7120041B9FE /* 18. TypeAliasePractice.swift */; };
 		45C8B7F82963BC770041B9FE /* 19. EscapingClsourePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7F72963BC770041B9FE /* 19. EscapingClsourePractice.swift */; };
 		45C8B7FB2963C6F10041B9FE /* 20. CodablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7FA2963C6F10041B9FE /* 20. CodablePractice.swift */; };
+		45C8B7FF2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7FE2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift */; };
+		45C8B8002963FAA10041B9FE /* 21. DownloadPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7FC2963E7440041B9FE /* 21. DownloadPractice.swift */; };
+		45C8B802296404AA0041B9FE /* 23. TimerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		45C8B7F52962B7120041B9FE /* 18. TypeAliasePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "18. TypeAliasePractice.swift"; sourceTree = "<group>"; };
 		45C8B7F72963BC770041B9FE /* 19. EscapingClsourePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "19. EscapingClsourePractice.swift"; sourceTree = "<group>"; };
 		45C8B7FA2963C6F10041B9FE /* 20. CodablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20. CodablePractice.swift"; sourceTree = "<group>"; };
+		45C8B7FC2963E7440041B9FE /* 21. DownloadPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "21. DownloadPractice.swift"; sourceTree = "<group>"; };
+		45C8B7FE2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "22. DownloadWithCombinePractice.swift"; sourceTree = "<group>"; };
+		45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "23. TimerPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 				45C8B7F52962B7120041B9FE /* 18. TypeAliasePractice.swift */,
 				45C8B7F72963BC770041B9FE /* 19. EscapingClsourePractice.swift */,
 				45C8B7FA2963C6F10041B9FE /* 20. CodablePractice.swift */,
+				45C8B7FC2963E7440041B9FE /* 21. DownloadPractice.swift */,
+				45C8B7FE2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift */,
+				45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -229,6 +238,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C8B7FF2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift in Sources */,
+				45C8B802296404AA0041B9FE /* 23. TimerPractice.swift in Sources */,
 				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
 				45C8B7E7296151B20041B9FE /* 14. CoreDataPractice.swift in Sources */,
 				45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */,
@@ -237,6 +248,7 @@
 				45C8B7B5295FCB730041B9FE /* 7. MultipleSheetPractice.swift in Sources */,
 				45C8B7C2295FF3200041B9FE /* 11. LocalNotificationPractice.swift in Sources */,
 				45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */,
+				45C8B8002963FAA10041B9FE /* 21. DownloadPractice.swift in Sources */,
 				45C8B7F62962B7120041B9FE /* 18. TypeAliasePractice.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
 				45C8B7F22962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift in Sources */,
