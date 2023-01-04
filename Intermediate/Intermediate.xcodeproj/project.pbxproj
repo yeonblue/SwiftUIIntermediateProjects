@@ -39,6 +39,7 @@
 		45C8B7FF2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7FE2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift */; };
 		45C8B8002963FAA10041B9FE /* 21. DownloadPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B7FC2963E7440041B9FE /* 21. DownloadPractice.swift */; };
 		45C8B802296404AA0041B9FE /* 23. TimerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */; };
+		45C8B8042965022F0041B9FE /* 24. SubscriberPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B8032965022F0041B9FE /* 24. SubscriberPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		45C8B7FC2963E7440041B9FE /* 21. DownloadPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "21. DownloadPractice.swift"; sourceTree = "<group>"; };
 		45C8B7FE2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "22. DownloadWithCombinePractice.swift"; sourceTree = "<group>"; };
 		45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "23. TimerPractice.swift"; sourceTree = "<group>"; };
+		45C8B8032965022F0041B9FE /* 24. SubscriberPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24. SubscriberPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				45C8B7FC2963E7440041B9FE /* 21. DownloadPractice.swift */,
 				45C8B7FE2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift */,
 				45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */,
+				45C8B8032965022F0041B9FE /* 24. SubscriberPractice.swift */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				45C8B7F62962B7120041B9FE /* 18. TypeAliasePractice.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
 				45C8B7F22962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift in Sources */,
+				45C8B8042965022F0041B9FE /* 24. SubscriberPractice.swift in Sources */,
 				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
 				45C8B7B7295FCEED0041B9FE /* 7.1 MultipleSheetPractice.swift in Sources */,
 				45C8B7F82963BC770041B9FE /* 19. EscapingClsourePractice.swift in Sources */,
