@@ -41,6 +41,16 @@
 		45C8B802296404AA0041B9FE /* 23. TimerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */; };
 		45C8B8042965022F0041B9FE /* 24. SubscriberPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B8032965022F0041B9FE /* 24. SubscriberPractice.swift */; };
 		45C8B806296541410041B9FE /* 25. FileManagerPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B805296541410041B9FE /* 25. FileManagerPractice.swift */; };
+		45D2FC5029665D4F00CDFF41 /* 26. NSCachePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC4F29665D4F00CDFF41 /* 26. NSCachePractice.swift */; };
+		45D2FC572966959400CDFF41 /* DownloadImageViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC562966959400CDFF41 /* DownloadImageViewPractice.swift */; };
+		45D2FC592966968100CDFF41 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC582966968100CDFF41 /* PhotoModel.swift */; };
+		45D2FC5B296696E900CDFF41 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC5A296696E900CDFF41 /* DownloadImageViewModel.swift */; };
+		45D2FC5D296697D300CDFF41 /* PhotoModelDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC5C296697D300CDFF41 /* PhotoModelDataService.swift */; };
+		45D2FC5F29669E1700CDFF41 /* DownloadingImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC5E29669E1700CDFF41 /* DownloadingImageRow.swift */; };
+		45D2FC6129669F8B00CDFF41 /* DownladingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC6029669F8B00CDFF41 /* DownladingImageView.swift */; };
+		45D2FC632966A32400CDFF41 /* ImageLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC622966A32400CDFF41 /* ImageLoadingViewModel.swift */; };
+		45D2FC652966A7DD00CDFF41 /* PhotoModelCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC642966A7DD00CDFF41 /* PhotoModelCacheManager.swift */; };
+		45D2FC672966A8AA00CDFF41 /* PhotoModelFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC662966A8AA00CDFF41 /* PhotoModelFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +89,16 @@
 		45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "23. TimerPractice.swift"; sourceTree = "<group>"; };
 		45C8B8032965022F0041B9FE /* 24. SubscriberPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24. SubscriberPractice.swift"; sourceTree = "<group>"; };
 		45C8B805296541410041B9FE /* 25. FileManagerPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "25. FileManagerPractice.swift"; sourceTree = "<group>"; };
+		45D2FC4F29665D4F00CDFF41 /* 26. NSCachePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "26. NSCachePractice.swift"; sourceTree = "<group>"; };
+		45D2FC562966959400CDFF41 /* DownloadImageViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewPractice.swift; sourceTree = "<group>"; };
+		45D2FC582966968100CDFF41 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		45D2FC5A296696E900CDFF41 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
+		45D2FC5C296697D300CDFF41 /* PhotoModelDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModelDataService.swift; sourceTree = "<group>"; };
+		45D2FC5E29669E1700CDFF41 /* DownloadingImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingImageRow.swift; sourceTree = "<group>"; };
+		45D2FC6029669F8B00CDFF41 /* DownladingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownladingImageView.swift; sourceTree = "<group>"; };
+		45D2FC622966A32400CDFF41 /* ImageLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingViewModel.swift; sourceTree = "<group>"; };
+		45D2FC642966A7DD00CDFF41 /* PhotoModelCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModelCacheManager.swift; sourceTree = "<group>"; };
+		45D2FC662966A8AA00CDFF41 /* PhotoModelFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModelFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +162,8 @@
 				45C8B801296404AA0041B9FE /* 23. TimerPractice.swift */,
 				45C8B8032965022F0041B9FE /* 24. SubscriberPractice.swift */,
 				45C8B805296541410041B9FE /* 25. FileManagerPractice.swift */,
+				45D2FC4F29665D4F00CDFF41 /* 26. NSCachePractice.swift */,
+				45D2FC512966954500CDFF41 /* 27. DownloadImages */,
 			);
 			path = Intermediate;
 			sourceTree = "<group>";
@@ -171,6 +193,54 @@
 				45C8B7EE296178FC0041B9FE /* CoreDataContainer.xcdatamodeld */,
 			);
 			path = "14. CoreData";
+			sourceTree = "<group>";
+		};
+		45D2FC512966954500CDFF41 /* 27. DownloadImages */ = {
+			isa = PBXGroup;
+			children = (
+				45D2FC552966956400CDFF41 /* Utils */,
+				45D2FC542966955E00CDFF41 /* ViewModels */,
+				45D2FC532966955800CDFF41 /* Views */,
+				45D2FC522966955400CDFF41 /* Model */,
+			);
+			path = "27. DownloadImages";
+			sourceTree = "<group>";
+		};
+		45D2FC522966955400CDFF41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45D2FC582966968100CDFF41 /* PhotoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45D2FC532966955800CDFF41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45D2FC562966959400CDFF41 /* DownloadImageViewPractice.swift */,
+				45D2FC5E29669E1700CDFF41 /* DownloadingImageRow.swift */,
+				45D2FC6029669F8B00CDFF41 /* DownladingImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		45D2FC542966955E00CDFF41 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				45D2FC5A296696E900CDFF41 /* DownloadImageViewModel.swift */,
+				45D2FC622966A32400CDFF41 /* ImageLoadingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		45D2FC552966956400CDFF41 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				45D2FC5C296697D300CDFF41 /* PhotoModelDataService.swift */,
+				45D2FC642966A7DD00CDFF41 /* PhotoModelCacheManager.swift */,
+				45D2FC662966A8AA00CDFF41 /* PhotoModelFileManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C8B7FF2963FA120041B9FE /* 22. DownloadWithCombinePractice.swift in Sources */,
+				45D2FC5F29669E1700CDFF41 /* DownloadingImageRow.swift in Sources */,
 				45C8B802296404AA0041B9FE /* 23. TimerPractice.swift in Sources */,
+				45D2FC632966A32400CDFF41 /* ImageLoadingViewModel.swift in Sources */,
+				45D2FC6129669F8B00CDFF41 /* DownladingImageView.swift in Sources */,
 				45C8B7A9295ECCF20041B9FE /* 2. MagnificationGesturePractice.swift in Sources */,
 				45C8B7E7296151B20041B9FE /* 14. CoreDataPractice.swift in Sources */,
 				45C8B7B1295FBD870041B9FE /* 5. ScrollViewReaderPractice.swift in Sources */,
@@ -256,10 +329,15 @@
 				45C8B7C4296003F90041B9FE /* 12. HashablePractice.swift in Sources */,
 				45C8B8002963FAA10041B9FE /* 21. DownloadPractice.swift in Sources */,
 				45C8B7F62962B7120041B9FE /* 18. TypeAliasePractice.swift in Sources */,
+				45D2FC672966A8AA00CDFF41 /* PhotoModelFileManager.swift in Sources */,
 				45C8B7AB295ED4B90041B9FE /* 3. RotationGesturePractice.swift in Sources */,
+				45D2FC572966959400CDFF41 /* DownloadImageViewPractice.swift in Sources */,
+				45D2FC652966A7DD00CDFF41 /* PhotoModelCacheManager.swift in Sources */,
 				45C8B7F22962A9DD0041B9FE /* 16. BackgroundThreadPractice.swift in Sources */,
+				45D2FC5B296696E900CDFF41 /* DownloadImageViewModel.swift in Sources */,
 				45C8B8042965022F0041B9FE /* 24. SubscriberPractice.swift in Sources */,
 				45C8B806296541410041B9FE /* 25. FileManagerPractice.swift in Sources */,
+				45D2FC5029665D4F00CDFF41 /* 26. NSCachePractice.swift in Sources */,
 				45C8B7AF295EF92C0041B9FE /* 4.1 DragGesturePractice2.swift in Sources */,
 				45C8B7B7295FCEED0041B9FE /* 7.1 MultipleSheetPractice.swift in Sources */,
 				45C8B7F82963BC770041B9FE /* 19. EscapingClsourePractice.swift in Sources */,
@@ -272,6 +350,8 @@
 				45C8B7A7295EB9A70041B9FE /* 1. LongPressGesturePractice.swift in Sources */,
 				45C8B7F42962B1010041B9FE /* 17. WeakSelfPractice.swift in Sources */,
 				45C8B7BB295FDC270041B9FE /* 9. SoundPractice.swift in Sources */,
+				45D2FC592966968100CDFF41 /* PhotoModel.swift in Sources */,
+				45D2FC5D296697D300CDFF41 /* PhotoModelDataService.swift in Sources */,
 				45C8B7ED29615B850041B9FE /* 15. CoreDataRelationshipPractice.swift in Sources */,
 				45C8B7C6296008740041B9FE /* 13. ArraysPractice.swift in Sources */,
 				45C8B7B3295FC2A30041B9FE /* 6. GeometryReaderPractice.swift in Sources */,
