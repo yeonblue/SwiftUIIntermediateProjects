@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject private var viewModel: HomeViewModel
     @State private var showProtfolio: Bool = false
     
     var body: some View {
@@ -23,6 +24,16 @@ struct HomeView: View {
 
                 homeHeaderView
                 
+                columnTitleView
+                
+                if !showProtfolio {
+                    allCoinsList
+                        .transition(.move(edge: .leading))
+                } else if showProtfolio {
+                    portfolioCoinsList
+                        .transition(.move(edge: .trailing))
+                }
+                
                 Spacer(minLength: 0)
             }
         }
@@ -34,6 +45,7 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView {
             HomeView()
                 .navigationBarHidden(true)
+                .environmentObject(dev.homeViewModel)
         }
     }
 }
@@ -65,6 +77,51 @@ extension HomeView {
                 }
         }
         .padding(.horizontal)
+    }
+    
+    private var allCoinsList: some View {
+        List {
+            ForEach(viewModel.allCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: false)
+                    .listRowInsets(.init(top: 8,
+                                         leading: 16,
+                                         bottom: 8,
+                                         trailing: 16))
+            }
+        }
+        .listStyle(.plain)
+    }
+    
+    private var portfolioCoinsList: some View {
+        List {
+            ForEach(viewModel.portfolioCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: true)
+                    .listRowInsets(.init(top: 8,
+                                         leading: 16,
+                                         bottom: 8,
+                                         trailing: 16))
+            }
+        }
+        .listStyle(.plain)
+    }
+    
+    private var columnTitleView: some View {
+        HStack {
+            Text("Coin")
+            
+            Spacer()
+            
+            if showProtfolio {
+                Text("Holdings")
+            }
+            
+            Text("Price")
+                .frame(width: UIScreen.main.bounds.width / 3,
+                       alignment: .trailing)
+        }
+        .font(.footnote)
+        .foregroundColor(.theme.secondaryText)
+        .padding(.horizontal, 16)
     }
 }
 

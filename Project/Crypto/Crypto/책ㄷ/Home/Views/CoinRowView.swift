@@ -23,9 +23,6 @@ struct CoinRowView: View {
                 centerColumn
             }
             
-            
-            Spacer()
-            
             rightColumn
         }
     }
@@ -78,5 +75,7 @@ extension CoinRowView {
         }
         .frame(width: UIScreen.main.bounds.width / 3, // portrait모드만 지원할 것이므로 괜찮음
                alignment: .trailing)
+
     }
+    
 }
