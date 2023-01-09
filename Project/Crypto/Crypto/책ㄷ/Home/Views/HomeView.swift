@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @EnvironmentObject private var viewModel: HomeViewModel
     @State private var showProtfolio: Bool = false
+    @State private var showPortfolioView: Bool = false
     
     var body: some View {
         ZStack {
@@ -18,6 +19,9 @@ struct HomeView: View {
             // background
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView) { //view 안이라면 어디에 둬도 상관 없음
+                    PortfolioView()
+                }
             
             // content
             VStack {
@@ -62,6 +66,11 @@ extension HomeView {
                 .background(
                     CircleButtonAnimationView(animate: $showProtfolio)
                 )
+                .onTapGesture {
+                    if showProtfolio {
+                        showPortfolioView.toggle()
+                    }
+                }
             
             Spacer()
             
