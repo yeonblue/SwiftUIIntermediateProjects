@@ -14,6 +14,7 @@ class HomeViewModel: ObservableObject {
     @Published var portfolioCoins: [CoinModel] = []
     @Published var searchText: String = ""
     @Published var statistics: [StatisticModel] = []
+    @Published var isLoading: Bool = false
     
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
@@ -34,30 +35,30 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellable)
         
-        marketDataService.$marketData
-            .compactMap { $0 }
-            .map(mapGlobalMarketData)
-            .sink { [weak self] stats in
-                self?.statistics = stats
-            }
-            .store(in: &cancellable)
-        
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
-            .map { (allCoins, portfolioEntities) -> [CoinModel] in
-                allCoins
-                    .compactMap { coin -> CoinModel? in
-                        guard let entity = portfolioEntities.first(where: { $0.coinId == coin.id}) else {
-                            return nil
-                        }
-                        
-                        return coin.updateHoldings(amount: entity.amount)
-                    }
-            }
+            .map(mapAllCoinsToPortfolioCoins)
             .sink { [weak self] portfolioCoins in
                 self?.portfolioCoins = portfolioCoins
             }
             .store(in: &cancellable)
+        
+        marketDataService.$marketData
+            .compactMap { $0 }
+            .combineLatest($portfolioCoins)
+            .map(mapGlobalMarketData)
+            .sink { [weak self] stats in
+                self?.statistics = stats
+                self?.isLoading = false
+            }
+            .store(in: &cancellable)
+    }
+    
+    func reloadData() {
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getData()
+        HapticManager.notification(type: .success)
     }
     
     func updatePortfolio(coin: CoinModel, amount: Double) {
@@ -78,7 +79,19 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    private func mapGlobalMarketData(data: MarketDataModel) -> [StatisticModel] {
+    private func mapAllCoinsToPortfolioCoins(allCoins: [CoinModel],
+                                             portfolioEntities: [PortfolioEntity]) -> [CoinModel] {
+        return allCoins
+            .compactMap { coin -> CoinModel? in
+                guard let entity = portfolioEntities.first(where: { $0.coinId == coin.id}) else {
+                    return nil
+                }
+                
+                return coin.updateHoldings(amount: entity.amount)
+            }
+    }
+    
+    private func mapGlobalMarketData(data: MarketDataModel, portfolioCoins: [CoinModel]) -> [StatisticModel] {
         var stats: [StatisticModel] = []
 
         let marketCap = StatisticModel(title: "Market Cap",
@@ -86,7 +99,25 @@ class HomeViewModel: ObservableObject {
                                        percentageChange: data.marketCapChangePercentage24HUsd)
         let volume = StatisticModel(title: "24h Volumne", value: data.volume)
         let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominance)
-        let portfolio = StatisticModel(title: "Portfolio Value", value: "₩0.00", percentageChange: 0)
+        
+        let portfolioValue = portfolioCoins
+                                .map { $0.currentHoldingValue }
+                                .reduce(0, +)
+        
+        let previousValue = portfolioCoins
+            .map { coin in
+                let currentValue = coin.currentHoldingValue
+                let percentChange = coin.priceChangePercentage24H ?? 0 / 100
+                let previousValue = currentValue / ( 1 + percentChange )
+                return previousValue
+            }
+            .reduce(0.0, +)
+        let percentageChange = ((portfolioValue - previousValue) / previousValue)
+        
+        let portfolio = StatisticModel(title: "Portfolio Value",
+                                       value: portfolioValue.asCurrenyWith6Decimals(),
+                                       percentageChange: percentageChange)
+        
         stats.append(contentsOf: [marketCap, volume, btcDominance, portfolio])
         
         return stats

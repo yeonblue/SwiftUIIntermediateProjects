@@ -38,6 +38,7 @@
 		45F51382296BAEA900FBD2FA /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51381296BAEA900FBD2FA /* CoinLogoView.swift */; };
 		45F51385296BD5A700FBD2FA /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45F51383296BD5A600FBD2FA /* PortfolioContainer.xcdatamodeld */; };
 		45F51387296BD61100FBD2FA /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51386296BD61100FBD2FA /* PortfolioDataService.swift */; };
+		45F51389296BF86500FBD2FA /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51388296BF86500FBD2FA /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		45F51381296BAEA900FBD2FA /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		45F51384296BD5A600FBD2FA /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		45F51386296BD61100FBD2FA /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
+		45F51388296BF86500FBD2FA /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			children = (
 				45E1EA2D296960A2000ED236 /* NetworkingManager.swift */,
 				45E1EA36296A7DCC000ED236 /* LocalFileManager.swift */,
+				45F51388296BF86500FBD2FA /* HapticManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				45D2FCAE2967C21F00CDFF41 /* CircleButtonView.swift in Sources */,
 				45D2FCA42967BD0100CDFF41 /* Color.swift in Sources */,
 				45E1EA39296A8662000ED236 /* SearchBarView.swift in Sources */,
+				45F51389296BF86500FBD2FA /* HapticManager.swift in Sources */,
 				45E1EA2E296960A2000ED236 /* NetworkingManager.swift in Sources */,
 				45F51378296AE7D100FBD2FA /* HomeStatsView.swift in Sources */,
 				45F51382296BAEA900FBD2FA /* CoinLogoView.swift in Sources */,
