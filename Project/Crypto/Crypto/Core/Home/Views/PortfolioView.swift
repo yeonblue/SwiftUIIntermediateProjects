@@ -37,6 +37,11 @@ struct PortfolioView: View {
                     trailingNavBarButton
                 }
             }
+            .onChange(of: viewModel.searchText) { newValue in
+                if newValue == "" {
+                    removeSelection()
+                }
+            }
         }
     }
 }
@@ -59,9 +64,11 @@ extension PortfolioView {
     }
     
     private func saveButtonTapped() {
-        guard let coin = selectedCoin else { return }
+        guard let coin = selectedCoin,
+              let amount = Double(quantityText) else { return }
         
         // save to portfolio
+        viewModel.updatePortfolio(coin: coin, amount: amount)
         
         // show checkmark
         withAnimation(.easeIn) {
@@ -82,6 +89,17 @@ extension PortfolioView {
         viewModel.searchText = ""
         UIApplication.shared.endEditing()
     }
+    
+    private func updateSelectedCoin(coin: CoinModel) {
+        selectedCoin = coin
+        
+        if let portfolioCoin = viewModel.portfolioCoins.first(where: { $0.id == coin.id }),
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
+    }
 }
 
 // MARK: - Views
@@ -89,12 +107,13 @@ extension PortfolioView {
     private var coinLogoListView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10) {
-                ForEach(viewModel.allCoins) { coin in
+                ForEach(viewModel.searchText.isEmpty ? viewModel.portfolioCoins
+                                                     : viewModel.allCoins) { coin in
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .padding(4)
