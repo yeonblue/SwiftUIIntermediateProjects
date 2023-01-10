@@ -13,6 +13,9 @@ struct HomeView: View {
     @State private var showProtfolio: Bool = false
     @State private var showPortfolioView: Bool = false
     
+    @State private var selectCoin: CoinModel? = nil
+    @State private var showDetailView: Bool = false
+    
     var body: some View {
         ZStack {
             
@@ -45,6 +48,13 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(isActive: $showDetailView) {
+                DetailLoadingView(coin: $selectCoin)
+            } label: {
+                EmptyView()
+            }
+        )
     }
 }
 
@@ -95,14 +105,35 @@ extension HomeView {
     private var allCoinsList: some View {
         List {
             ForEach(viewModel.allCoins) { coin in
+                
+                // List가 생성될 때 초기화도 진행, Lazy NavLink가 나오기 전까지는 이러한 방법은 비효율일듯
+                // NavigationLink {
+                //     DetailView(coin: coin)
+                // } label: {
+                //     CoinRowView(coin: coin, showHoldingsColumn: false)
+                //         .listRowInsets(.init(top: 8,
+                //                              leading: 16,
+                //                              bottom: 8,
+                //                              trailing: 16))
+                // }
+                
                 CoinRowView(coin: coin, showHoldingsColumn: false)
                     .listRowInsets(.init(top: 8,
                                          leading: 16,
                                          bottom: 8,
                                          trailing: 16))
+                    .contentShape(Rectangle()) // 없으면 spacer 부분은 tap이 불가능
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
+    }
+    
+    private func segue(coin: CoinModel) {
+        selectCoin = coin
+        showDetailView.toggle()
     }
     
     private var portfolioCoinsList: some View {
@@ -113,6 +144,9 @@ extension HomeView {
                                          leading: 16,
                                          bottom: 8,
                                          trailing: 16))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(.plain)
