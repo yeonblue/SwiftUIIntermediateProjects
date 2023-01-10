@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject private var viewModel: HomeViewModel
     @State private var showProtfolio: Bool = false
     @State private var showPortfolioView: Bool = false
+    @State private var showSettingsView: Bool = false
     
     @State private var selectCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
@@ -24,6 +25,9 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 .sheet(isPresented: $showPortfolioView) { //view 안이라면 어디에 둬도 상관 없음
                     PortfolioView()
+                }
+                .sheet(isPresented: $showSettingsView) {
+                    SettingsView()
                 }
             
             // content
@@ -79,6 +83,8 @@ extension HomeView {
                 .onTapGesture {
                     if showProtfolio {
                         showPortfolioView.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
             
