@@ -39,8 +39,8 @@ struct DetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                Text("Hi")
-                    .frame(height: 150)
+                
+                ChartView(coin: coin)
                 
                 // overviewGridView
                 Group {
@@ -58,8 +58,19 @@ struct DetailView: View {
             }
             .padding(.horizontal)
         }
-        .navigationTitle(coin.id)
+        .navigationTitle(coin.name)
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                HStack {
+                    Text(viewModel.coin.symbol.uppercased())
+                        .font(.headline)
+                        .foregroundColor(.theme.secondaryText)
+                    CoinImageView(coin: coin)
+                        .frame(width: 25, height: 25)
+                }
+            }
+        }
     }
 }
 
