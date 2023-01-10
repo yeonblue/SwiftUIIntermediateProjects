@@ -23,6 +23,7 @@ struct DetailLoadingView: View {
 struct DetailView: View {
     
     @StateObject var viewModel: DetailViewModel
+    @State private var showFullDescription: Bool = false
     
     private let column: [GridItem] = [
         GridItem(.flexible()),
@@ -46,6 +47,8 @@ struct DetailView: View {
                 Group {
                     overviewTitle
                     Divider()
+                    
+                    descriptionSectionView
                     overviewGridView
                 }
 
@@ -55,6 +58,8 @@ struct DetailView: View {
                     Divider()
                     additionalGridView
                 }
+                
+                websiteSectionView
             }
             .padding(.horizontal)
         }
@@ -118,5 +123,49 @@ extension DetailView {
                 StatisticView(stat: stat)
             }
         }
+    }
+    
+    private var descriptionSectionView: some View {
+        ZStack {
+            if let coinDescription = viewModel.coinDescription,
+               !coinDescription.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescription)
+                        .font(.callout)
+                        .foregroundColor(.theme.secondaryText)
+                        .lineLimit(showFullDescription ? nil : 3)
+                    
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    } label: {
+                        Text(showFullDescription ? "Less" : "Read more...")
+                            .font(.caption)
+                            .bold()
+                            .padding(.vertical, 4)
+                    }
+                    .accentColor(.blue)
+
+                }
+            }
+        }
+    }
+    
+    private var websiteSectionView: some View {
+        VStack {
+            if let website = viewModel.websiteURL,
+               let url = URL(string: website) {
+                Link("Website", destination: url)
+            }
+            
+            if let website = viewModel.redditURL,
+               let url = URL(string: website) {
+                Link("Reddit", destination: url)
+            }
+        }
+        .padding(.horizontal)
+        .accentColor(.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

@@ -45,6 +45,7 @@
 		45F51394296CFE2F00FBD2FA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51393296CFE2F00FBD2FA /* DetailViewModel.swift */; };
 		45F51396296D3CE200FBD2FA /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51395296D3CE200FBD2FA /* ChartView.swift */; };
 		45F51398296D4A3800FBD2FA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51397296D4A3800FBD2FA /* Date.swift */; };
+		45F5139A296D59D600FBD2FA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F51399296D59D600FBD2FA /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		45F51393296CFE2F00FBD2FA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		45F51395296D3CE200FBD2FA /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		45F51397296D4A3800FBD2FA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		45F51399296D59D600FBD2FA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				45E1EA252969021E000ED236 /* Double.swift */,
 				45E1EA3A296AB23F000ED236 /* UIApplication.swift */,
 				45F51397296D4A3800FBD2FA /* Date.swift */,
+				45F51399296D59D600FBD2FA /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				45F51380296BAB1100FBD2FA /* XmarkButton.swift in Sources */,
 				45F5137C296B96BA00FBD2FA /* MarketDataService.swift in Sources */,
 				45D2FCB02967EE1A00CDFF41 /* CircleButtonAnimationView.swift in Sources */,
+				45F5139A296D59D600FBD2FA /* String.swift in Sources */,
 				45E1EA3529699E23000ED236 /* CoinImageViewModel.swift in Sources */,
 				45E1EA242968FAF0000ED236 /* PreviewProvider.swift in Sources */,
 				45F5137E296B9D7900FBD2FA /* PortfolioView.swift in Sources */,

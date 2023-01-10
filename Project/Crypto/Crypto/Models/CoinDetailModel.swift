@@ -153,6 +153,10 @@ struct CoinDetailModel: Codable {
         case statusUpdates = "status_updates"
         case lastUpdated = "last_updated"
     }
+    
+    var readableDescription: String {
+        return description?.en?.removingHTMLOccurances ?? ""
+    }
 }
 
 // MARK: - Description
