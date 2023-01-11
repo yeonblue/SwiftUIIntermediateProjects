@@ -17,6 +17,8 @@
 		45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */; };
 		45F513AD296E8F4200FBD2FA /* 5. CustomShapePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513AC296E8F4200FBD2FA /* 5. CustomShapePractice.swift */; };
 		45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513AE296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift */; };
+		45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B0296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift */; };
+		45F513B3296ED70D00FBD2FA /* 8. GenericPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4.1. MatchedGeometryEffectPractice2.swift"; sourceTree = "<group>"; };
 		45F513AC296E8F4200FBD2FA /* 5. CustomShapePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5. CustomShapePractice.swift"; sourceTree = "<group>"; };
 		45F513AE296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6. CustomShapeCurvePractice.swift"; sourceTree = "<group>"; };
+		45F513B0296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7. AnimatedableDataPractice.swift"; sourceTree = "<group>"; };
+		45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8. GenericPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */,
 				45F513AC296E8F4200FBD2FA /* 5. CustomShapePractice.swift */,
 				45F513AE296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift */,
+				45F513B0296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift */,
+				45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 				45D2FC752966B28700CDFF41 /* AdvancedApp.swift in Sources */,
 				45F513AD296E8F4200FBD2FA /* 5. CustomShapePractice.swift in Sources */,
 				45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */,
+				45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */,
 				45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */,
+				45F513B3296ED70D00FBD2FA /* 8. GenericPractice.swift in Sources */,
 				45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */,
 				45F513A7296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift in Sources */,
 				45F513A9296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift in Sources */,
