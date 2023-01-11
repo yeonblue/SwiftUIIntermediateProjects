@@ -13,6 +13,8 @@
 		45D2FC832967AA1600CDFF41 /* 1. ViewModifierPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC822967AA1600CDFF41 /* 1. ViewModifierPractice.swift */; };
 		45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC842967AFEA00CDFF41 /* 2. ButtonStylePractice.swift */; };
 		45F513A7296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513A6296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift */; };
+		45F513A9296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513A8296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift */; };
+		45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		45D2FC822967AA1600CDFF41 /* 1. ViewModifierPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1. ViewModifierPractice.swift"; sourceTree = "<group>"; };
 		45D2FC842967AFEA00CDFF41 /* 2. ButtonStylePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2. ButtonStylePractice.swift"; sourceTree = "<group>"; };
 		45F513A6296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3. CustomAnyTransitionPractice.swift"; sourceTree = "<group>"; };
+		45F513A8296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4. MatchedGeometryEffectPractice.swift"; sourceTree = "<group>"; };
+		45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4.1. MatchedGeometryEffectPractice2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				45D2FC822967AA1600CDFF41 /* 1. ViewModifierPractice.swift */,
 				45D2FC842967AFEA00CDFF41 /* 2. ButtonStylePractice.swift */,
 				45F513A6296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift */,
+				45F513A8296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift */,
+				45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 				45D2FC832967AA1600CDFF41 /* 1. ViewModifierPractice.swift in Sources */,
 				45D2FC752966B28700CDFF41 /* AdvancedApp.swift in Sources */,
 				45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */,
+				45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */,
 				45F513A7296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift in Sources */,
+				45F513A9296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
