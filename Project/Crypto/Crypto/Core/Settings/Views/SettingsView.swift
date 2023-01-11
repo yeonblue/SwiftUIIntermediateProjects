@@ -17,12 +17,16 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                descriptionAndLinksView
-                coinGeckoSection
-                developerSection
-                applictionSection
+            ZStack {
+                Color.theme.background
+                List {
+                    descriptionAndLinksView
+                    coinGeckoSection
+                    developerSection
+                    applictionSection
+                }
             }
+            .listRowBackground(Color.theme.background)
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {

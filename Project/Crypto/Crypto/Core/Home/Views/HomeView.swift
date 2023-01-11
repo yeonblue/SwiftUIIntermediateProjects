@@ -45,8 +45,15 @@ struct HomeView: View {
                     allCoinsList
                         .transition(.move(edge: .leading))
                 } else if showProtfolio {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .center) {
+                        
+                        if viewModel.portfolioCoins.isEmpty && viewModel.searchText.isEmpty {
+                            portfolioEmptyTextView
+                        } else {
+                            portfolioCoinsList
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -129,6 +136,7 @@ extension HomeView {
                                          bottom: 8,
                                          trailing: 16))
                     .contentShape(Rectangle()) // 없으면 spacer 부분은 tap이 불가능
+                    .listRowBackground(Color.theme.background)
                     .onTapGesture {
                         segue(coin: coin)
                     }
@@ -225,6 +233,15 @@ extension HomeView {
         .font(.footnote)
         .foregroundColor(.theme.secondaryText)
         .padding(.horizontal, 16)
+    }
+    
+    private var portfolioEmptyTextView: some View {
+        Text("You haven't added any coins to your portfolio yet! Click the + button to get started")
+            .font(.callout)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .foregroundColor(.theme.accent)
+            .padding()
     }
 }
 

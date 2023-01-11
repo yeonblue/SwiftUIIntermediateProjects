@@ -63,6 +63,7 @@ struct DetailView: View {
             }
             .padding(.horizontal)
         }
+        .background(Color.theme.background)
         .navigationTitle(coin.name)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {

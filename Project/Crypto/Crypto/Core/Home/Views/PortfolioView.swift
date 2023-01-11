@@ -42,6 +42,7 @@ struct PortfolioView: View {
                     removeSelection()
                 }
             }
+            .background(Color.theme.background)
         }
     }
 }
