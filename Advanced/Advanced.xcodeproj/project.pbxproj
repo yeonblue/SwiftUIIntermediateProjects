@@ -19,6 +19,10 @@
 		45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513AE296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift */; };
 		45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B0296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift */; };
 		45F513B3296ED70D00FBD2FA /* 8. GenericPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */; };
+		45F513B5296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B4296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift */; };
+		45F513B7296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B6296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift */; };
+		45F513BA296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B9296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift */; };
+		45F513BC296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513BB296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		45F513AE296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6. CustomShapeCurvePractice.swift"; sourceTree = "<group>"; };
 		45F513B0296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7. AnimatedableDataPractice.swift"; sourceTree = "<group>"; };
 		45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8. GenericPractice.swift"; sourceTree = "<group>"; };
+		45F513B4296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9. ViewBuilderPractice.swift"; sourceTree = "<group>"; };
+		45F513B6296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10. PreferenceKeyPractice.swift"; sourceTree = "<group>"; };
+		45F513B9296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10.1. GeometryPreferencePractice.swift"; sourceTree = "<group>"; };
+		45F513BB296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10.2. ScrollViewOffsetPreferenceKeyPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,8 @@
 				45F513AE296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift */,
 				45F513B0296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift */,
 				45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */,
+				45F513B4296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift */,
+				45F513B8296FE2C900FBD2FA /* 10. GeometryPreferencePractice */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -89,6 +99,16 @@
 				45D2FC7B2966B28800CDFF41 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		45F513B8296FE2C900FBD2FA /* 10. GeometryPreferencePractice */ = {
+			isa = PBXGroup;
+			children = (
+				45F513B6296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift */,
+				45F513B9296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift */,
+				45F513BB296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift */,
+			);
+			path = "10. GeometryPreferencePractice";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F513B5296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift in Sources */,
 				45D2FC832967AA1600CDFF41 /* 1. ViewModifierPractice.swift in Sources */,
+				45F513BC296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift in Sources */,
+				45F513BA296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift in Sources */,
 				45D2FC752966B28700CDFF41 /* AdvancedApp.swift in Sources */,
 				45F513AD296E8F4200FBD2FA /* 5. CustomShapePractice.swift in Sources */,
 				45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */,
+				45F513B7296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift in Sources */,
 				45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */,
 				45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */,
 				45F513B3296ED70D00FBD2FA /* 8. GenericPractice.swift in Sources */,
