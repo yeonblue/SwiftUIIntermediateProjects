@@ -23,6 +23,11 @@
 		45F513B7296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B6296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift */; };
 		45F513BA296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513B9296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift */; };
 		45F513BC296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513BB296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift */; };
+		45F513BE296FFF5F00FBD2FA /* TabViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513BD296FFF5F00FBD2FA /* TabViewPractice.swift */; };
+		45F513C12970239300FBD2FA /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513C02970239300FBD2FA /* CustomTabBarView.swift */; };
+		45F513C32970287400FBD2FA /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513C22970287400FBD2FA /* CustomTabBarContainerView.swift */; };
+		45F513C52970E55C00FBD2FA /* TabBaritemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513C42970E55C00FBD2FA /* TabBaritemPreferenceKey.swift */; };
+		45F513C72970EA5C00FBD2FA /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513C62970EA5C00FBD2FA /* TabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		45F513B6296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10. PreferenceKeyPractice.swift"; sourceTree = "<group>"; };
 		45F513B9296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10.1. GeometryPreferencePractice.swift"; sourceTree = "<group>"; };
 		45F513BB296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10.2. ScrollViewOffsetPreferenceKeyPractice.swift"; sourceTree = "<group>"; };
+		45F513BD296FFF5F00FBD2FA /* TabViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewPractice.swift; sourceTree = "<group>"; };
+		45F513C02970239300FBD2FA /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		45F513C22970287400FBD2FA /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		45F513C42970E55C00FBD2FA /* TabBaritemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBaritemPreferenceKey.swift; sourceTree = "<group>"; };
+		45F513C62970EA5C00FBD2FA /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,7 @@
 				45F513B2296ED70D00FBD2FA /* 8. GenericPractice.swift */,
 				45F513B4296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift */,
 				45F513B8296FE2C900FBD2FA /* 10. GeometryPreferencePractice */,
+				45F513BF296FFF8C00FBD2FA /* 11. CustomTabView */,
 			);
 			path = Advanced;
 			sourceTree = "<group>";
@@ -109,6 +120,18 @@
 				45F513BB296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift */,
 			);
 			path = "10. GeometryPreferencePractice";
+			sourceTree = "<group>";
+		};
+		45F513BF296FFF8C00FBD2FA /* 11. CustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				45F513BD296FFF5F00FBD2FA /* TabViewPractice.swift */,
+				45F513C02970239300FBD2FA /* CustomTabBarView.swift */,
+				45F513C22970287400FBD2FA /* CustomTabBarContainerView.swift */,
+				45F513C42970E55C00FBD2FA /* TabBaritemPreferenceKey.swift */,
+				45F513C62970EA5C00FBD2FA /* TabBarItem.swift */,
+			);
+			path = "11. CustomTabView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,14 +207,19 @@
 				45F513B5296FC69F00FBD2FA /* 9. ViewBuilderPractice.swift in Sources */,
 				45D2FC832967AA1600CDFF41 /* 1. ViewModifierPractice.swift in Sources */,
 				45F513BC296FE69F00FBD2FA /* 10.2. ScrollViewOffsetPreferenceKeyPractice.swift in Sources */,
+				45F513C12970239300FBD2FA /* CustomTabBarView.swift in Sources */,
 				45F513BA296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift in Sources */,
 				45D2FC752966B28700CDFF41 /* AdvancedApp.swift in Sources */,
 				45F513AD296E8F4200FBD2FA /* 5. CustomShapePractice.swift in Sources */,
+				45F513C52970E55C00FBD2FA /* TabBaritemPreferenceKey.swift in Sources */,
 				45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */,
 				45F513B7296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift in Sources */,
 				45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */,
 				45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */,
+				45F513BE296FFF5F00FBD2FA /* TabViewPractice.swift in Sources */,
+				45F513C72970EA5C00FBD2FA /* TabBarItem.swift in Sources */,
 				45F513B3296ED70D00FBD2FA /* 8. GenericPractice.swift in Sources */,
+				45F513C32970287400FBD2FA /* CustomTabBarContainerView.swift in Sources */,
 				45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */,
 				45F513A7296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift in Sources */,
 				45F513A9296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift in Sources */,
