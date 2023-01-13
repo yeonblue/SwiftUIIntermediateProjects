@@ -1,5 +1,5 @@
 //
-//  UIRepresentablePractice.swift
+//  UIViewRepresentablePractice.swift
 //  Advanced
 //
 //  Created by yeonBlue on 2023/01/13.
@@ -9,7 +9,7 @@ import SwiftUI
 
 // UIKit의 UIView를 SwiftUI서 사용하기 위함 -> UIViewRepresentable
 
-struct UIRepresentablePractice: View {
+struct UIViewRepresentablePractice: View {
     
     @State private var text: String = ""
     
@@ -37,9 +37,9 @@ struct UIRepresentablePractice: View {
     }
 }
 
-struct UIRepresentablePractice_Previews: PreviewProvider {
+struct UIViewRepresentablePractice_Previews: PreviewProvider {
     static var previews: some View {
-        UIRepresentablePractice()
+        UIViewRepresentablePractice()
     }
 }
 
