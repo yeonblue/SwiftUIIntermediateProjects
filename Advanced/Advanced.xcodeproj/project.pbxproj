@@ -38,7 +38,21 @@
 		45F513DA29717C6400FBD2FA /* 14. UIViewControllerRepresentablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513D929717C6300FBD2FA /* 14. UIViewControllerRepresentablePractice.swift */; };
 		45F513DD297264AE00FBD2FA /* 15. ProtocolPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */; };
 		45F513DF297272A600FBD2FA /* 16. DependencyInjectionPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */; };
+		45F513E22972917500FBD2FA /* UnitTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513E12972917500FBD2FA /* UnitTestView.swift */; };
+		45F513E42972960C00FBD2FA /* UnitTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513E32972960C00FBD2FA /* UnitTestViewModel.swift */; };
+		45F513EC297296F900FBD2FA /* Advanced_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513EB297296F900FBD2FA /* Advanced_Tests.swift */; };
+		45F513F3297297CD00FBD2FA /* UnitTestViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45F513ED297296F900FBD2FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D2FC692966B28600CDFF41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D2FC702966B28700CDFF41;
+			remoteInfo = Advanced;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		45D2FC712966B28700CDFF41 /* Advanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Advanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,10 +87,22 @@
 		45F513D929717C6300FBD2FA /* 14. UIViewControllerRepresentablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14. UIViewControllerRepresentablePractice.swift"; sourceTree = "<group>"; };
 		45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "15. ProtocolPractice.swift"; sourceTree = "<group>"; };
 		45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "16. DependencyInjectionPractice.swift"; sourceTree = "<group>"; };
+		45F513E12972917500FBD2FA /* UnitTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestView.swift; sourceTree = "<group>"; };
+		45F513E32972960C00FBD2FA /* UnitTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestViewModel.swift; sourceTree = "<group>"; };
+		45F513E9297296F900FBD2FA /* Advanced_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Advanced_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F513EB297296F900FBD2FA /* Advanced_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_Tests.swift; sourceTree = "<group>"; };
+		45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestViewModel_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		45D2FC6E2966B28700CDFF41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F513E6297296F900FBD2FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,6 +121,8 @@
 				45F513D929717C6300FBD2FA /* 14. UIViewControllerRepresentablePractice.swift */,
 				45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */,
 				45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */,
+				45F513E02972916200FBD2FA /* 17. UnitTestPractice */,
+				45F513EA297296F900FBD2FA /* Advanced_Tests */,
 				45D2FC722966B28700CDFF41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				45D2FC712966B28700CDFF41 /* Advanced.app */,
+				45F513E9297296F900FBD2FA /* Advanced_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +201,24 @@
 			path = "12. CustomNavigationView";
 			sourceTree = "<group>";
 		};
+		45F513E02972916200FBD2FA /* 17. UnitTestPractice */ = {
+			isa = PBXGroup;
+			children = (
+				45F513E12972917500FBD2FA /* UnitTestView.swift */,
+				45F513E32972960C00FBD2FA /* UnitTestViewModel.swift */,
+			);
+			path = "17. UnitTestPractice";
+			sourceTree = "<group>";
+		};
+		45F513EA297296F900FBD2FA /* Advanced_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				45F513EB297296F900FBD2FA /* Advanced_Tests.swift */,
+				45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */,
+			);
+			path = Advanced_Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +239,24 @@
 			productReference = 45D2FC712966B28700CDFF41 /* Advanced.app */;
 			productType = "com.apple.product-type.application";
 		};
+		45F513E8297296F900FBD2FA /* Advanced_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F513EF297296F900FBD2FA /* Build configuration list for PBXNativeTarget "Advanced_Tests" */;
+			buildPhases = (
+				45F513E5297296F900FBD2FA /* Sources */,
+				45F513E6297296F900FBD2FA /* Frameworks */,
+				45F513E7297296F900FBD2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45F513EE297296F900FBD2FA /* PBXTargetDependency */,
+			);
+			name = Advanced_Tests;
+			productName = Advanced_Tests;
+			productReference = 45F513E9297296F900FBD2FA /* Advanced_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +269,10 @@
 				TargetAttributes = {
 					45D2FC702966B28700CDFF41 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					45F513E8297296F900FBD2FA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 45D2FC702966B28700CDFF41;
 					};
 				};
 			};
@@ -221,6 +290,7 @@
 			projectRoot = "";
 			targets = (
 				45D2FC702966B28700CDFF41 /* Advanced */,
+				45F513E8297296F900FBD2FA /* Advanced_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +302,13 @@
 			files = (
 				45D2FC7C2966B28800CDFF41 /* Preview Assets.xcassets in Resources */,
 				45D2FC792966B28800CDFF41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F513E7297296F900FBD2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +327,7 @@
 				45F513BA296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift in Sources */,
 				45D2FC752966B28700CDFF41 /* AdvancedApp.swift in Sources */,
 				45F513D829714B1800FBD2FA /* 13. UIViewRepresentablePractice.swift in Sources */,
+				45F513E22972917500FBD2FA /* UnitTestView.swift in Sources */,
 				45F513D22971206500FBD2FA /* CustomNavView.swift in Sources */,
 				45F513AD296E8F4200FBD2FA /* 5. CustomShapePractice.swift in Sources */,
 				45F513DA29717C6400FBD2FA /* 14. UIViewControllerRepresentablePractice.swift in Sources */,
@@ -266,6 +344,7 @@
 				45F513C32970287400FBD2FA /* CustomTabBarContainerView.swift in Sources */,
 				45F513CA2971174600FBD2FA /* AppNavBarView.swift in Sources */,
 				45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */,
+				45F513E42972960C00FBD2FA /* UnitTestViewModel.swift in Sources */,
 				45F513CC2971189000FBD2FA /* CustomNavBarView.swift in Sources */,
 				45F513DF297272A600FBD2FA /* 16. DependencyInjectionPractice.swift in Sources */,
 				45F513CE29711CFD00FBD2FA /* CustomNavBarContainerView.swift in Sources */,
@@ -274,7 +353,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45F513E5297296F900FBD2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F513F3297297CD00FBD2FA /* UnitTestViewModel_Tests.swift in Sources */,
+				45F513EC297296F900FBD2FA /* Advanced_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45F513EE297296F900FBD2FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D2FC702966B28700CDFF41 /* Advanced */;
+			targetProxy = 45F513ED297296F900FBD2FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		45D2FC7D2966B28800CDFF41 /* Debug */ = {
@@ -451,6 +547,44 @@
 			};
 			name = Release;
 		};
+		45F513F0297296F900FBD2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433LH3TNXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yeonBlue.Advanced-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Advanced.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Advanced";
+			};
+			name = Debug;
+		};
+		45F513F1297296F900FBD2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433LH3TNXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yeonBlue.Advanced-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Advanced.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Advanced";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -468,6 +602,15 @@
 			buildConfigurations = (
 				45D2FC802966B28800CDFF41 /* Debug */,
 				45D2FC812966B28800CDFF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45F513EF297296F900FBD2FA /* Build configuration list for PBXNativeTarget "Advanced_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F513F0297296F900FBD2FA /* Debug */,
+				45F513F1297296F900FBD2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
