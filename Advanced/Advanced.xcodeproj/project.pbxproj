@@ -36,6 +36,8 @@
 		45F513D62971349300FBD2FA /* CustomNavBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513D52971349300FBD2FA /* CustomNavBarPreferenceKey.swift */; };
 		45F513D829714B1800FBD2FA /* 13. UIViewRepresentablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513D729714B1800FBD2FA /* 13. UIViewRepresentablePractice.swift */; };
 		45F513DA29717C6400FBD2FA /* 14. UIViewControllerRepresentablePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513D929717C6300FBD2FA /* 14. UIViewControllerRepresentablePractice.swift */; };
+		45F513DD297264AE00FBD2FA /* 15. ProtocolPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */; };
+		45F513DF297272A600FBD2FA /* 16. DependencyInjectionPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		45F513D52971349300FBD2FA /* CustomNavBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKey.swift; sourceTree = "<group>"; };
 		45F513D729714B1800FBD2FA /* 13. UIViewRepresentablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13. UIViewRepresentablePractice.swift"; sourceTree = "<group>"; };
 		45F513D929717C6300FBD2FA /* 14. UIViewControllerRepresentablePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14. UIViewControllerRepresentablePractice.swift"; sourceTree = "<group>"; };
+		45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "15. ProtocolPractice.swift"; sourceTree = "<group>"; };
+		45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "16. DependencyInjectionPractice.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				45F513C8297116D400FBD2FA /* 12. CustomNavigationView */,
 				45F513D729714B1800FBD2FA /* 13. UIViewRepresentablePractice.swift */,
 				45F513D929717C6300FBD2FA /* 14. UIViewControllerRepresentablePractice.swift */,
+				45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */,
+				45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */,
 				45D2FC722966B28700CDFF41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -254,12 +260,14 @@
 				45F513D62971349300FBD2FA /* CustomNavBarPreferenceKey.swift in Sources */,
 				45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */,
 				45F513BE296FFF5F00FBD2FA /* TabViewPractice.swift in Sources */,
+				45F513DD297264AE00FBD2FA /* 15. ProtocolPractice.swift in Sources */,
 				45F513C72970EA5C00FBD2FA /* TabBarItem.swift in Sources */,
 				45F513B3296ED70D00FBD2FA /* 8. GenericPractice.swift in Sources */,
 				45F513C32970287400FBD2FA /* CustomTabBarContainerView.swift in Sources */,
 				45F513CA2971174600FBD2FA /* AppNavBarView.swift in Sources */,
 				45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */,
 				45F513CC2971189000FBD2FA /* CustomNavBarView.swift in Sources */,
+				45F513DF297272A600FBD2FA /* 16. DependencyInjectionPractice.swift in Sources */,
 				45F513CE29711CFD00FBD2FA /* CustomNavBarContainerView.swift in Sources */,
 				45F513A7296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift in Sources */,
 				45F513A9296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift in Sources */,
