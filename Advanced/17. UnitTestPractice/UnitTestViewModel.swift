@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import Combine
 
 class UnitTestViewModel: ObservableObject {
     
     @Published var isPremium: Bool
     @Published var dataArray: [String] = []
     @Published var selectedItem: String? = nil
+    let dataService: NewDataSerciceProtocol
+    var cancellable = Set<AnyCancellable>()
     
-    init(isPremium: Bool) {
+    init(isPremium: Bool, dataService: NewDataSerciceProtocol = NewMockDataService(items: nil)) {
         self.isPremium = isPremium
+        self.dataService = dataService
     }
     
     func addItem(item: String) {
@@ -40,6 +44,22 @@ class UnitTestViewModel: ObservableObject {
         } else {
             throw DataError.itemNotFound
         }
+    }
+    
+    func downloadWithEscaping() {
+        dataService.downloadItemsWithEscaping { [weak self] items in
+            self?.dataArray = items
+        }
+    }
+    
+    func downloadWithCombine() {
+        dataService.downloadItemsWithCombine()
+            .sink { _ in
+                
+            } receiveValue: { [weak self] items in
+                self?.dataArray = items
+            }
+            .store(in: &cancellable)
     }
 }
 

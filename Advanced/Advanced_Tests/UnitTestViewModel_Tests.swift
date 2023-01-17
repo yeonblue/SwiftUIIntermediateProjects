@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Combine
 @testable import Advanced
 
 // Naming:
@@ -18,13 +19,16 @@ import XCTest
 final class UnitTestViewModel_Tests: XCTestCase {
 
     var viewModel: UnitTestViewModel?
+    var cancellable: Set<AnyCancellable>!
     
     override func setUpWithError() throws {
         viewModel = UnitTestViewModel(isPremium: true) // 매 테스트 마다 초기화 함수, 아래의 경우처럼 매번 초기화 할 필요는 없음
+        cancellable = Set<AnyCancellable>()
     }
 
     override func tearDownWithError() throws {
         viewModel = nil
+        cancellable = nil
     }
 
     func testExample() throws {
@@ -306,5 +310,73 @@ final class UnitTestViewModel_Tests: XCTestCase {
         }
         
         XCTAssertTrue(viewModel.dataArray.isEmpty)
+    }
+    
+    func test_UnitTestViewModel_downloadWithEscaping_shouldReturnItems() {
+        
+        // Given
+        let viewModel = UnitTestViewModel(isPremium: Bool.random())
+        
+        // When
+        let expectation = XCTestExpectation(description: "3초 후 데이터 추가 됨")
+        viewModel.downloadWithEscaping() // async하게 3초후 데이터가 추가 됨
+        
+        // Then
+        // XCTAssertGreaterThan(viewModel.dataArray.count, 0) // 단순히 이렇게 하면 테스트는 실패함
+        
+        viewModel.$dataArray
+            .dropFirst() // 처음에 []가 보내지므로
+            .sink { items in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    func test_UnitTestViewModel_downloadWithCombine_shouldReturnItems() {
+        
+        // Given
+        let viewModel = UnitTestViewModel(isPremium: Bool.random())
+        
+        // When
+        let expectation = XCTestExpectation(description: "3초 후 데이터 추가 됨")
+        viewModel.downloadWithCombine() // async하게 3초후 데이터가 추가 됨
+        
+        // Then
+        // XCTAssertGreaterThan(viewModel.dataArray.count, 0) // 단순히 이렇게 하면 테스트는 실패함
+        
+        viewModel.$dataArray
+            .dropFirst() // 처음에 []가 보내지므로
+            .sink { items in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    
+    func test_UnitTestViewModel_downloadWithEscaping_shouldReturnItems2() {
+        
+        // Given
+        let items = [UUID().uuidString, UUID().uuidString, UUID().uuidString, UUID().uuidString, UUID().uuidString]
+        let dataService = NewMockDataService(items: items)
+        let viewModel = UnitTestViewModel(isPremium: Bool.random(), dataService: dataService)
+        
+        // When
+        let expectation = XCTestExpectation(description: "3초 후 데이터 추가 됨")
+        viewModel.downloadWithEscaping() // async하게 3초후 데이터가 추가 됨
+        
+        // Then
+        // XCTAssertGreaterThan(viewModel.dataArray.count, 0) // 단순히 이렇게 하면 테스트는 실패함
+        
+        viewModel.$dataArray
+            .dropFirst() // 처음에 []가 보내지므로
+            .sink { items in
+                expectation.fulfill()
+            }
+            .store(in: &cancellable)
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(viewModel.dataArray.count, 0)
+        XCTAssertEqual(viewModel.dataArray.count, items.count)
     }
 }

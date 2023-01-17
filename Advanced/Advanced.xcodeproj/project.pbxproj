@@ -42,6 +42,8 @@
 		45F513E42972960C00FBD2FA /* UnitTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513E32972960C00FBD2FA /* UnitTestViewModel.swift */; };
 		45F513EC297296F900FBD2FA /* Advanced_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513EB297296F900FBD2FA /* Advanced_Tests.swift */; };
 		45F513F3297297CD00FBD2FA /* UnitTestViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */; };
+		45F513F529763D6300FBD2FA /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F429763D6300FBD2FA /* NewMockDataService.swift */; };
+		45F513F729763DB900FBD2FA /* NewMockDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F629763DB900FBD2FA /* NewMockDataService_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		45F513E9297296F900FBD2FA /* Advanced_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Advanced_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F513EB297296F900FBD2FA /* Advanced_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_Tests.swift; sourceTree = "<group>"; };
 		45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestViewModel_Tests.swift; sourceTree = "<group>"; };
+		45F513F429763D6300FBD2FA /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
+		45F513F629763DB900FBD2FA /* NewMockDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,7 @@
 			children = (
 				45F513E12972917500FBD2FA /* UnitTestView.swift */,
 				45F513E32972960C00FBD2FA /* UnitTestViewModel.swift */,
+				45F513F429763D6300FBD2FA /* NewMockDataService.swift */,
 			);
 			path = "17. UnitTestPractice";
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				45F513EB297296F900FBD2FA /* Advanced_Tests.swift */,
 				45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */,
+				45F513F629763DB900FBD2FA /* NewMockDataService_Tests.swift */,
 			);
 			path = Advanced_Tests;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */,
 				45F513D62971349300FBD2FA /* CustomNavBarPreferenceKey.swift in Sources */,
 				45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */,
+				45F513F529763D6300FBD2FA /* NewMockDataService.swift in Sources */,
 				45F513BE296FFF5F00FBD2FA /* TabViewPractice.swift in Sources */,
 				45F513DD297264AE00FBD2FA /* 15. ProtocolPractice.swift in Sources */,
 				45F513C72970EA5C00FBD2FA /* TabBarItem.swift in Sources */,
@@ -359,6 +366,7 @@
 			files = (
 				45F513F3297297CD00FBD2FA /* UnitTestViewModel_Tests.swift in Sources */,
 				45F513EC297296F900FBD2FA /* Advanced_Tests.swift in Sources */,
+				45F513F729763DB900FBD2FA /* NewMockDataService_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
