@@ -11,7 +11,7 @@ import SwiftUI
 struct AdvancedApp: App {
     var body: some Scene {
         WindowGroup {
-            UIViewControllerRepresentablePractice()
+            UITestPractice()
         }
     }
 }

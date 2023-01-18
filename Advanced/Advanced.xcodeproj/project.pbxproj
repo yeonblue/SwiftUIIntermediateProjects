@@ -44,10 +44,21 @@
 		45F513F3297297CD00FBD2FA /* UnitTestViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */; };
 		45F513F529763D6300FBD2FA /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F429763D6300FBD2FA /* NewMockDataService.swift */; };
 		45F513F729763DB900FBD2FA /* NewMockDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F629763DB900FBD2FA /* NewMockDataService_Tests.swift */; };
+		45F513F929766AA800FBD2FA /* 18. UITestPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513F829766AA800FBD2FA /* 18. UITestPractice.swift */; };
+		45F514012976714E00FBD2FA /* Advanced_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F514002976714E00FBD2FA /* Advanced_UITests.swift */; };
+		45F514032976714E00FBD2FA /* Advanced_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F514022976714E00FBD2FA /* Advanced_UITestsLaunchTests.swift */; };
+		45F5140A29776F0000FBD2FA /* UITestPracticeView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5140929776F0000FBD2FA /* UITestPracticeView_UITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		45F513ED297296F900FBD2FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D2FC692966B28600CDFF41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D2FC702966B28700CDFF41;
+			remoteInfo = Advanced;
+		};
+		45F514042976714E00FBD2FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45D2FC692966B28600CDFF41 /* Project object */;
 			proxyType = 1;
@@ -96,6 +107,11 @@
 		45F513F2297297CD00FBD2FA /* UnitTestViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestViewModel_Tests.swift; sourceTree = "<group>"; };
 		45F513F429763D6300FBD2FA /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
 		45F513F629763DB900FBD2FA /* NewMockDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService_Tests.swift; sourceTree = "<group>"; };
+		45F513F829766AA800FBD2FA /* 18. UITestPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "18. UITestPractice.swift"; sourceTree = "<group>"; };
+		45F513FE2976714E00FBD2FA /* Advanced_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Advanced_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F514002976714E00FBD2FA /* Advanced_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_UITests.swift; sourceTree = "<group>"; };
+		45F514022976714E00FBD2FA /* Advanced_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		45F5140929776F0000FBD2FA /* UITestPracticeView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestPracticeView_UITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		45F513E6297296F900FBD2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F513FB2976714E00FBD2FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,7 +149,9 @@
 				45F513DC297264AD00FBD2FA /* 15. ProtocolPractice.swift */,
 				45F513DE297272A600FBD2FA /* 16. DependencyInjectionPractice.swift */,
 				45F513E02972916200FBD2FA /* 17. UnitTestPractice */,
+				45F513F829766AA800FBD2FA /* 18. UITestPractice.swift */,
 				45F513EA297296F900FBD2FA /* Advanced_Tests */,
+				45F513FF2976714E00FBD2FA /* Advanced_UITests */,
 				45D2FC722966B28700CDFF41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +161,7 @@
 			children = (
 				45D2FC712966B28700CDFF41 /* Advanced.app */,
 				45F513E9297296F900FBD2FA /* Advanced_Tests.xctest */,
+				45F513FE2976714E00FBD2FA /* Advanced_UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +251,16 @@
 			path = Advanced_Tests;
 			sourceTree = "<group>";
 		};
+		45F513FF2976714E00FBD2FA /* Advanced_UITests */ = {
+			isa = PBXGroup;
+			children = (
+				45F514002976714E00FBD2FA /* Advanced_UITests.swift */,
+				45F514022976714E00FBD2FA /* Advanced_UITestsLaunchTests.swift */,
+				45F5140929776F0000FBD2FA /* UITestPracticeView_UITests.swift */,
+			);
+			path = Advanced_UITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +299,24 @@
 			productReference = 45F513E9297296F900FBD2FA /* Advanced_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		45F513FD2976714E00FBD2FA /* Advanced_UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45F514062976714E00FBD2FA /* Build configuration list for PBXNativeTarget "Advanced_UITests" */;
+			buildPhases = (
+				45F513FA2976714E00FBD2FA /* Sources */,
+				45F513FB2976714E00FBD2FA /* Frameworks */,
+				45F513FC2976714E00FBD2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45F514052976714E00FBD2FA /* PBXTargetDependency */,
+			);
+			name = Advanced_UITests;
+			productName = Advanced_UITests;
+			productReference = 45F513FE2976714E00FBD2FA /* Advanced_UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,6 +331,10 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					45F513E8297296F900FBD2FA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 45D2FC702966B28700CDFF41;
+					};
+					45F513FD2976714E00FBD2FA = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 45D2FC702966B28700CDFF41;
 					};
@@ -297,6 +355,7 @@
 			targets = (
 				45D2FC702966B28700CDFF41 /* Advanced */,
 				45F513E8297296F900FBD2FA /* Advanced_Tests */,
+				45F513FD2976714E00FBD2FA /* Advanced_UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,6 +371,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		45F513E7297296F900FBD2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F513FC2976714E00FBD2FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,6 +418,7 @@
 				45F513CA2971174600FBD2FA /* AppNavBarView.swift in Sources */,
 				45F513AF296EAE1100FBD2FA /* 6. CustomShapeCurvePractice.swift in Sources */,
 				45F513E42972960C00FBD2FA /* UnitTestViewModel.swift in Sources */,
+				45F513F929766AA800FBD2FA /* 18. UITestPractice.swift in Sources */,
 				45F513CC2971189000FBD2FA /* CustomNavBarView.swift in Sources */,
 				45F513DF297272A600FBD2FA /* 16. DependencyInjectionPractice.swift in Sources */,
 				45F513CE29711CFD00FBD2FA /* CustomNavBarContainerView.swift in Sources */,
@@ -370,6 +437,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45F513FA2976714E00FBD2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F514032976714E00FBD2FA /* Advanced_UITestsLaunchTests.swift in Sources */,
+				45F5140A29776F0000FBD2FA /* UITestPracticeView_UITests.swift in Sources */,
+				45F514012976714E00FBD2FA /* Advanced_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -377,6 +454,11 @@
 			isa = PBXTargetDependency;
 			target = 45D2FC702966B28700CDFF41 /* Advanced */;
 			targetProxy = 45F513ED297296F900FBD2FA /* PBXContainerItemProxy */;
+		};
+		45F514052976714E00FBD2FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D2FC702966B28700CDFF41 /* Advanced */;
+			targetProxy = 45F514042976714E00FBD2FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -593,6 +675,42 @@
 			};
 			name = Release;
 		};
+		45F514072976714E00FBD2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433LH3TNXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yeonBlue.Advanced-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Advanced;
+			};
+			name = Debug;
+		};
+		45F514082976714E00FBD2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 433LH3TNXX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yeonBlue.Advanced-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Advanced;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -619,6 +737,15 @@
 			buildConfigurations = (
 				45F513F0297296F900FBD2FA /* Debug */,
 				45F513F1297296F900FBD2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45F514062976714E00FBD2FA /* Build configuration list for PBXNativeTarget "Advanced_UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45F514072976714E00FBD2FA /* Debug */,
+				45F514082976714E00FBD2FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
