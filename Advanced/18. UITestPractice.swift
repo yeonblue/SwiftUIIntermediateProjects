@@ -12,7 +12,11 @@ class UITestPractiveViewModel: ObservableObject {
     @Published var textFieldText: String = ""
     let placeholderText: String = "Add your name..."
     
-    @Published var currentUserIsSignedIn: Bool = false
+    @Published var currentUserIsSignedIn: Bool
+    
+    init(currentUserIsSignedIn: Bool) {
+        self.currentUserIsSignedIn = currentUserIsSignedIn
+    }
     
     func signUpButtonTapped() {
         guard !textFieldText.isEmpty else { return }
@@ -23,7 +27,11 @@ class UITestPractiveViewModel: ObservableObject {
 
 struct UITestPractice: View {
     
-    @StateObject var vm: UITestPractiveViewModel = UITestPractiveViewModel()
+    @StateObject var vm: UITestPractiveViewModel
+    
+    init(userIsSignIn: Bool) {
+        self._vm = StateObject(wrappedValue: UITestPractiveViewModel(currentUserIsSignedIn: userIsSignIn))
+    }
     
     var body: some View {
         ZStack {
@@ -47,7 +55,7 @@ struct UITestPractice: View {
 
 struct UITestPractice_Previews: PreviewProvider {
     static var previews: some View {
-        UITestPractice()
+        UITestPractice(userIsSignIn: false)
     }
 }
 
