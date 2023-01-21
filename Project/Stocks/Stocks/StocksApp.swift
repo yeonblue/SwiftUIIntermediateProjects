@@ -15,7 +15,7 @@ struct StocksApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainListView()
                 .task {
                     do {
                         let quotes = try await stocksAPI.fetchQuotes(symbols: "AAPL")
