@@ -1,5 +1,5 @@
 //
-//  Ticker.swift
+//  Chart.swift
 //  
 //
 //  Created by yeonBlue on 2023/01/21.
