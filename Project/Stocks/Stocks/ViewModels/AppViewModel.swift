@@ -37,6 +37,29 @@ class AppViewModel: ObservableObject {
         guard UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url)
     }
+    
+    func isAddedToMyTickers(ticker: Ticker) -> Bool {
+        return tickers.first(where: { $0.symbol == ticker.symbol }) != nil
+    }
+    
+    @MainActor
+    func toggleTicker(_ ticker: Ticker) {
+        if isAddedToMyTickers(ticker: ticker) {
+            removeFromMyTickers(ticker: ticker)
+        } else {
+            addToMyTickers(ticker: ticker)
+        }
+    }
+    
+    func addToMyTickers(ticker: Ticker) {
+        tickers.append(ticker)
+    }
+    
+    func removeFromMyTickers(ticker: Ticker) {
+        guard let index = tickers.firstIndex(where: { $0.symbol == ticker.symbol }) else {
+            return
+        }
+        
+        tickers.remove(at: index)
+    }
 }
-
-

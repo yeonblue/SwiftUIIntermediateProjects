@@ -13,7 +13,6 @@ struct StocksApp: App {
     
     @StateObject var appVM = AppViewModel()
     
-    
     var body: some Scene {
         WindowGroup {
             NavigationStack {

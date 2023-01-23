@@ -22,6 +22,11 @@
 		45748C72297E4A7100CBBF67 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C71297E4A7100CBBF67 /* QuotesViewModel.swift */; };
 		45748C75297E4AD000CBBF67 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C74297E4AD000CBBF67 /* Utils.swift */; };
 		45748C78297E509A00CBBF67 /* Quote+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C77297E509A00CBBF67 /* Quote+Extension.swift */; };
+		45748C7A297E653100CBBF67 /* FetchPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C79297E653100CBBF67 /* FetchPhase.swift */; };
+		45748C7C297E65B800CBBF67 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C7B297E65B800CBBF67 /* SearchViewModel.swift */; };
+		45748C7E297E66AA00CBBF67 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C7D297E66AA00CBBF67 /* SearchView.swift */; };
+		45748C81297E7CB700CBBF67 /* StockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C80297E7CB700CBBF67 /* StockAPIService.swift */; };
+		45748C83297E7DEC00CBBF67 /* MockStocksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C82297E7DEC00CBBF67 /* MockStocksAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		45748C71297E4A7100CBBF67 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		45748C74297E4AD000CBBF67 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		45748C77297E509A00CBBF67 /* Quote+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Extension.swift"; sourceTree = "<group>"; };
+		45748C79297E653100CBBF67 /* FetchPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhase.swift; sourceTree = "<group>"; };
+		45748C7B297E65B800CBBF67 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		45748C7D297E66AA00CBBF67 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		45748C80297E7CB700CBBF67 /* StockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAPIService.swift; sourceTree = "<group>"; };
+		45748C82297E7DEC00CBBF67 /* MockStocksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStocksAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				45748C46297BCFA600CBBF67 /* StocksApp.swift */,
+				45748C7F297E7C8F00CBBF67 /* Services */,
 				45748C76297E4B8A00CBBF67 /* Extensions */,
 				45748C6E297E48EF00CBBF67 /* Mocks & Stubs */,
 				45748C5E297BE1B800CBBF67 /* Models */,
@@ -116,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				45748C5F297BE1C700CBBF67 /* TickerListRowData.swift */,
+				45748C79297E653100CBBF67 /* FetchPhase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +138,7 @@
 				45748C48297BCFA600CBBF67 /* MainListView.swift */,
 				45748C62297C04DC00CBBF67 /* TickerListRowView.swift */,
 				45748C64297E458800CBBF67 /* Common */,
+				45748C7D297E66AA00CBBF67 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +158,7 @@
 			children = (
 				45748C6C297E481E00CBBF67 /* AppViewModel.swift */,
 				45748C71297E4A7100CBBF67 /* QuotesViewModel.swift */,
+				45748C7B297E65B800CBBF67 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -153,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				45748C6F297E495200CBBF67 /* Stubs.swift */,
+				45748C82297E7DEC00CBBF67 /* MockStocksAPI.swift */,
 			);
 			path = "Mocks & Stubs";
 			sourceTree = "<group>";
@@ -171,6 +186,14 @@
 				45748C77297E509A00CBBF67 /* Quote+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		45748C7F297E7C8F00CBBF67 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				45748C80297E7CB700CBBF67 /* StockAPIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,16 +271,21 @@
 			files = (
 				45748C70297E495200CBBF67 /* Stubs.swift in Sources */,
 				45748C6A297E47B700CBBF67 /* LoadingStateView.swift in Sources */,
+				45748C7A297E653100CBBF67 /* FetchPhase.swift in Sources */,
 				45748C49297BCFA600CBBF67 /* MainListView.swift in Sources */,
 				45748C72297E4A7100CBBF67 /* QuotesViewModel.swift in Sources */,
 				45748C6D297E481E00CBBF67 /* AppViewModel.swift in Sources */,
 				45748C47297BCFA600CBBF67 /* StocksApp.swift in Sources */,
 				45748C78297E509A00CBBF67 /* Quote+Extension.swift in Sources */,
+				45748C7C297E65B800CBBF67 /* SearchViewModel.swift in Sources */,
 				45748C66297E459500CBBF67 /* EmptyStateView.swift in Sources */,
+				45748C7E297E66AA00CBBF67 /* SearchView.swift in Sources */,
 				45748C75297E4AD000CBBF67 /* Utils.swift in Sources */,
+				45748C83297E7DEC00CBBF67 /* MockStocksAPI.swift in Sources */,
 				45748C68297E462800CBBF67 /* ErrorStateView.swift in Sources */,
 				45748C60297BE1C700CBBF67 /* TickerListRowData.swift in Sources */,
 				45748C63297C04DC00CBBF67 /* TickerListRowView.swift in Sources */,
+				45748C81297E7CB700CBBF67 /* StockAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

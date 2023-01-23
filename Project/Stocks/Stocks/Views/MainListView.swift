@@ -12,6 +12,7 @@ struct MainListView: View {
     
     @EnvironmentObject var appVM: AppViewModel
     @StateObject var quotesVM = QuotesViewModel()
+    @StateObject var searchVM = SearchViewModel()
     
     var body: some View {
         tickerListView
@@ -22,6 +23,13 @@ struct MainListView: View {
             .toolbar {
                 titleToolBar
                 attributionToolbar
+            }
+            .searchable(text: $searchVM.query)
+            .task(id: appVM.tickers) { // id가 변경되면 작업을 취소하고 다시 시작
+                await quotesVM.fetchQuotes(tickers: appVM.tickers)
+            }
+            .refreshable {
+                await quotesVM.fetchQuotes(tickers: appVM.tickers)
             }
     }
     
@@ -45,10 +53,11 @@ struct MainListView: View {
     
     @ViewBuilder
     private var overlayView: some View {
-        if appVM.tickers.isEmpty {
+        
+        if searchVM.isSearching {
+            SearchView(searchVM: searchVM)
+        } else if appVM.tickers.isEmpty {
             EmptyStateView(text: appVM.emptyTickerText)
-        } else {
-            EmptyView()
         }
     }
     
@@ -59,8 +68,8 @@ struct MainListView: View {
                 Text(appVM.subtitleText)
                     .foregroundColor(Color(uiColor: .secondaryLabel))
             }
+            .padding(.bottom)
             .font(.title2.weight(.heavy))
-            .padding(.vertical)
         }
     }
     
@@ -96,16 +105,22 @@ struct MainListView_Previews: PreviewProvider {
         return vm
     }()
     
-    @StateObject static var quotesVM: QuotesViewModel = {
+    static var quotesVM: QuotesViewModel = {
         let vm = QuotesViewModel()
         vm.quotesDict = Quote.stubsDict
+        return vm
+    }()
+    
+    static var searchVM: SearchViewModel = {
+        let vm = SearchViewModel()
+        vm.phase = .success(Ticker.stubs)
         return vm
     }()
     
     static var previews: some View {
         Group {
             NavigationStack {
-                MainListView(quotesVM: quotesVM)
+                MainListView(quotesVM: quotesVM, searchVM: searchVM)
             }
             .environmentObject(appVM)
             .previewDisplayName("with tickers")
