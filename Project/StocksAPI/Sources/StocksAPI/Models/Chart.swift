@@ -52,5 +52,13 @@ public struct Ticker: Codable, Identifiable, Hashable, Equatable {
         self.exchDisp = exchDisp
     }
     
-    
+    public init(symbol: String, shortName: String) {
+        self.symbol = symbol
+        self.quoteType = nil
+        self.shortName = shortName
+        self.longName = nil
+        self.sectore = nil
+        self.industry = nil
+        self.exchDisp = nil
+    }
 }

@@ -11,19 +11,15 @@ import StocksAPI
 @main
 struct StocksApp: App {
     
-    let stocksAPI = StocksAPI()
+    @StateObject var appVM = AppViewModel()
+    
     
     var body: some Scene {
         WindowGroup {
-            MainListView()
-                .task {
-                    do {
-                        let quotes = try await stocksAPI.fetchQuotes(symbols: "AAPL")
-                        print(quotes)
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                }
+            NavigationStack {
+                MainListView()
+            }
+            .environmentObject(appVM)
         }
     }
 }

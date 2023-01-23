@@ -144,7 +144,7 @@ public struct Quote: Codable, Identifiable, Hashable {
     public let marketState: String?
     public let fullExchangeName: String?
     public let displayName: String?
-    public let symbol: String?
+    public let symbol: String
     public let regularMarketPrice: Double?
     public let regularMarketChange: Double?
     public let regularMarketChangePercent: Double?
@@ -168,7 +168,7 @@ public struct Quote: Codable, Identifiable, Hashable {
     public let trailingAnnualDividendYield: Double?
     public let epsTrailingTwelveMonths: Double?
     
-    public init(currency: String?, marketState: String?, fullExchangeName: String?, displayName: String?, symbol: String?, regularMarketPrice: Double?, regularMarketChange: Double?, regularMarketChangePercent: Double?, regularMarketPreviousClose: Double?, postMarketPrice: Double?, postMarketChange: Double?, regularMarketOpen: Double?, regularMarketDayHigh: Double?, regularMarketDayLow: Double?, regularMarketVolume: Double?, trailingPE: Double?, marketCap: Double?, fiftyTwoWeekLow: Double?, fiftyTwoWeekHigh: Double?, averageDailyVolume3Month: Double?, trailingAnnualDividendYield: Double?, epsTrailingTwelveMonths: Double?) {
+    public init(currency: String?, marketState: String?, fullExchangeName: String?, displayName: String?, symbol: String, regularMarketPrice: Double?, regularMarketChange: Double?, regularMarketChangePercent: Double?, regularMarketPreviousClose: Double?, postMarketPrice: Double?, postMarketChange: Double?, regularMarketOpen: Double?, regularMarketDayHigh: Double?, regularMarketDayLow: Double?, regularMarketVolume: Double?, trailingPE: Double?, marketCap: Double?, fiftyTwoWeekLow: Double?, fiftyTwoWeekHigh: Double?, averageDailyVolume3Month: Double?, trailingAnnualDividendYield: Double?, epsTrailingTwelveMonths: Double?) {
         self.currency = currency
         self.marketState = marketState
         self.fullExchangeName = fullExchangeName
@@ -191,5 +191,30 @@ public struct Quote: Codable, Identifiable, Hashable {
         self.averageDailyVolume3Month = averageDailyVolume3Month
         self.trailingAnnualDividendYield = trailingAnnualDividendYield
         self.epsTrailingTwelveMonths = epsTrailingTwelveMonths
+    }
+    
+    public init(symbol: String, regularMarketPrice: Double, regularMarketChange: Double) {
+        self.currency = nil
+        self.marketState = nil
+        self.fullExchangeName = nil
+        self.displayName = nil
+        self.symbol = symbol
+        self.regularMarketPrice = regularMarketPrice
+        self.regularMarketChange = regularMarketChange
+        self.regularMarketChangePercent = nil
+        self.regularMarketPreviousClose = nil
+        self.postMarketPrice = nil
+        self.postMarketChange = nil
+        self.regularMarketOpen = nil
+        self.regularMarketDayHigh = nil
+        self.regularMarketDayLow = nil
+        self.regularMarketVolume = nil
+        self.trailingPE = nil
+        self.marketCap = nil
+        self.fiftyTwoWeekLow = nil
+        self.fiftyTwoWeekHigh = nil
+        self.averageDailyVolume3Month = nil
+        self.trailingAnnualDividendYield = nil
+        self.epsTrailingTwelveMonths = nil
     }
 }

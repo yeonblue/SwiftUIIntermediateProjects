@@ -14,6 +14,14 @@
 		45748C5D297BD9BC00CBBF67 /* StocksAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 45748C5C297BD9BC00CBBF67 /* StocksAPI */; };
 		45748C60297BE1C700CBBF67 /* TickerListRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C5F297BE1C700CBBF67 /* TickerListRowData.swift */; };
 		45748C63297C04DC00CBBF67 /* TickerListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C62297C04DC00CBBF67 /* TickerListRowView.swift */; };
+		45748C66297E459500CBBF67 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C65297E459500CBBF67 /* EmptyStateView.swift */; };
+		45748C68297E462800CBBF67 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C67297E462800CBBF67 /* ErrorStateView.swift */; };
+		45748C6A297E47B700CBBF67 /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C69297E47B700CBBF67 /* LoadingStateView.swift */; };
+		45748C6D297E481E00CBBF67 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C6C297E481E00CBBF67 /* AppViewModel.swift */; };
+		45748C70297E495200CBBF67 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C6F297E495200CBBF67 /* Stubs.swift */; };
+		45748C72297E4A7100CBBF67 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C71297E4A7100CBBF67 /* QuotesViewModel.swift */; };
+		45748C75297E4AD000CBBF67 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C74297E4AD000CBBF67 /* Utils.swift */; };
+		45748C78297E509A00CBBF67 /* Quote+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C77297E509A00CBBF67 /* Quote+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +33,14 @@
 		45748C5A297BD84900CBBF67 /* StocksAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = StocksAPI; path = ../StocksAPI; sourceTree = "<group>"; };
 		45748C5F297BE1C700CBBF67 /* TickerListRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowData.swift; sourceTree = "<group>"; };
 		45748C62297C04DC00CBBF67 /* TickerListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowView.swift; sourceTree = "<group>"; };
+		45748C65297E459500CBBF67 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		45748C67297E462800CBBF67 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		45748C69297E47B700CBBF67 /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
+		45748C6C297E481E00CBBF67 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		45748C6F297E495200CBBF67 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		45748C71297E4A7100CBBF67 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		45748C74297E4AD000CBBF67 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		45748C77297E509A00CBBF67 /* Quote+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +76,13 @@
 		45748C45297BCFA600CBBF67 /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
-				45748C61297C04C800CBBF67 /* Views */,
-				45748C5E297BE1B800CBBF67 /* Models */,
 				45748C46297BCFA600CBBF67 /* StocksApp.swift */,
-				45748C48297BCFA600CBBF67 /* MainListView.swift */,
+				45748C76297E4B8A00CBBF67 /* Extensions */,
+				45748C6E297E48EF00CBBF67 /* Mocks & Stubs */,
+				45748C5E297BE1B800CBBF67 /* Models */,
+				45748C6B297E47E600CBBF67 /* ViewModels */,
+				45748C61297C04C800CBBF67 /* Views */,
+				45748C73297E4AB700CBBF67 /* Utils */,
 				45748C4A297BCFA800CBBF67 /* Assets.xcassets */,
 				45748C4C297BCFA800CBBF67 /* Preview Content */,
 			);
@@ -104,9 +123,54 @@
 		45748C61297C04C800CBBF67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45748C48297BCFA600CBBF67 /* MainListView.swift */,
 				45748C62297C04DC00CBBF67 /* TickerListRowView.swift */,
+				45748C64297E458800CBBF67 /* Common */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		45748C64297E458800CBBF67 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				45748C65297E459500CBBF67 /* EmptyStateView.swift */,
+				45748C67297E462800CBBF67 /* ErrorStateView.swift */,
+				45748C69297E47B700CBBF67 /* LoadingStateView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		45748C6B297E47E600CBBF67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				45748C6C297E481E00CBBF67 /* AppViewModel.swift */,
+				45748C71297E4A7100CBBF67 /* QuotesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		45748C6E297E48EF00CBBF67 /* Mocks & Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				45748C6F297E495200CBBF67 /* Stubs.swift */,
+			);
+			path = "Mocks & Stubs";
+			sourceTree = "<group>";
+		};
+		45748C73297E4AB700CBBF67 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				45748C74297E4AD000CBBF67 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		45748C76297E4B8A00CBBF67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				45748C77297E509A00CBBF67 /* Quote+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +246,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45748C70297E495200CBBF67 /* Stubs.swift in Sources */,
+				45748C6A297E47B700CBBF67 /* LoadingStateView.swift in Sources */,
 				45748C49297BCFA600CBBF67 /* MainListView.swift in Sources */,
+				45748C72297E4A7100CBBF67 /* QuotesViewModel.swift in Sources */,
+				45748C6D297E481E00CBBF67 /* AppViewModel.swift in Sources */,
 				45748C47297BCFA600CBBF67 /* StocksApp.swift in Sources */,
+				45748C78297E509A00CBBF67 /* Quote+Extension.swift in Sources */,
+				45748C66297E459500CBBF67 /* EmptyStateView.swift in Sources */,
+				45748C75297E4AD000CBBF67 /* Utils.swift in Sources */,
+				45748C68297E462800CBBF67 /* ErrorStateView.swift in Sources */,
 				45748C60297BE1C700CBBF67 /* TickerListRowData.swift in Sources */,
 				45748C63297C04DC00CBBF67 /* TickerListRowView.swift in Sources */,
 			);
