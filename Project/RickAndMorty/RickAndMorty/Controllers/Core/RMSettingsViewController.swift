@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// App setting 관리하는 VC
 final class RMSettingsViewController: UIViewController {
 
     override func viewDidLoad() {
