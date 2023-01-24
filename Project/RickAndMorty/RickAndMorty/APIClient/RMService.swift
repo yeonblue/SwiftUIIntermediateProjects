@@ -18,8 +18,17 @@ final class RMService {
     /// API Call 함수
     /// - Parameters:
     ///   - request: request 객체,
+    ///   - type: Codable Type
     ///   - completion: callback with data or error
-    public func execute(_ request: RMRequest, completion: @escaping () -> Void) {
+    public func execute<T: Codable>(
+        _ request: RMRequest,
+        type: T.Type,
+        completion: @escaping (Result<T, Error>) -> Void
+    ) {
         
+        // baseURL: https://rickandmortyapi.com/api
+        // EndPoint
+        // Path components
+        // query param
     }
 }

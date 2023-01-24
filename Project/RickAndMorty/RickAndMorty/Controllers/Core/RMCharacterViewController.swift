@@ -13,5 +13,21 @@ final class RMCharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Characters"
+        
+        let request = RMRequest(
+            endPoint: .character,
+            queryParam: [.init(name: "name", value: "rick"),
+                         .init(name: "status", value: "alive")]
+        )
+
+        RMService.shared.execute(request,
+                                 type: RMCharacter.self) { result in
+            switch result {
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error)
+            }
+        }
     }
 }
