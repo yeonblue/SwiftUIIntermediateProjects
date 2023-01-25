@@ -6,28 +6,26 @@
 //
 
 import UIKit
+import SnapKit
 
 /// show and search for characters
 final class RMCharacterViewController: UIViewController {
 
+    // MARK: - Properties
+    private let characterListView = CharacterListView()
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Characters"
         
-        let request = RMRequest(
-            endPoint: .character,
-            queryParam: [.init(name: "name", value: "rick"),
-                         .init(name: "status", value: "alive")]
-        )
-
-        RMService.shared.execute(request,
-                                 type: RMCharacter.self) { result in
-            switch result {
-                case .success(let result):
-                    print(result)
-                case .failure(let error):
-                    print(error)
-            }
+        setupView()
+    }
+    
+    func setupView() {
+        view.addSubview(characterListView)
+        characterListView.snp.makeConstraints {
+            $0.edges.equalTo(self.view.safeAreaLayoutGuide)
         }
     }
 }

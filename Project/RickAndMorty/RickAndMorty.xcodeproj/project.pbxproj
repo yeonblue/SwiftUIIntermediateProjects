@@ -22,6 +22,11 @@
 		45748CBB297F69BE00CBBF67 /* RMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CBA297F69BE00CBBF67 /* RMService.swift */; };
 		45748CBD297F69CB00CBBF67 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CBC297F69CB00CBBF67 /* RMRequest.swift */; };
 		45748CBF297F6A3300CBBF67 /* RMEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CBE297F6A3300CBBF67 /* RMEndPoint.swift */; };
+		45748CC3298106D000CBBF67 /* RMGetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CC2298106D000CBBF67 /* RMGetAllCharactersResponse.swift */; };
+		45748CC52981123F00CBBF67 /* CharacterListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CC42981123F00CBBF67 /* CharacterListViewViewModel.swift */; };
+		45748CC72981129B00CBBF67 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CC62981129B00CBBF67 /* CharacterListView.swift */; };
+		45748CCA2981194E00CBBF67 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 45748CC92981194E00CBBF67 /* SnapKit */; };
+		45748CCC29811C1500CBBF67 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748CCB29811C1500CBBF67 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,10 @@
 		45748CBA297F69BE00CBBF67 /* RMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMService.swift; sourceTree = "<group>"; };
 		45748CBC297F69CB00CBBF67 /* RMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
 		45748CBE297F6A3300CBBF67 /* RMEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndPoint.swift; sourceTree = "<group>"; };
+		45748CC2298106D000CBBF67 /* RMGetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGetAllCharactersResponse.swift; sourceTree = "<group>"; };
+		45748CC42981123F00CBBF67 /* CharacterListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewViewModel.swift; sourceTree = "<group>"; };
+		45748CC62981129B00CBBF67 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		45748CCB29811C1500CBBF67 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45748CCA2981194E00CBBF67 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +107,7 @@
 		45748CA5297EB94E00CBBF67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				45748CC62981129B00CBBF67 /* CharacterListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +115,7 @@
 		45748CA6297EB95300CBBF67 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				45748CC42981123F00CBBF67 /* CharacterListViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -111,6 +123,8 @@
 		45748CA7297EB95900CBBF67 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				45748CC1298106B100CBBF67 /* APIResponseType */,
+				45748CC0298106A400CBBF67 /* DataTypes */,
 				45748CAB297EBA0800CBBF67 /* RMLocation.swift */,
 				45748CAD297EBA0F00CBBF67 /* RMEpisode.swift */,
 				45748CAF297EBA1D00CBBF67 /* RMCharacter.swift */,
@@ -142,6 +156,7 @@
 				45748C9B297EB6AD00CBBF67 /* LaunchScreen.storyboard */,
 				45748C90297EB6AB00CBBF67 /* AppDelegate.swift */,
 				45748C92297EB6AB00CBBF67 /* SceneDelegate.swift */,
+				45748CCB29811C1500CBBF67 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,6 +171,21 @@
 				45748CB8297EBACF00CBBF67 /* RMSettingsViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		45748CC0298106A400CBBF67 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		45748CC1298106B100CBBF67 /* APIResponseType */ = {
+			isa = PBXGroup;
+			children = (
+				45748CC2298106D000CBBF67 /* RMGetAllCharactersResponse.swift */,
+			);
+			path = APIResponseType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +204,9 @@
 			dependencies = (
 			);
 			name = RickAndMorty;
+			packageProductDependencies = (
+				45748CC92981194E00CBBF67 /* SnapKit */,
+			);
 			productName = RickAndMorty;
 			productReference = 45748C8D297EB6AB00CBBF67 /* RickAndMorty.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 45748C84297EB6AB00CBBF67;
+			packageReferences = (
+				45748CC82981194E00CBBF67 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 45748C8E297EB6AB00CBBF67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,9 +268,13 @@
 				45748CB0297EBA1D00CBBF67 /* RMCharacter.swift in Sources */,
 				45748C95297EB6AB00CBBF67 /* RMTabBarController.swift in Sources */,
 				45748C91297EB6AB00CBBF67 /* AppDelegate.swift in Sources */,
+				45748CC3298106D000CBBF67 /* RMGetAllCharactersResponse.swift in Sources */,
 				45748CAE297EBA0F00CBBF67 /* RMEpisode.swift in Sources */,
+				45748CC72981129B00CBBF67 /* CharacterListView.swift in Sources */,
 				45748C93297EB6AB00CBBF67 /* SceneDelegate.swift in Sources */,
 				45748CB9297EBACF00CBBF67 /* RMSettingsViewController.swift in Sources */,
+				45748CC52981123F00CBBF67 /* CharacterListViewViewModel.swift in Sources */,
+				45748CCC29811C1500CBBF67 /* Extensions.swift in Sources */,
 				45748CBF297F6A3300CBBF67 /* RMEndPoint.swift in Sources */,
 				45748CBB297F69BE00CBBF67 /* RMService.swift in Sources */,
 				45748CAC297EBA0800CBBF67 /* RMLocation.swift in Sources */,
@@ -450,6 +490,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45748CC82981194E00CBBF67 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45748CC92981194E00CBBF67 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45748CC82981194E00CBBF67 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45748C85297EB6AB00CBBF67 /* Project object */;
 }

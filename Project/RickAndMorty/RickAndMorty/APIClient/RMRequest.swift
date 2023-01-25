@@ -18,14 +18,14 @@ final class RMRequest {
     /// Desired Endpoint
     private let endPoint: RMEndPoint
     
-    /// Path Components, can be empty, 중복 방지를 위해 Set을 사용
-    private let pathComponents: Set<[String]>
+    /// Path Components, can be empty
+    private let pathComponents: [String]
     
     /// Query param, can be empty
     private let queryParam: [URLQueryItem]
     
     /// 여기서는 GET만 사용
-    private let httpMethod = "GET"
+    let httpMethod = "GET"
     
     public var url: URL? {
         return URL(string: urlString)
@@ -61,11 +61,15 @@ final class RMRequest {
     ///   - queryParam: Query param, can be empty
     public init(
         endPoint: RMEndPoint,
-        pathComponents: Set<[String]> = [],
+        pathComponents: [String] = [],
         queryParam: [URLQueryItem] = []
     ) {
         self.endPoint = endPoint
         self.pathComponents = pathComponents
         self.queryParam = queryParam
     }
+}
+
+extension RMRequest {
+    static let listCharacterRequests = RMRequest(endPoint: .character)
 }
