@@ -29,14 +29,22 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .systemGreen
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RMCharacterCollectionViewCell.identifier,
+                                                            for: indexPath) as? RMCharacterCollectionViewCell else  {
+            fatalError("Not support cell")
+        }
+        let viewModel = RMCharacterCollectionViewCellViewModel(
+            characterName: "test",
+            characterStatus: .alive,
+            characterImageURL: URL(string: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")
+        )
+        cell.configure(viewModel: viewModel)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let bounds = UIScreen.main.bounds
         let width = (bounds.width - 30) / 2
-        return CGSize(width: width, height: width * 1.25)
+        return CGSize(width: width, height: width * 1.5)
     }
 }

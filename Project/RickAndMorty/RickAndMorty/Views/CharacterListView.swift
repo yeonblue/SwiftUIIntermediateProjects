@@ -24,12 +24,13 @@ class CharacterListView: UIView {
         layout.sectionInset = .init(top: 0, left: 10, bottom: 0, right: 10)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterCollectionViewCell.identifier)
         collectionView.isHidden = true
         collectionView.alpha = 0 // animation을 위함
         return collectionView
     }()
-    
+        
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,6 +47,7 @@ class CharacterListView: UIView {
         fatalError("Unsupport Xib")
     }
     
+    // MARK: - Setup
     private func addConstraints() {
         spinner.snp.makeConstraints({
             $0.width.height.equalTo(100)
