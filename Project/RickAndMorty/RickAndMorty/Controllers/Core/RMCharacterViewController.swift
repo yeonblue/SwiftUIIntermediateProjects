@@ -12,13 +12,13 @@ import SnapKit
 final class RMCharacterViewController: UIViewController {
 
     // MARK: - Properties
-    private let characterListView = CharacterListView()
+    private let characterListView = RMCharacterListView()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Characters"
-        
+        characterListView.delegate = self
         setupView()
     }
     
@@ -27,5 +27,16 @@ final class RMCharacterViewController: UIViewController {
         characterListView.snp.makeConstraints {
             $0.edges.equalTo(self.view.safeAreaLayoutGuide)
         }
+    }
+}
+
+extension RMCharacterViewController: RMCharacterListViewDelegate {
+    func rmCharacterListView(_ chracterListView: RMCharacterListView, didSelectChracter character: RMCharacter) {
+        
+        let viewModel = RMCharacterDetailViewViewModel(character: character)
+        let detailVC = RMCharacterDetailViewController(viewModel: viewModel)
+        
+        detailVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

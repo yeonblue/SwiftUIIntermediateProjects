@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol RMCharacterListViewDelegate: AnyObject {
+    func rmCharacterListView(_ chracterListView: RMCharacterListView, didSelectChracter character: RMCharacter)
+}
+
 /// show list of charaters, loader, etc.
-class CharacterListView: UIView {
+class RMCharacterListView: UIView {
 
     // MARK: - Properties
     private let viewModel = CharacterListViewViewModel()
@@ -21,16 +25,25 @@ class CharacterListView: UIView {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = .init(top: 0, left: 10, bottom: 0, right: 10)
+        layout.sectionInset = .init(top: 0, left: 10, bottom: 10, right: 10)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(RMCharacterCollectionViewCell.self,
                                 forCellWithReuseIdentifier: RMCharacterCollectionViewCell.identifier)
         collectionView.isHidden = true
         collectionView.alpha = 0 // animation을 위함
+        
+        collectionView.register(
+            RMFooterLoadingUICollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+            withReuseIdentifier: RMFooterLoadingUICollectionReusableView.identifier
+        )
+        
         return collectionView
     }()
-        
+       
+    public weak var delegate: RMCharacterListViewDelegate?
+    
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,7 +58,7 @@ class CharacterListView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Unsupport Xib")
+        fatalError("Not support NSCoder init")
     }
     
     // MARK: - Setup
@@ -66,7 +79,8 @@ class CharacterListView: UIView {
     }
 }
 
-extension CharacterListView: RMCharcterListViewModelDelegate {
+extension RMCharacterListView: RMCharcterListViewModelDelegate {
+    
     func didLoadInitialCharacters() {
         spinner.stopAnimating()
         collectionView.isHidden = false
@@ -75,6 +89,9 @@ extension CharacterListView: RMCharcterListViewModelDelegate {
         UIView.animate(withDuration: 0.3) {
             self.collectionView.alpha = 1.0
         }
-        print("fdsfas")
+    }
+    
+    func didSelectCharacter(_ character: RMCharacter) {
+        delegate?.rmCharacterListView(self, didSelectChracter: character)
     }
 }

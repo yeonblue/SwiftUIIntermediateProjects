@@ -93,7 +93,6 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
         // - userInterfaceStyle
         // 같은 것이 변경될때 호출되는 함수 - traitCollectionDidChange
 
-        
         setupLayer()
     }
     

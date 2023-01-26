@@ -9,12 +9,18 @@ import UIKit
 
 protocol RMCharcterListViewModelDelegate: AnyObject {
     func didLoadInitialCharacters()
+    func didSelectCharacter(_ character: RMCharacter)
 }
 
+/// CharacterListView를 handle하는 ViewModel
 class CharacterListViewViewModel: NSObject {
     
     // MARK: - Properties
     public weak var delegate: RMCharcterListViewModelDelegate?
+    
+    /// 추가 페이지를 로딩중인지 여부
+    private var isLoadingMoreCharacters: Bool = false
+    
     private var charcters: [RMCharacter] = [] {
         didSet {
             for charcter in charcters {
@@ -28,15 +34,19 @@ class CharacterListViewViewModel: NSObject {
         }
     }
     
+    private var apiInfo: Info? = nil
     private var cellViewModels: [RMCharacterCollectionViewCellViewModel] = []
 
     // MARK: - Functions
+    
+    /// fetch initial set of character(20)
     public func fetchCharacters() {
         RMService.shared.execute(.listCharacterRequests, type: RMGetAllCharactersResponse.self) { [weak self] result in
             switch result {
                 case .success(let result):
                     let results = result.results
                     self?.charcters = results
+                    self?.apiInfo = result.info
                 
                     DispatchQueue.main.async {
                         self?.delegate?.didLoadInitialCharacters()
@@ -45,6 +55,15 @@ class CharacterListViewViewModel: NSObject {
                     print(error)
             }
         }
+    }
+    
+    /// more load if additionoal chracters are needed
+    public func fetchAdditionalChracters() {
+        
+    }
+    
+    public var shouldShowLoadmoreIndicator: Bool {
+        return apiInfo?.next != nil
     }
 }
 
@@ -69,5 +88,57 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
         let bounds = UIScreen.main.bounds
         let width = (bounds.width - 30) / 2
         return CGSize(width: width, height: width * 1.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let character = charcters[indexPath.row]
+        delegate?.didSelectCharacter(character)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionFooter,
+              shouldShowLoadmoreIndicator,
+              let footer = collectionView.dequeueReusableSupplementaryView(
+                      ofKind: UICollectionView.elementKindSectionFooter,
+                      withReuseIdentifier: RMFooterLoadingUICollectionReusableView.identifier,
+                      for: indexPath
+                  ) as? RMFooterLoadingUICollectionReusableView else {
+            fatalError("Not support")
+        }
+        
+        footer.startAnimating()
+        return footer
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        guard shouldShowLoadmoreIndicator else {
+            return .zero
+        }
+        
+        return CGSize(width: UIScreen.main.bounds.width, height: 100)
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+// CollectionView는 UIScrollView도 상속하므로
+extension CharacterListViewViewModel: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        guard shouldShowLoadmoreIndicator, !isLoadingMoreCharacters else {
+            return
+        }
+        
+        let offset = scrollView.contentOffset.y
+        let totalContentHeight = scrollView.contentSize.height // 스크롤 뷰 실제 content 크기
+        let totalScrollViewFixedHeight = scrollView.frame.size.height
+        
+        // print(offset, totalContentHeight, totalScrollViewFixedHeight) // 0.0 3185.0 700.0
+        // -100은 어느정도 offset
+        
+        if offset >= (totalContentHeight - totalScrollViewFixedHeight - 100) {
+            isLoadingMoreCharacters = true
+        }
     }
 }
