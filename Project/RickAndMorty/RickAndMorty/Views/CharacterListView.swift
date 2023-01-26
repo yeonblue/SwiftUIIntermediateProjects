@@ -41,6 +41,7 @@ class CharacterListView: UIView {
         spinner.startAnimating()
         setupCollectionView()
         viewModel.fetchCharacters()
+        viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -62,14 +63,18 @@ class CharacterListView: UIView {
     private func setupCollectionView() {
         collectionView.delegate = viewModel
         collectionView.dataSource = viewModel
+    }
+}
+
+extension CharacterListView: RMCharcterListViewModelDelegate {
+    func didLoadInitialCharacters() {
+        spinner.stopAnimating()
+        collectionView.isHidden = false
+        collectionView.reloadData()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            self?.spinner.stopAnimating()
-            
-            self?.collectionView.isHidden = false
-            UIView.animate(withDuration: 0.3) {
-                self?.collectionView.alpha = 1.0
-            }
+        UIView.animate(withDuration: 0.3) {
+            self.collectionView.alpha = 1.0
         }
+        print("fdsfas")
     }
 }

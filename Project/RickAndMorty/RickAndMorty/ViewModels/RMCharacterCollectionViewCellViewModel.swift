@@ -16,7 +16,7 @@ struct RMCharacterCollectionViewCellViewModel {
     
     
     public var characterStatusText: String {
-        self.characterStatus.rawValue
+        return "Status: \(characterStatus.rawValue)"
     }
     
     // MARK: - Init

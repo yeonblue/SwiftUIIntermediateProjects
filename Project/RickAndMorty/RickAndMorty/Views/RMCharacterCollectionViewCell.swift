@@ -40,6 +40,7 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubviews(imageView, nameLabel, statusLabel)
         addConstraints()
+        setupLayer()
     }
     
     required init?(coder: NSCoder) {
@@ -49,14 +50,14 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
     // MARK: - Setup
     private func addConstraints() {
         statusLabel.snp.makeConstraints {
-            $0.height.equalTo(50)
+            $0.height.equalTo(30)
             $0.leading.equalToSuperview().inset(5)
             $0.trailing.equalToSuperview().inset(5)
             $0.bottom.equalToSuperview().inset(4)
         }
         
         nameLabel.snp.makeConstraints {
-            $0.height.equalTo(50)
+            $0.height.equalTo(30)
             $0.leading.equalToSuperview().inset(5)
             $0.trailing.equalToSuperview().inset(5) // inset: superview와의 간격에 사용
             $0.bottom.equalTo(statusLabel.snp.top).offset(4) // offset: element와의 간격에 사용
@@ -68,11 +69,32 @@ class RMCharacterCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    private func setupLayer() {
+        contentView.layer.cornerRadius = 8
+        contentView.layer.shadowColor = UIColor.label.cgColor
+        contentView.layer.shadowRadius = 4
+        contentView.layer.shadowOffset = CGSize(width: -4, height: 4)
+        contentView.layer.shadowOpacity = 0.6
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
         nameLabel.text = nil
         statusLabel.text = nil
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        // - horizontal / vertical size class
+        // - display scale
+        // - user interface idiom
+        // - userInterfaceStyle
+        // 같은 것이 변경될때 호출되는 함수 - traitCollectionDidChange
+
+        
+        setupLayer()
     }
     
     public func configure(viewModel: RMCharacterCollectionViewCellViewModel) {
