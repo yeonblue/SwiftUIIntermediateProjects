@@ -94,4 +94,13 @@ extension RMCharacterListView: RMCharcterListViewModelDelegate {
     func didSelectCharacter(_ character: RMCharacter) {
         delegate?.rmCharacterListView(self, didSelectChracter: character)
     }
+    
+    func didLoadMoreCharacters(with newIndexPath: [IndexPath]) {
+
+        collectionView.performBatchUpdates { // performBatchUpdates(:completion:) 사용 시 이점: completion 활용 가능
+            collectionView.insertItems(at: newIndexPath)
+        } completion: { _ in
+            
+        }
+    }
 }

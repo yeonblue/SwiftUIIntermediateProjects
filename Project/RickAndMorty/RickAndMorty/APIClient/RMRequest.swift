@@ -54,6 +54,8 @@ final class RMRequest {
         return urlStr
     }
     
+    // MARK: - Init
+    
     /// Init Constructor
     /// - Parameters:
     ///   - endPoint: Target Endpoint
@@ -67,6 +69,46 @@ final class RMRequest {
         self.endPoint = endPoint
         self.pathComponents = pathComponents
         self.queryParam = queryParam
+    }
+    
+    convenience init?(url: URL) {
+        let string = url.absoluteString
+        guard string.contains(Constants.baseURL) else {
+            return nil
+        }
+        
+        let trimmed = string.replacingOccurrences(of: Constants.baseURL + "/", with: "")
+        if trimmed.contains("/") {
+            let components = trimmed.components(separatedBy: "/")
+            if !components.isEmpty {
+                let endpointString = components[0]
+                if let rmEndPoint = RMEndPoint(rawValue: endpointString) {
+                    self.init(endPoint: rmEndPoint)
+                    return
+                }
+            }
+        } else if trimmed.contains("?") {
+            let components = trimmed.components(separatedBy: "?")
+            if !components.isEmpty, components.count >= 2 {
+                let endpointString = components[0]
+                
+                let queryItemStr = components[1]
+                let queryItem: [URLQueryItem] = queryItemStr.components(separatedBy: "&").compactMap({ query in
+                    guard query.contains("=") else {
+                        return nil
+                    }
+                    
+                    let parts = query.components(separatedBy: "=")
+                    return URLQueryItem(name: parts[0], value: parts[1])
+                })
+                
+                if let rmEndPoint = RMEndPoint(rawValue: endpointString) {
+                    self.init(endPoint: rmEndPoint, queryParam: queryItem)
+                    return
+                }
+            }
+        }
+        return nil
     }
 }
 

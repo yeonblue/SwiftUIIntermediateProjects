@@ -10,6 +10,7 @@ import UIKit
 protocol RMCharcterListViewModelDelegate: AnyObject {
     func didLoadInitialCharacters()
     func didSelectCharacter(_ character: RMCharacter)
+    func didLoadMoreCharacters(with newIndexPath: [IndexPath])
 }
 
 /// CharacterListView를 handle하는 ViewModel
@@ -29,7 +30,10 @@ class CharacterListViewViewModel: NSObject {
                     characterStatus: charcter.status,
                     characterImageURL: URL(string: charcter.image)
                 )
-                cellViewModels.append(viewModel)
+                
+                if !cellViewModels.contains(viewModel) {
+                    cellViewModels.append(viewModel)
+                }
             }
         }
     }
@@ -58,8 +62,48 @@ class CharacterListViewViewModel: NSObject {
     }
     
     /// more load if additionoal chracters are needed
-    public func fetchAdditionalChracters() {
+    public func fetchAdditionalChracters(url: URL) {
         
+        guard isLoadingMoreCharacters == false else {
+            return
+        }
+        
+        isLoadingMoreCharacters = true
+        
+        // fetch more chracters
+        guard let request = RMRequest(url: url) else {
+            isLoadingMoreCharacters = false
+            print("Failed to create request")
+            return
+        }
+        
+        print("Fetching more chracters: \(url.absoluteString)")
+        RMService.shared.execute(request, type: RMGetAllCharactersResponse.self) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+                case .success(let result):
+                    let moreResults = result.results
+                    self.apiInfo = result.info
+                
+                    let originalCount = self.charcters.count
+                    let newCount = moreResults.count
+                    let total = originalCount + newCount
+                    let startIndex = total - newCount
+                    self.charcters.append(contentsOf: moreResults)
+                
+                    let indexPathsToAdd: [IndexPath] = Array(startIndex..<(startIndex + newCount)).compactMap {
+                        return IndexPath(row: $0, section: 0)
+                    }
+
+                    DispatchQueue.main.async {
+                        self.delegate?.didLoadMoreCharacters(with: indexPathsToAdd)
+                        self.isLoadingMoreCharacters = false
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self.isLoadingMoreCharacters = false
+            }
+        }
     }
     
     public var shouldShowLoadmoreIndicator: Bool {
@@ -126,7 +170,9 @@ extension CharacterListViewViewModel: UICollectionViewDataSource, UICollectionVi
 extension CharacterListViewViewModel: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        guard shouldShowLoadmoreIndicator, !isLoadingMoreCharacters else {
+        guard shouldShowLoadmoreIndicator,
+              !isLoadingMoreCharacters,
+              let nextURLStr = apiInfo?.next, let url = URL(string: nextURLStr) else {
             return
         }
         
@@ -138,7 +184,7 @@ extension CharacterListViewViewModel: UIScrollViewDelegate {
         // -100은 어느정도 offset
         
         if offset >= (totalContentHeight - totalScrollViewFixedHeight - 100) {
-            isLoadingMoreCharacters = true
+            fetchAdditionalChracters(url: url)
         }
     }
 }
