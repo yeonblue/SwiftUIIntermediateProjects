@@ -52,13 +52,19 @@ final class RMCharacterDetailView: UIView {
         }
     }
     
+    // MARK: - CollectionView Compositional Layout
     private func createCollectionView() -> UICollectionView {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             return self.createSection(for: sectionIndex)
         }
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterPhotoCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterPhotoCollectionViewCell.identifier)
+        collectionView.register(RMCharacterInfoCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterInfoCollectionViewCell.identifier)
+        collectionView.register(RMCharacterEpisodeCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterEpisodeCollectionViewCell.identifier)
         return collectionView
     }
     
@@ -67,48 +73,54 @@ final class RMCharacterDetailView: UIView {
         let sectionTypes = viewModel.sections
         
         switch sectionTypes[sectionIdx] {
-            case .photo:
-                return createPhotoSectionLayout()
-            case .infomation:
-                return createInfoSectionLayout()
-            case .episodes:
-                return createEpisodesSectionLayout()
+        case .photo:
+            return createPhotoSectionLayout()
+        case .infomation:
+            return createInfoSectionLayout()
+        case .episodes:
+            return createEpisodesSectionLayout()
         }
     }
     
     private func createPhotoSectionLayout() -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
         
         let item = NSCollectionLayoutItem(layoutSize: size)
         item.contentInsets = .init(top: 0, leading: 0, bottom: 10, trailing: 0)
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
-       
+        
         return section
     }
     
     private func createInfoSectionLayout() -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150))
         
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(150))
         let item = NSCollectionLayoutItem(layoutSize: size)
-        item.contentInsets = .init(top: 0, leading: 0, bottom: 10, trailing: 0)
+        item.contentInsets = .init(top: 0, leading: 2, bottom: 4, trailing: 2)
         
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item, item])
         let section = NSCollectionLayoutSection(group: group)
-       
+        
         return section
     }
     
     private func createEpisodesSectionLayout() -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150))
-        
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: size)
-        item.contentInsets = .init(top: 0, leading: 0, bottom: 10, trailing: 0)
+        item.contentInsets = .init(top: 2, leading: 2, bottom: 10, trailing: 2)
         
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalHeight(0.8),
+                heightDimension: .absolute(150)),
+            subitems: [item]
+        )
         let section = NSCollectionLayoutSection(group: group)
-       
+        section.orthogonalScrollingBehavior = .groupPaging // groupPagingCentered: 하나씩 가운데에 배치되게 할 수 있음
+        
         return section
     }
 }
