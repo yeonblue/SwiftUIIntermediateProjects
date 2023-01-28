@@ -33,6 +33,7 @@
 		45E8D10129825CED0017DC9B /* RMCharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D10029825CED0017DC9B /* RMCharacterDetailView.swift */; };
 		45E8D10329825D060017DC9B /* RMCharacterDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D10229825D060017DC9B /* RMCharacterDetailViewViewModel.swift */; };
 		45E8D10529826CB50017DC9B /* RMFooterLoadingUICollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D10429826CB50017DC9B /* RMFooterLoadingUICollectionReusableView.swift */; };
+		45E8D1072983940E0017DC9B /* RMImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D1062983940E0017DC9B /* RMImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		45E8D10029825CED0017DC9B /* RMCharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailView.swift; sourceTree = "<group>"; };
 		45E8D10229825D060017DC9B /* RMCharacterDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailViewViewModel.swift; sourceTree = "<group>"; };
 		45E8D10429826CB50017DC9B /* RMFooterLoadingUICollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFooterLoadingUICollectionReusableView.swift; sourceTree = "<group>"; };
+		45E8D1062983940E0017DC9B /* RMImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		45748CA8297EB95E00CBBF67 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				45E8D1062983940E0017DC9B /* RMImageLoader.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				45748C93297EB6AB00CBBF67 /* SceneDelegate.swift in Sources */,
 				45748CB9297EBACF00CBBF67 /* RMSettingsViewController.swift in Sources */,
 				45748CC52981123F00CBBF67 /* CharacterListViewViewModel.swift in Sources */,
+				45E8D1072983940E0017DC9B /* RMImageLoader.swift in Sources */,
 				45E8D10329825D060017DC9B /* RMCharacterDetailViewViewModel.swift in Sources */,
 				45748CCC29811C1500CBBF67 /* Extensions.swift in Sources */,
 				45748CBF297F6A3300CBBF67 /* RMEndPoint.swift in Sources */,

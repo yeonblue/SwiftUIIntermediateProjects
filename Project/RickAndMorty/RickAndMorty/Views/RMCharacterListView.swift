@@ -97,7 +97,9 @@ extension RMCharacterListView: RMCharcterListViewModelDelegate {
     
     func didLoadMoreCharacters(with newIndexPath: [IndexPath]) {
 
-        collectionView.performBatchUpdates { // performBatchUpdates(:completion:) 사용 시 이점: completion 활용 가능
+        collectionView.performBatchUpdates {
+            // performBatchUpdates(:completion:) 사용 시 이점: completion 활용 가능
+            // 아니면 여러 개의 변경을 동시에 animate하고 싶을 때, 추가로 performBatchUpdates는 delete를 우선 작업 주의
             collectionView.insertItems(at: newIndexPath)
         } completion: { _ in
             
