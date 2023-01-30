@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct NetworkingSandBoxApp: App {
+    
+    #if DEBUG
+    @State var networkManager = NetworkManager(enviroment: .testing)
+    #else
+    @State var networkManager = NetworkManager(enviroment: .production)
+    #endif
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.networkManager, networkManager)
         }
     }
 }

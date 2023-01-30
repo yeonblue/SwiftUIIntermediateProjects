@@ -11,6 +11,7 @@
 		45E8D189298794010017DC9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D188298794010017DC9B /* ContentView.swift */; };
 		45E8D18B298794030017DC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E8D18A298794030017DC9B /* Assets.xcassets */; };
 		45E8D18E298794030017DC9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E8D18D298794030017DC9B /* Preview Assets.xcassets */; };
+		45E8D1962987BB9C0017DC9B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8D1952987BB9C0017DC9B /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		45E8D188298794010017DC9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		45E8D18A298794030017DC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45E8D18D298794030017DC9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45E8D1952987BB9C0017DC9B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				45E8D186298794010017DC9B /* NetworkingSandBoxApp.swift */,
 				45E8D188298794010017DC9B /* ContentView.swift */,
+				45E8D1952987BB9C0017DC9B /* NetworkManager.swift */,
 				45E8D18A298794030017DC9B /* Assets.xcassets */,
 				45E8D18C298794030017DC9B /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E8D1962987BB9C0017DC9B /* NetworkManager.swift in Sources */,
 				45E8D189298794010017DC9B /* ContentView.swift in Sources */,
 				45E8D187298794010017DC9B /* NetworkingSandBoxApp.swift in Sources */,
 			);
