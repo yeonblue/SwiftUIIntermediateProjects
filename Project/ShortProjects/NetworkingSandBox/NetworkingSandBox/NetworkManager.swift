@@ -26,6 +26,7 @@ struct EndPoint<T: Decodable> {
     var type: T.Type
     var method = HTTPMethod.get
     var headers = [String: String]()
+    var keyPath: String?
 }
 
 extension EndPoint where T == [News] {
@@ -35,6 +36,26 @@ extension EndPoint where T == [News] {
 
 extension EndPoint where T == [Message] {
     static let messages = EndPoint(path: "messages.json", type: [Message].self)
+}
+
+extension EndPoint where T == String {
+    static let city = EndPoint(path: "nested.json", type: String.self, keyPath: "response.user.address.city")
+    
+    /*
+     {
+         "response": {
+             "code": 200,
+             "user": {
+                 "name": "Johnny Appleseed",
+                 "address": {
+                     "city": "Cupertino",
+                     "state": "California"
+                 }
+             }
+         },
+         "hash": "b5d6bb47c7820de4706e73b4921893a3b2d4ee4c"
+     }
+     */
 }
 
 //extension EndPoint where T == [String: String] {
@@ -65,6 +86,15 @@ struct NetworkManager {
         request.httpBody = data
         
         var (data, _) = try await enviroment.session.data(for: request)
+        
+        if let keyPath = resource.keyPath {
+            if let rootObject = try JSONSerialization.jsonObject(with: data) as? NSDictionary {
+                if let nestedObject = rootObject.value(forKeyPath: keyPath) {
+                    data = try JSONSerialization.data(withJSONObject: nestedObject, options: .fragmentsAllowed)
+                }
+            }
+        }
+        
         let result = try JSONDecoder().decode(T.self, from: data)
         return result
     }

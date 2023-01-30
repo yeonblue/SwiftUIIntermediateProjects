@@ -45,8 +45,12 @@ struct ContentView: View {
             do {
                 headlines = try await networkManager.fetch(.headlines)
                 messages = try await networkManager.fetch(.messages)
-                print(try await networkManager.fetch(.inValidURL, defaultValue: []))
-                print(try await networkManager.fetch(.inValidURL, attempts: 5))
+                
+                let city = try await networkManager.fetch(.city)
+                print(city)
+                
+                // print(try await networkManager.fetch(.inValidURL, defaultValue: []))
+                // print(try await networkManager.fetch(.inValidURL, attempts: 5))
             } catch {
                 print(error.localizedDescription)
             }
