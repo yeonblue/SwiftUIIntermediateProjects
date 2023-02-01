@@ -71,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		456D334A29893466003B9B98 /* Advanced.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Advanced.entitlements; sourceTree = "<group>"; };
 		45748C332977B03300CBBF67 /* 19. AdvancedCombinePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "19. AdvancedCombinePractice.swift"; sourceTree = "<group>"; };
 		45748C352978114100CBBF67 /* 20. FuturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20. FuturePractice.swift"; sourceTree = "<group>"; };
 		45748C3829791CE900CBBF67 /* CloudKitUserPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUserPractice.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 		45D2FC732966B28700CDFF41 /* Advanced */ = {
 			isa = PBXGroup;
 			children = (
+				456D334A29893466003B9B98 /* Advanced.entitlements */,
 				45D2FC782966B28800CDFF41 /* Assets.xcassets */,
 				45D2FC7A2966B28800CDFF41 /* Preview Content */,
 				45D2FC742966B28700CDFF41 /* AdvancedApp.swift */,
@@ -602,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Advanced/Advanced.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Advanced/Preview Content\"";
@@ -632,6 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Advanced/Advanced.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Advanced/Preview Content\"";

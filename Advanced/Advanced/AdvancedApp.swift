@@ -25,7 +25,8 @@ struct AdvancedApp: App {
     
     var body: some Scene {
         WindowGroup {
-            UITestPractice(userIsSignIn: currentUserIsSignedIn)
+            CloudKitUserPractice()
+            //UITestPractice(userIsSignIn: currentUserIsSignedIn)
         }
     }
 }
