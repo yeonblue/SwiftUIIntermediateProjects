@@ -10,11 +10,12 @@ import CloudKit
 
 struct FruitModel: Hashable {
     let name: String
+    let imageURL: URL?
     let record: CKRecord // 연습용으로 실제 모델에서 직접 record를 넣는 것은 좋지 않음
 }
 
-
 // CloudKit Console에서 Indexes sort할 키 정의 가능 - queryable이 아닌 sortable
+// event는 completion으로 처리
 class CloudKitCrudPracticeViewModel: ObservableObject {
     
     @Published var text: String = ""
@@ -33,7 +34,21 @@ class CloudKitCrudPracticeViewModel: ObservableObject {
         let newFruit = CKRecord(recordType: "Fruits")
         newFruit["name"] = name
         
-        saveItem(record: newFruit)
+        // CKAsset을 올리고 싶으면 FileManager에 저장을 하고 그 URL을 이용해야 함
+        // 하지만 내려올 때는 cloudkit에 저장된 url이 내려옴
+        guard
+            let image = UIImage(named: "swift"),
+            let path = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent("swift.jpg"),
+            let data = image.jpegData(compressionQuality: 1.0) else { return }
+        
+        do {
+            try data.write(to: path)
+            let asset = CKAsset(fileURL: path)
+            newFruit["image"] = asset
+            saveItem(record: newFruit)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     private func saveItem(record: CKRecord) {
@@ -65,8 +80,9 @@ class CloudKitCrudPracticeViewModel: ObservableObject {
             switch returnedResult {
                 case .success(let record):
                     guard let name = record["name"] as? String else { return }
-                    //record.creationDate
-                    returnedItems.append(FruitModel(name: name, record: record))
+                    let imageAsset = record["image"] as? CKAsset
+                    let imageURL = imageAsset?.fileURL
+                returnedItems.append(FruitModel(name: name, imageURL: imageURL, record: record))
                 case .failure(let error):
                     print("Error recordMatchedBlock: \(error.localizedDescription)")
             }
@@ -134,10 +150,20 @@ struct CloudKitCrudPractice: View {
                 
                 List {
                     ForEach(vm.fruits, id: \.self) { fruit in
-                        Text(fruit.name)
-                            .onTapGesture {
-                                vm.updateItem(fruit: fruit)
+                        HStack {
+                            Text(fruit.name)
+                                .onTapGesture {
+                                    vm.updateItem(fruit: fruit)
+                                }
+                            
+                            if let url = fruit.imageURL,
+                               let data = try? Data(contentsOf: url),
+                               let image = UIImage(data: data) {
+                               Image(uiImage: image)
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
                             }
+                        }
                     }
                     .onDelete(perform: vm.delete)
                 }
