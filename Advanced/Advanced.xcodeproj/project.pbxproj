@@ -15,6 +15,7 @@
 		45D2FC7C2966B28800CDFF41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D2FC7B2966B28800CDFF41 /* Preview Assets.xcassets */; };
 		45D2FC832967AA1600CDFF41 /* 1. ViewModifierPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC822967AA1600CDFF41 /* 1. ViewModifierPractice.swift */; };
 		45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D2FC842967AFEA00CDFF41 /* 2. ButtonStylePractice.swift */; };
+		45E8CE35298A00AB0052E167 /* CloudKitCrudPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8CE34298A00AB0052E167 /* CloudKitCrudPractice.swift */; };
 		45F513A7296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513A6296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift */; };
 		45F513A9296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513A8296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift */; };
 		45F513AB296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */; };
@@ -81,6 +82,7 @@
 		45D2FC7B2966B28800CDFF41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45D2FC822967AA1600CDFF41 /* 1. ViewModifierPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1. ViewModifierPractice.swift"; sourceTree = "<group>"; };
 		45D2FC842967AFEA00CDFF41 /* 2. ButtonStylePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2. ButtonStylePractice.swift"; sourceTree = "<group>"; };
+		45E8CE34298A00AB0052E167 /* CloudKitCrudPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCrudPractice.swift; sourceTree = "<group>"; };
 		45F513A6296E5A6700FBD2FA /* 3. CustomAnyTransitionPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3. CustomAnyTransitionPractice.swift"; sourceTree = "<group>"; };
 		45F513A8296E6B3400FBD2FA /* 4. MatchedGeometryEffectPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4. MatchedGeometryEffectPractice.swift"; sourceTree = "<group>"; };
 		45F513AA296E6DC400FBD2FA /* 4.1. MatchedGeometryEffectPractice2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4.1. MatchedGeometryEffectPractice2.swift"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				45748C3829791CE900CBBF67 /* CloudKitUserPractice.swift */,
+				45E8CE34298A00AB0052E167 /* CloudKitCrudPractice.swift */,
 			);
 			path = "21. CloudKitPractice";
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				45F513C12970239300FBD2FA /* CustomTabBarView.swift in Sources */,
 				45F513D4297131DC00FBD2FA /* CustomNavLink.swift in Sources */,
 				45F513BA296FE2F400FBD2FA /* 10.1. GeometryPreferencePractice.swift in Sources */,
+				45E8CE35298A00AB0052E167 /* CloudKitCrudPractice.swift in Sources */,
 				45748C3929791CE900CBBF67 /* CloudKitUserPractice.swift in Sources */,
 				45748C362978114100CBBF67 /* 20. FuturePractice.swift in Sources */,
 				45D2FC752966B28700CDFF41 /* AdvancedApp.swift in Sources */,
