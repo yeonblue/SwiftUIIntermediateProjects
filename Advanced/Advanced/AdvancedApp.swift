@@ -25,7 +25,7 @@ struct AdvancedApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CloudKitPushNotificationView()
+            CloudKitCrudPractice()
             //UITestPractice(userIsSignIn: currentUserIsSignedIn)
         }
     }

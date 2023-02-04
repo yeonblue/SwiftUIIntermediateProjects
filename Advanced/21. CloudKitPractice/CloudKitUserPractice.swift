@@ -11,6 +11,7 @@
 
 import SwiftUI
 import CloudKit
+import Combine
 
 class CloudKitUserPracticeViewModel: ObservableObject {
     
@@ -18,6 +19,8 @@ class CloudKitUserPracticeViewModel: ObservableObject {
     @Published var isSignedIntoiCloud: Bool = false
     @Published var error: String = ""
     @Published var userName: String = ""
+    
+    var cancellables = Set<AnyCancellable>()
     
     init() {
         getiCloudStatus()
@@ -28,34 +31,29 @@ class CloudKitUserPracticeViewModel: ObservableObject {
     private func getiCloudStatus() {
         
         // iCloud에 로그인 여부를 알 수 있음
-        CKContainer.default().accountStatus { [weak self] status, error in
-            DispatchQueue.main.async {
-                switch status {
-                case .couldNotDetermine:
-                    self?.error = CloudKitError.iCloudAcountNotDetermined.localizedDescription
-                case .available:
-                    self?.isSignedIntoiCloud = true
-                case .restricted:
-                    self?.error = CloudKitError.iCloudAccountRestricted.localizedDescription
-                case .noAccount:
-                    self?.error = CloudKitError.iCloudAccountNotFound.localizedDescription
-                case .temporarilyUnavailable:
-                    break
-                @unknown default:
-                    self?.error = CloudKitError.iCloudAccountUnknown.localizedDescription
+        CloudKitUtility.getCloudStatus()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        self?.error = error.localizedDescription
                 }
-            }
-        }
+            } receiveValue: { [weak self] success in
+                self?.isSignedIntoiCloud = success
+            }.store(in: &cancellables)
     }
     
     func requestPermission() {
-        CKContainer.default().requestApplicationPermission(.userDiscoverability) { [weak self] permission, error in
-            DispatchQueue.main.async {
-                if  permission == .granted {
-                    self?.permissionStatus = true
-                }
-            }
-        }
+        CloudKitUtility.requestAplicationPermission()
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                
+            } receiveValue: { [weak self] success in
+                self?.permissionStatus = success
+            }.store(in: &cancellables)
+
     }
     
     func fetchiCloudUserRecordID() {
@@ -83,13 +81,6 @@ class CloudKitUserPracticeViewModel: ObservableObject {
                 // email로 찾았으면 email은 볼 수 있음
             }
         }
-    }
-    
-    enum CloudKitError: String, LocalizedError {
-        case iCloudAccountNotFound
-        case iCloudAcountNotDetermined
-        case iCloudAccountRestricted
-        case iCloudAccountUnknown
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4510AAA5298A39DC0068FDE9 /* CloudKitPushNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510AAA4298A39DC0068FDE9 /* CloudKitPushNotificationView.swift */; };
+		4510AAA7298E2A670068FDE9 /* CloudKitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510AAA6298E2A670068FDE9 /* CloudKitUtility.swift */; };
 		45748C342977B03300CBBF67 /* 19. AdvancedCombinePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C332977B03300CBBF67 /* 19. AdvancedCombinePractice.swift */; };
 		45748C362978114100CBBF67 /* 20. FuturePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C352978114100CBBF67 /* 20. FuturePractice.swift */; };
 		45748C3929791CE900CBBF67 /* CloudKitUserPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45748C3829791CE900CBBF67 /* CloudKitUserPractice.swift */; };
@@ -74,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		4510AAA4298A39DC0068FDE9 /* CloudKitPushNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitPushNotificationView.swift; sourceTree = "<group>"; };
+		4510AAA6298E2A670068FDE9 /* CloudKitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUtility.swift; sourceTree = "<group>"; };
 		456D334A29893466003B9B98 /* Advanced.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Advanced.entitlements; sourceTree = "<group>"; };
 		45748C332977B03300CBBF67 /* 19. AdvancedCombinePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "19. AdvancedCombinePractice.swift"; sourceTree = "<group>"; };
 		45748C352978114100CBBF67 /* 20. FuturePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "20. FuturePractice.swift"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				45748C3829791CE900CBBF67 /* CloudKitUserPractice.swift */,
 				45E8CE34298A00AB0052E167 /* CloudKitCrudPractice.swift */,
 				4510AAA4298A39DC0068FDE9 /* CloudKitPushNotificationView.swift */,
+				4510AAA6298E2A670068FDE9 /* CloudKitUtility.swift */,
 			);
 			path = "21. CloudKitPractice";
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				45F513AD296E8F4200FBD2FA /* 5. CustomShapePractice.swift in Sources */,
 				45F513DA29717C6400FBD2FA /* 14. UIViewControllerRepresentablePractice.swift in Sources */,
 				45F513C52970E55C00FBD2FA /* TabBaritemPreferenceKey.swift in Sources */,
+				4510AAA7298E2A670068FDE9 /* CloudKitUtility.swift in Sources */,
 				45D2FC852967AFEA00CDFF41 /* 2. ButtonStylePractice.swift in Sources */,
 				45F513B7296FDEE000FBD2FA /* 10. PreferenceKeyPractice.swift in Sources */,
 				45F513B1296ED06F00FBD2FA /* 7. AnimatedableDataPractice.swift in Sources */,

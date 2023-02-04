@@ -7,11 +7,40 @@
 
 import SwiftUI
 import CloudKit
+import Combine
 
-struct FruitModel: Hashable {
+struct FruitModel: Hashable, CloudKitableProtocol {
     let name: String
     let imageURL: URL?
     let record: CKRecord // 연습용으로 실제 모델에서 직접 record를 넣는 것은 좋지 않음
+    
+    init?(record: CKRecord) {
+        guard let name = record["name"] as? String else { return nil }
+        let imageAsset = record["image"] as? CKAsset
+        let url = imageAsset?.fileURL
+        
+        self.name = name
+        self.imageURL = url
+        self.record = record
+    }
+    
+    init?(name: String, imageURL: URL? = nil) {
+        let record = CKRecord(recordType: "Fruits")
+        record["name"] = name
+        
+        if let url = imageURL {
+            let asset = CKAsset(fileURL: url)
+            record["image"] = asset
+        }
+        
+        self.init(record: record)
+    }
+    
+    func update(newName: String) -> FruitModel? {
+        let record = record
+        record["name"] = newName
+        return FruitModel(record: record)
+    }
 }
 
 // CloudKit Console에서 Indexes sort할 키 정의 가능 - queryable이 아닌 sortable
@@ -20,6 +49,8 @@ class CloudKitCrudPracticeViewModel: ObservableObject {
     
     @Published var text: String = ""
     @Published var fruits: [FruitModel] = []
+    
+    var cancellable = Set<AnyCancellable>()
     
     init() {
         fetchItems()
@@ -63,55 +94,65 @@ class CloudKitCrudPracticeViewModel: ObservableObject {
         }
     }
     
+    // func fetchItems() {
+    //     let predicate = NSPredicate(value: true) // 모두를 fetch하고 싶으므로
+    //     // let predicate = NSPredicate(format: "name == %@", "Apple")
+    //
+    //     let query = CKQuery(recordType: "Fruits", predicate: predicate)
+    //     query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+    //
+    //     let queryOperation = CKQueryOperation(query: query)
+    //
+    //     var returnedItems: [FruitModel] = []
+    //
+    //     // result 콜백을 따로 설정, iOS 15이상 사용 가능, recordMatchedBlock을 이용해서 검색결과를 이용한 핸들러를 정의
+    //     // 단일 실행으로 조회할때마다 실행되는 클로져
+    //     queryOperation.recordMatchedBlock = { (returnRecordID, returnedResult) in
+    //         switch returnedResult {
+    //             case .success(let record):
+    //                 guard let name = record["name"] as? String else { return }
+    //                 let imageAsset = record["image"] as? CKAsset
+    //                 let imageURL = imageAsset?.fileURL
+    //                 returnedItems.append(FruitModel(name: name, imageURL: imageURL, record: record))
+    //             case .failure(let error):
+    //                 print("Error recordMatchedBlock: \(error.localizedDescription)")
+    //         }
+    //     }
+    //
+    //     // queryOperation.recordFetchedBlock = { (returnedRecord) in
+    //     //     guard let name = returnedRecord["name"] as? String else { return }
+    //     //     returnedItems.append(name)
+    //     // }
+    //
+    //     // result 콜백을 따로 설정, iOS 15이상 사용 가능, fetch가 완전히 끝났을 때 동작
+    //      queryOperation.queryResultBlock = { [weak self] returnResult in
+    //          switch returnResult {
+    //              case .success(let result):
+    //                  DispatchQueue.main.async {
+    //                      print("queryResultBlock result: \(String(describing: result))")
+    //                      self?.fruits = returnedItems
+    //                  }
+    //              case .failure(let error):
+    //                 print("Error queryResultBlock: \(error.localizedDescription)")
+    //          }
+    //      }
+    //
+    //     // queryOperation.queryCompletionBlock = { (returnedCursor, error) in
+    //     //     print(returnedCursor)
+    //     // }
+    //
+    //     queryOperation.resultsLimit = 5 // 제힌을 둘 수도 있음, 하지만 최대 100개로 제한되어있음.
+    //     addOperations(operation: queryOperation)
+    // }
+    
     func fetchItems() {
-        let predicate = NSPredicate(value: true) // 모두를 fetch하고 싶으므로
-        // let predicate = NSPredicate(format: "name == %@", "Apple")
-        
-        let query = CKQuery(recordType: "Fruits", predicate: predicate)
-        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
-        
-        let queryOperation = CKQueryOperation(query: query)
-        
-        var returnedItems: [FruitModel] = []
-        
-        // result 콜백을 따로 설정, iOS 15이상 사용 가능, recordMatchedBlock을 이용해서 검색결과를 이용한 핸들러를 정의
-        // 단일 실행으로 조회할때마다 실행되는 클로져
-        queryOperation.recordMatchedBlock = { (returnRecordID, returnedResult) in
-            switch returnedResult {
-                case .success(let record):
-                    guard let name = record["name"] as? String else { return }
-                    let imageAsset = record["image"] as? CKAsset
-                    let imageURL = imageAsset?.fileURL
-                returnedItems.append(FruitModel(name: name, imageURL: imageURL, record: record))
-                case .failure(let error):
-                    print("Error recordMatchedBlock: \(error.localizedDescription)")
-            }
-        }
-        
-        // queryOperation.recordFetchedBlock = { (returnedRecord) in
-        //     guard let name = returnedRecord["name"] as? String else { return }
-        //     returnedItems.append(name)
-        // }
-        
-        // result 콜백을 따로 설정, iOS 15이상 사용 가능, fetch가 완전히 끝났을 때 동작
-         queryOperation.queryResultBlock = { [weak self] returnResult in
-             switch returnResult {
-                 case .success(let result):
-                     DispatchQueue.main.async {
-                         print("queryResultBlock result: \(String(describing: result))")
-                         self?.fruits = returnedItems
-                     }
-                 case .failure(let error):
-                    print("Error queryResultBlock: \(error.localizedDescription)")
-             }
-         }
-        
-        // queryOperation.queryCompletionBlock = { (returnedCursor, error) in
-        //     print(returnedCursor)
-        // }
-        
-        queryOperation.resultsLimit = 5 // 제힌을 둘 수도 있음, 하지만 최대 100개로 제한되어있음.
-        addOperations(operation: queryOperation)
+        let predicate = NSPredicate(value: true)
+        CloudKitUtility.fetchUsingCombine(predicate: predicate, recordType: "Fruits")
+            .replaceError(with: [])
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] items in
+                self?.fruits = items
+            }.store(in: &cancellable)
     }
     
     func addOperations(operation: CKDatabaseOperation) {
