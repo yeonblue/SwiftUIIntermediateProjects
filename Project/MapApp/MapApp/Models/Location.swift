@@ -22,11 +22,15 @@ import MapKit
      link: "https://en.wikipedia.org/wiki/Colosseum")
 */
 
-struct Location {
+struct Location: Identifiable {
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
     let description: String
     let imageNames: [String]
     let link: String
+    
+    var id: String { // id가 같으면 같은 Location으로 간주, 이름과 도시명이 같으면 같은 것으로 간주
+        return name + cityName
+    }
 }
