@@ -16,6 +16,7 @@
 		4510AACD2990EF3D0068FDE9 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510AACC2990EF3D0068FDE9 /* LocationsView.swift */; };
 		4510AACF2990F13B0068FDE9 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510AACE2990F13B0068FDE9 /* LocationsViewModel.swift */; };
 		4510AAD12991E1530068FDE9 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510AAD02991E1530068FDE9 /* LocationsListView.swift */; };
+		4510AAD32991F1C30068FDE9 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510AAD22991F1C30068FDE9 /* LocationPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4510AACC2990EF3D0068FDE9 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		4510AACE2990F13B0068FDE9 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		4510AAD02991E1530068FDE9 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
+		4510AAD22991F1C30068FDE9 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				4510AACC2990EF3D0068FDE9 /* LocationsView.swift */,
 				4510AAD02991E1530068FDE9 /* LocationsListView.swift */,
+				4510AAD22991F1C30068FDE9 /* LocationPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				4510AACB2990A9450068FDE9 /* LocationsDataService.swift in Sources */,
 				4510AAD12991E1530068FDE9 /* LocationsListView.swift in Sources */,
+				4510AAD32991F1C30068FDE9 /* LocationPreviewView.swift in Sources */,
 				4510AACF2990F13B0068FDE9 /* LocationsViewModel.swift in Sources */,
 				4510AAB72990A3E70068FDE9 /* ContentView.swift in Sources */,
 				4510AACD2990EF3D0068FDE9 /* LocationsView.swift in Sources */,

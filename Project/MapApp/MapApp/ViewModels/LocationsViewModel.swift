@@ -54,4 +54,24 @@ class LocationsViewModel: ObservableObject {
             showLocationsList = false
         }
     }
+    
+    func nextButtonTapped() {
+        
+        // Get curent idx
+        guard let currentIdx = locations.firstIndex(of: mapLocation) else {
+            return
+        }
+        
+        // check nextIdx is valid
+        let nextIdx = currentIdx + 1
+        
+        guard locations.indices.contains(nextIdx) else {
+            // no next item, move 0 idx
+            showNextLocation(location: locations.first!) // 이 프로젝트에서는 데이터가 없는 경우는 없으므로
+            return
+        }
+        
+        let nextLocation = locations[nextIdx]
+        showNextLocation(location: nextLocation)
+    }
 }

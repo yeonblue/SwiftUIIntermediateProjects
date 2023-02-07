@@ -66,5 +66,4 @@ class LocationsDataService {
             ],
             link: "https://en.wikipedia.org/wiki/Louvre"),
     ]
-    
 }
