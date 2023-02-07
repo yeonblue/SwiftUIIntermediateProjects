@@ -22,7 +22,7 @@ import MapKit
      link: "https://en.wikipedia.org/wiki/Colosseum")
 */
 
-struct Location: Identifiable {
+struct Location: Identifiable, Equatable { // Equatable이 있어야 .animation(<#T##animation: Animation?##Animation?#>, value: <#T##Equatable#>)에 사용 가능
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
@@ -32,5 +32,9 @@ struct Location: Identifiable {
     
     var id: String { // id가 같으면 같은 Location으로 간주, 이름과 도시명이 같으면 같은 것으로 간주
         return name + cityName
+    }
+    
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        return lhs.id == rhs.id
     }
 }
