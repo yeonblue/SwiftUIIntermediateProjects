@@ -44,7 +44,7 @@ extension LocationDetailView {
                     Image(imgName)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.width)
+                        .frame(width: UIDevice.current.userInterfaceIdiom == .pad ? nil : UIScreen.main.bounds.width)
                         .clipped()
                 }
             }
@@ -59,6 +59,7 @@ extension LocationDetailView {
                 Text(location.name)
                     .font(.largeTitle)
                     .fontWeight(.semibold)
+                    .foregroundColor(.primary)
                 Text(location.cityName)
                     .font(.title3)
                     .foregroundColor(.secondary)
