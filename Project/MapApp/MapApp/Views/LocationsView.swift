@@ -14,7 +14,7 @@ struct LocationsView: View {
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $vm.mapRegion)
+            mapLayerView
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
@@ -23,19 +23,11 @@ struct LocationsView: View {
                 
                 Spacer()
                 
-                ZStack {
-                    ForEach(vm.locations) { loc in
-                        if vm.mapLocation == loc {
-                            LocationPreviewView(location: loc)
-                                .shadow(color: .black.opacity(0.5), radius: 20)
-                                .padding()
-                                .transition(.asymmetric(insertion: .move(edge: .trailing),
-                                                        removal: .move(edge: .leading)))
-                        }
-                    }
-                }
-
+                locationPreviewView
             }
+        }
+        .sheet(item: $vm.sheetLocation) { loc in
+            LocationDetailView(location: loc)
         }
     }
 }
@@ -73,6 +65,38 @@ extension LocationsView {
         .background(.thickMaterial)
         .cornerRadius(10)
         .shadow(color: .black.opacity(0.5), radius: 20, x: 0, y: 15)
+    }
+    
+    private var mapLayerView: some View {
+        Map(
+            coordinateRegion: $vm.mapRegion,
+            annotationItems: vm.locations, // identifiable한 list(RandomAccessCollections)
+            annotationContent: { loc in
+                
+                // MapMarker(coordinate: loc.coordinates, tint: .blue) // MapPin은 deprecated
+                MapAnnotation(coordinate: loc.coordinates) {
+                    LocationMapAnnotationView()
+                        .scaleEffect(vm.mapLocation == loc ? 1 : 0.6)
+                        .onTapGesture {
+                            vm.showNextLocation(location: loc)
+                        }
+                }
+            }
+        )
+    }
+    
+    private var locationPreviewView: some View {
+        ZStack {
+            ForEach(vm.locations) { loc in
+                if vm.mapLocation == loc {
+                    LocationPreviewView(location: loc)
+                        .shadow(color: .black.opacity(0.5), radius: 20)
+                        .padding()
+                        .transition(.asymmetric(insertion: .move(edge: .trailing),
+                                                removal: .move(edge: .leading)))
+                }
+            }
+        }
     }
 }
 
