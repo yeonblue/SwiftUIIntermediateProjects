@@ -12,6 +12,12 @@
 		45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FC88FD29A60A51005E7EE7 /* Assets.xcassets */; };
 		45FC890129A60A51005E7EE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FC890029A60A51005E7EE7 /* Preview Assets.xcassets */; };
 		45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC890829A6EF30005E7EE7 /* AnimatingCircles.swift */; };
+		45FC890C29A6F33B005E7EE7 /* RecordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC890B29A6F33B005E7EE7 /* RecordPlayer.swift */; };
+		45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC890D29A6F3B9005E7EE7 /* RecordPlayerBox.swift */; };
+		45FC891029A6F4DB005E7EE7 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC890F29A6F4DB005E7EE7 /* RecordView.swift */; };
+		45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891129A6F632005E7EE7 /* ArmView.swift */; };
+		45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891329A6FD05005E7EE7 /* PlaySound.swift */; };
+		45FC891629A6FED7005E7EE7 /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45FC891529A6FDB7005E7EE7 /* music.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		45FC88FD29A60A51005E7EE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45FC890029A60A51005E7EE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45FC890829A6EF30005E7EE7 /* AnimatingCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingCircles.swift; sourceTree = "<group>"; };
+		45FC890B29A6F33B005E7EE7 /* RecordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPlayer.swift; sourceTree = "<group>"; };
+		45FC890D29A6F3B9005E7EE7 /* RecordPlayerBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPlayerBox.swift; sourceTree = "<group>"; };
+		45FC890F29A6F4DB005E7EE7 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		45FC891129A6F632005E7EE7 /* ArmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmView.swift; sourceTree = "<group>"; };
+		45FC891329A6FD05005E7EE7 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		45FC891529A6FDB7005E7EE7 /* music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +67,9 @@
 			children = (
 				45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */,
 				45FC88FB29A60A4F005E7EE7 /* ContentView.swift */,
+				45FC891329A6FD05005E7EE7 /* PlaySound.swift */,
 				45FC890729A60D09005E7EE7 /* 1. Animating Circles */,
+				45FC890A29A6F31A005E7EE7 /* 2. RecordPlayer */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -76,6 +90,18 @@
 				45FC890829A6EF30005E7EE7 /* AnimatingCircles.swift */,
 			);
 			path = "1. Animating Circles";
+			sourceTree = "<group>";
+		};
+		45FC890A29A6F31A005E7EE7 /* 2. RecordPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				45FC890B29A6F33B005E7EE7 /* RecordPlayer.swift */,
+				45FC890D29A6F3B9005E7EE7 /* RecordPlayerBox.swift */,
+				45FC890F29A6F4DB005E7EE7 /* RecordView.swift */,
+				45FC891129A6F632005E7EE7 /* ArmView.swift */,
+				45FC891529A6FDB7005E7EE7 /* music.m4a */,
+			);
+			path = "2. RecordPlayer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +164,7 @@
 			files = (
 				45FC890129A60A51005E7EE7 /* Preview Assets.xcassets in Resources */,
 				45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */,
+				45FC891629A6FED7005E7EE7 /* music.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +176,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */,
+				45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */,
+				45FC891029A6F4DB005E7EE7 /* RecordView.swift in Sources */,
+				45FC890C29A6F33B005E7EE7 /* RecordPlayer.swift in Sources */,
+				45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */,
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
+				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
 				45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
