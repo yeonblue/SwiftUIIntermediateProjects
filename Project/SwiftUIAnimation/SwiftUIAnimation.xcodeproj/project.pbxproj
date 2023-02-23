@@ -18,6 +18,7 @@
 		45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891129A6F632005E7EE7 /* ArmView.swift */; };
 		45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891329A6FD05005E7EE7 /* PlaySound.swift */; };
 		45FC891629A6FED7005E7EE7 /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45FC891529A6FDB7005E7EE7 /* music.m4a */; };
+		45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891829A70BC2005E7EE7 /* HueRotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		45FC891129A6F632005E7EE7 /* ArmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmView.swift; sourceTree = "<group>"; };
 		45FC891329A6FD05005E7EE7 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		45FC891529A6FDB7005E7EE7 /* music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.m4a; sourceTree = "<group>"; };
+		45FC891829A70BC2005E7EE7 /* HueRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueRotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 				45FC891329A6FD05005E7EE7 /* PlaySound.swift */,
 				45FC890729A60D09005E7EE7 /* 1. Animating Circles */,
 				45FC890A29A6F31A005E7EE7 /* 2. RecordPlayer */,
+				45FC891729A6FF63005E7EE7 /* 3.HueRotation */,
+				45FC891B29A7120A005E7EE7 /* 4.  BreathingFlower */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -102,6 +106,21 @@
 				45FC891529A6FDB7005E7EE7 /* music.m4a */,
 			);
 			path = "2. RecordPlayer";
+			sourceTree = "<group>";
+		};
+		45FC891729A6FF63005E7EE7 /* 3.HueRotation */ = {
+			isa = PBXGroup;
+			children = (
+				45FC891829A70BC2005E7EE7 /* HueRotation.swift */,
+			);
+			path = 3.HueRotation;
+			sourceTree = "<group>";
+		};
+		45FC891B29A7120A005E7EE7 /* 4.  BreathingFlower */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "4.  BreathingFlower";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +199,7 @@
 				45FC891029A6F4DB005E7EE7 /* RecordView.swift in Sources */,
 				45FC890C29A6F33B005E7EE7 /* RecordPlayer.swift in Sources */,
 				45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */,
+				45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */,
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
 				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
 				45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */,
