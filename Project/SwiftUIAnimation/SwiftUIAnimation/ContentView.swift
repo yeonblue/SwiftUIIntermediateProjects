@@ -9,13 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List {
+            NavigationLink {
+                AnimatingCircles()
+            } label: {
+                Text("AnimatingCircles")
+            }
+
+            NavigationLink {
+                RecordPlayer()
+            } label: {
+                Text("RecordPlayer")
+            }
+            
+            NavigationLink {
+                HueRotation()
+            } label: {
+                Text("HueRotation")
+            }
+            
+            NavigationLink {
+                BreathingFlower()
+            } label: {
+                Text("BreathingFlower")
+            }
         }
-        .padding()
     }
 }
 

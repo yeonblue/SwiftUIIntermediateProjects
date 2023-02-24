@@ -19,6 +19,8 @@
 		45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891329A6FD05005E7EE7 /* PlaySound.swift */; };
 		45FC891629A6FED7005E7EE7 /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45FC891529A6FDB7005E7EE7 /* music.m4a */; };
 		45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891829A70BC2005E7EE7 /* HueRotation.swift */; };
+		45FC891D29A712C5005E7EE7 /* BreathingFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891C29A712C5005E7EE7 /* BreathingFlower.swift */; };
+		45FC891F29A89984005E7EE7 /* PetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891E29A89984005E7EE7 /* PetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		45FC891329A6FD05005E7EE7 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		45FC891529A6FDB7005E7EE7 /* music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.m4a; sourceTree = "<group>"; };
 		45FC891829A70BC2005E7EE7 /* HueRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueRotation.swift; sourceTree = "<group>"; };
+		45FC891C29A712C5005E7EE7 /* BreathingFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingFlower.swift; sourceTree = "<group>"; };
+		45FC891E29A89984005E7EE7 /* PetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		45FC891B29A7120A005E7EE7 /* 4.  BreathingFlower */ = {
 			isa = PBXGroup;
 			children = (
+				45FC891C29A712C5005E7EE7 /* BreathingFlower.swift */,
+				45FC891E29A89984005E7EE7 /* PetalView.swift */,
 			);
 			path = "4.  BreathingFlower";
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */,
 				45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */,
 				45FC891029A6F4DB005E7EE7 /* RecordView.swift in Sources */,
+				45FC891F29A89984005E7EE7 /* PetalView.swift in Sources */,
+				45FC891D29A712C5005E7EE7 /* BreathingFlower.swift in Sources */,
 				45FC890C29A6F33B005E7EE7 /* RecordPlayer.swift in Sources */,
 				45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */,
 				45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */,
