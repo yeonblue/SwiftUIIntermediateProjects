@@ -26,6 +26,8 @@ struct BreathingFlower: View {
                 .frame(width: 400, height: 900)
                 .scaleEffect(1.1) // ignoreSafeAraa는 화면이 늘어날 수 있으므로 scaleEffect 사용
             
+            SnowView()
+            
             ZStack {
                 // MARK: - Animate text label
                 Group {

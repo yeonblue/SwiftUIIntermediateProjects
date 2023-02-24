@@ -21,6 +21,7 @@
 		45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891829A70BC2005E7EE7 /* HueRotation.swift */; };
 		45FC891D29A712C5005E7EE7 /* BreathingFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891C29A712C5005E7EE7 /* BreathingFlower.swift */; };
 		45FC891F29A89984005E7EE7 /* PetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC891E29A89984005E7EE7 /* PetalView.swift */; };
+		45FC892129A89EBE005E7EE7 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC892029A89EBE005E7EE7 /* SnowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		45FC891829A70BC2005E7EE7 /* HueRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueRotation.swift; sourceTree = "<group>"; };
 		45FC891C29A712C5005E7EE7 /* BreathingFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingFlower.swift; sourceTree = "<group>"; };
 		45FC891E29A89984005E7EE7 /* PetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetalView.swift; sourceTree = "<group>"; };
+		45FC892029A89EBE005E7EE7 /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +78,9 @@
 				45FC891329A6FD05005E7EE7 /* PlaySound.swift */,
 				45FC890729A60D09005E7EE7 /* 1. Animating Circles */,
 				45FC890A29A6F31A005E7EE7 /* 2. RecordPlayer */,
-				45FC891729A6FF63005E7EE7 /* 3.HueRotation */,
-				45FC891B29A7120A005E7EE7 /* 4.  BreathingFlower */,
+				45FC891729A6FF63005E7EE7 /* 3. HueRotation */,
+				45FC891B29A7120A005E7EE7 /* 4. BreathingFlower */,
+				45FC892229A8A74A005E7EE7 /* 5. FlyingEagle */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -112,21 +115,29 @@
 			path = "2. RecordPlayer";
 			sourceTree = "<group>";
 		};
-		45FC891729A6FF63005E7EE7 /* 3.HueRotation */ = {
+		45FC891729A6FF63005E7EE7 /* 3. HueRotation */ = {
 			isa = PBXGroup;
 			children = (
 				45FC891829A70BC2005E7EE7 /* HueRotation.swift */,
 			);
-			path = 3.HueRotation;
+			path = "3. HueRotation";
 			sourceTree = "<group>";
 		};
-		45FC891B29A7120A005E7EE7 /* 4.  BreathingFlower */ = {
+		45FC891B29A7120A005E7EE7 /* 4. BreathingFlower */ = {
 			isa = PBXGroup;
 			children = (
 				45FC891C29A712C5005E7EE7 /* BreathingFlower.swift */,
 				45FC891E29A89984005E7EE7 /* PetalView.swift */,
+				45FC892029A89EBE005E7EE7 /* SnowView.swift */,
 			);
-			path = "4.  BreathingFlower";
+			path = "4. BreathingFlower";
+			sourceTree = "<group>";
+		};
+		45FC892229A8A74A005E7EE7 /* 5. FlyingEagle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "5. FlyingEagle";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
 				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
 				45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */,
+				45FC892129A89EBE005E7EE7 /* SnowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
