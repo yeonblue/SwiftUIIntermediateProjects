@@ -8,41 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    struct Item: Identifiable {
+        let id: UUID = UUID()
+        let title: String
+        let view: AnyView
+        
+        init<T: View>(title: String, view: T) {
+            self.title = title
+            self.view = AnyView(view)
+        }
+    }
+    
+    let items: [Item] = [
+        Item(title: "1. AnimatingCircles", view: AnimatingCircles()),
+        Item(title: "2. RecordPlayer", view: RecordPlayer()),
+        Item(title: "3. HueRotation", view: HueRotation()),
+        Item(title: "4. BreathingFlower", view: BreathingFlower()),
+        Item(title: "5. FlyingEagle", view: FlyingEagle()),
+        Item(title: "6. SpriteAnimation", view: SpriteAnimation()),
+        Item(title: "7. HueRotation2", view: HueRotation2())
+    ]
+    
     var body: some View {
         List {
-            NavigationLink {
-                AnimatingCircles()
-            } label: {
-                Text("1. AnimatingCircles")
-            }
-
-            NavigationLink {
-                RecordPlayer()
-            } label: {
-                Text("2. RecordPlayer")
-            }
-            
-            NavigationLink {
-                HueRotation()
-            } label: {
-                Text("3. HueRotation")
-            }
-            
-            NavigationLink {
-                BreathingFlower()
-            } label: {
-                Text("4. BreathingFlower")
-            }
-            
-            NavigationLink {
-                FlyingEagle()
-            } label: {
-                Text("5. FlyingEagle")
+            ForEach(items) { item in
+                NavigationLink {
+                    item.view
+                } label: {
+                    Text(item.title)
+                }
             }
         }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {

@@ -24,6 +24,7 @@
 		45FC892129A89EBE005E7EE7 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC892029A89EBE005E7EE7 /* SnowView.swift */; };
 		45FC892429A8A873005E7EE7 /* FlyingEagle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC892329A8A873005E7EE7 /* FlyingEagle.swift */; };
 		45FC892829A8DB61005E7EE7 /* SpriteAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC892729A8DB61005E7EE7 /* SpriteAnimation.swift */; };
+		45FC892C29A8E816005E7EE7 /* HueRotation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC892B29A8E816005E7EE7 /* HueRotation2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		45FC892029A89EBE005E7EE7 /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
 		45FC892329A8A873005E7EE7 /* FlyingEagle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingEagle.swift; sourceTree = "<group>"; };
 		45FC892729A8DB61005E7EE7 /* SpriteAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteAnimation.swift; sourceTree = "<group>"; };
+		45FC892B29A8E816005E7EE7 /* HueRotation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueRotation2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				45FC891B29A7120A005E7EE7 /* 4. BreathingFlower */,
 				45FC892229A8A74A005E7EE7 /* 5. FlyingEagle */,
 				45FC892529A8DABB005E7EE7 /* 6. SpriteKitAnimation */,
+				45FC892A29A8E7A3005E7EE7 /* 7. HueRotation2 */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -152,6 +155,14 @@
 				45FC892729A8DB61005E7EE7 /* SpriteAnimation.swift */,
 			);
 			path = "6. SpriteKitAnimation";
+			sourceTree = "<group>";
+		};
+		45FC892A29A8E7A3005E7EE7 /* 7. HueRotation2 */ = {
+			isa = PBXGroup;
+			children = (
+				45FC892B29A8E816005E7EE7 /* HueRotation2.swift */,
+			);
+			path = "7. HueRotation2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 				45FC892829A8DB61005E7EE7 /* SpriteAnimation.swift in Sources */,
 				45FC891D29A712C5005E7EE7 /* BreathingFlower.swift in Sources */,
 				45FC890C29A6F33B005E7EE7 /* RecordPlayer.swift in Sources */,
+				45FC892C29A8E816005E7EE7 /* HueRotation2.swift in Sources */,
 				45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */,
 				45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */,
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
