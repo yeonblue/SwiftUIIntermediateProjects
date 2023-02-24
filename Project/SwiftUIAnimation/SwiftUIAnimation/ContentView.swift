@@ -13,25 +13,31 @@ struct ContentView: View {
             NavigationLink {
                 AnimatingCircles()
             } label: {
-                Text("AnimatingCircles")
+                Text("1. AnimatingCircles")
             }
 
             NavigationLink {
                 RecordPlayer()
             } label: {
-                Text("RecordPlayer")
+                Text("2. RecordPlayer")
             }
             
             NavigationLink {
                 HueRotation()
             } label: {
-                Text("HueRotation")
+                Text("3. HueRotation")
             }
             
             NavigationLink {
                 BreathingFlower()
             } label: {
-                Text("BreathingFlower")
+                Text("4. BreathingFlower")
+            }
+            
+            NavigationLink {
+                FlyingEagle()
+            } label: {
+                Text("5. FlyingEagle")
             }
         }
     }
@@ -39,6 +45,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationStack {
+            ContentView()
+        }
     }
 }
