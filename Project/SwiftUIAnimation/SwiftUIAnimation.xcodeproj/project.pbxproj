@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		452F256629AC6B5400C1CA50 /* PresentDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */; };
+		452F256829AC6D7300C1CA50 /* CustomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */; };
+		452F256B29ACCD9100C1CA50 /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */; };
 		45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */; };
 		45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC88FB29A60A4F005E7EE7 /* ContentView.swift */; };
 		45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FC88FD29A60A51005E7EE7 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDismissTransition.swift; sourceTree = "<group>"; };
+		452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsView.swift; sourceTree = "<group>"; };
+		452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
 		45FC88F629A60A4F005E7EE7 /* SwiftUIAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationApp.swift; sourceTree = "<group>"; };
 		45FC88FB29A60A4F005E7EE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,8 +70,17 @@
 			isa = PBXGroup;
 			children = (
 				452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */,
+				452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */,
 			);
 			path = "8. PresentDismissTransitionNew Group";
+			sourceTree = "<group>";
+		};
+		452F256929ACCD6B00C1CA50 /* 9. ParallaxEffect */ = {
+			isa = PBXGroup;
+			children = (
+				452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */,
+			);
+			path = "9. ParallaxEffect";
 			sourceTree = "<group>";
 		};
 		45FC88ED29A60A4F005E7EE7 = {
@@ -100,6 +113,7 @@
 				45FC892529A8DABB005E7EE7 /* 6. SpriteKitAnimation */,
 				45FC892A29A8E7A3005E7EE7 /* 7. HueRotation2 */,
 				452F256429AC6AEB00C1CA50 /* 8. PresentDismissTransitionNew Group */,
+				452F256929ACCD6B00C1CA50 /* 9. ParallaxEffect */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -250,8 +264,10 @@
 				45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */,
 				452F256629AC6B5400C1CA50 /* PresentDismissTransition.swift in Sources */,
 				45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */,
+				452F256B29ACCD9100C1CA50 /* ParallaxEffect.swift in Sources */,
 				45FC891029A6F4DB005E7EE7 /* RecordView.swift in Sources */,
 				45FC892429A8A873005E7EE7 /* FlyingEagle.swift in Sources */,
+				452F256829AC6D7300C1CA50 /* CustomSettingsView.swift in Sources */,
 				45FC891F29A89984005E7EE7 /* PetalView.swift in Sources */,
 				45FC892829A8DB61005E7EE7 /* SpriteAnimation.swift in Sources */,
 				45FC891D29A712C5005E7EE7 /* BreathingFlower.swift in Sources */,
