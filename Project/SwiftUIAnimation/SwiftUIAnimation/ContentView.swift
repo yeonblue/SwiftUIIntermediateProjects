@@ -26,10 +26,12 @@ struct ContentView: View {
         Item(title: "3. HueRotation", view: HueRotation()),
         Item(title: "4. BreathingFlower", view: BreathingFlower()),
         Item(title: "5. FlyingEagle", view: FlyingEagle()),
+        
         Item(title: "6. SpriteAnimation", view: SpriteAnimation()),
         Item(title: "7. HueRotation2", view: HueRotation2()),
         Item(title: "8. PresentDismissTransition", view: PresentDismissTransition()),
-        Item(title: "9. ParallaxEffect", view: ParallaxEffect())
+        Item(title: "9. ParallaxEffect", view: ParallaxEffect()),
+        Item(title: "10. Elevator", view: Elevator())
     ]
     
     var body: some View {

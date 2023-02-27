@@ -10,6 +10,9 @@
 		452F256629AC6B5400C1CA50 /* PresentDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */; };
 		452F256829AC6D7300C1CA50 /* CustomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */; };
 		452F256B29ACCD9100C1CA50 /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */; };
+		452F256F29ACD3B200C1CA50 /* elevatorChime.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 452F256E29ACD3B000C1CA50 /* elevatorChime.m4a */; };
+		452F257029ACD3B500C1CA50 /* doorsOpenClose.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 452F256D29ACD3B000C1CA50 /* doorsOpenClose.m4a */; };
+		452F257229ACD3D300C1CA50 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F257129ACD3D300C1CA50 /* Elevator.swift */; };
 		45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */; };
 		45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC88FB29A60A4F005E7EE7 /* ContentView.swift */; };
 		45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FC88FD29A60A51005E7EE7 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 		452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDismissTransition.swift; sourceTree = "<group>"; };
 		452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsView.swift; sourceTree = "<group>"; };
 		452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
+		452F256D29ACD3B000C1CA50 /* doorsOpenClose.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = doorsOpenClose.m4a; sourceTree = "<group>"; };
+		452F256E29ACD3B000C1CA50 /* elevatorChime.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = elevatorChime.m4a; sourceTree = "<group>"; };
+		452F257129ACD3D300C1CA50 /* Elevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
 		45FC88F629A60A4F005E7EE7 /* SwiftUIAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationApp.swift; sourceTree = "<group>"; };
 		45FC88FB29A60A4F005E7EE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +89,16 @@
 			path = "9. ParallaxEffect";
 			sourceTree = "<group>";
 		};
+		452F256C29ACD36800C1CA50 /* 10. Elevator */ = {
+			isa = PBXGroup;
+			children = (
+				452F257129ACD3D300C1CA50 /* Elevator.swift */,
+				452F256D29ACD3B000C1CA50 /* doorsOpenClose.m4a */,
+				452F256E29ACD3B000C1CA50 /* elevatorChime.m4a */,
+			);
+			path = "10. Elevator";
+			sourceTree = "<group>";
+		};
 		45FC88ED29A60A4F005E7EE7 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +130,7 @@
 				45FC892A29A8E7A3005E7EE7 /* 7. HueRotation2 */,
 				452F256429AC6AEB00C1CA50 /* 8. PresentDismissTransitionNew Group */,
 				452F256929ACCD6B00C1CA50 /* 9. ParallaxEffect */,
+				452F256C29ACD36800C1CA50 /* 10. Elevator */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -249,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				45FC890129A60A51005E7EE7 /* Preview Assets.xcassets in Resources */,
+				452F256F29ACD3B200C1CA50 /* elevatorChime.m4a in Resources */,
 				45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */,
+				452F257029ACD3B500C1CA50 /* doorsOpenClose.m4a in Resources */,
 				45FC891629A6FED7005E7EE7 /* music.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +296,7 @@
 				45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */,
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
 				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
+				452F257229ACD3D300C1CA50 /* Elevator.swift in Sources */,
 				45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */,
 				45FC892129A89EBE005E7EE7 /* SnowView.swift in Sources */,
 			);
