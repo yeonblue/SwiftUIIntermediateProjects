@@ -31,7 +31,9 @@ struct ContentView: View {
         Item(title: "7. HueRotation2", view: HueRotation2()),
         Item(title: "8. PresentDismissTransition", view: PresentDismissTransition()),
         Item(title: "9. ParallaxEffect", view: ParallaxEffect()),
-        Item(title: "10. Elevator", view: Elevator())
+        Item(title: "10. Elevator", view: Elevator()),
+        
+        Item(title: "11. SwingingGirl", view: SwingingGirl())
     ]
     
     var body: some View {
