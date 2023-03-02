@@ -35,7 +35,8 @@ struct ContentView: View {
         
         Item(title: "11. SwingingGirl", view: SwingingGirl()),
         Item(title: "12. TwinkleStar", view: TwinkleStar()),
-        Item(title: "13. Weather", view: Weather())
+        Item(title: "13. Weather", view: Weather()),
+        Item(title: "14. GearAndBelts", view: GearAndBelts())
     ]
     
     var body: some View {
@@ -50,6 +51,7 @@ struct ContentView: View {
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
