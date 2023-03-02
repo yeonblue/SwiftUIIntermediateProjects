@@ -33,7 +33,9 @@ struct ContentView: View {
         Item(title: "9. ParallaxEffect", view: ParallaxEffect()),
         Item(title: "10. Elevator", view: Elevator()),
         
-        Item(title: "11. SwingingGirl", view: SwingingGirl())
+        Item(title: "11. SwingingGirl", view: SwingingGirl()),
+        Item(title: "12. TwinkleStar", view: TwinkleStar()),
+        Item(title: "13. Weather", view: Weather())
     ]
     
     var body: some View {

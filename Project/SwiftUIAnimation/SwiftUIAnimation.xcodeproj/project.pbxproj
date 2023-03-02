@@ -16,6 +16,8 @@
 		452F257429ADDBFE00C1CA50 /* ElevatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F257329ADDBFE00C1CA50 /* ElevatorViewModel.swift */; };
 		452F257629ADE47200C1CA50 /* ElevatorAndPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F257529ADE47200C1CA50 /* ElevatorAndPeopleView.swift */; };
 		452F257929ADF8F000C1CA50 /* SwingingGirl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F257829ADF8F000C1CA50 /* SwingingGirl.swift */; };
+		458F5D8D29B03B5F00C591AC /* TwinkleStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F5D8C29B03B5F00C591AC /* TwinkleStar.swift */; };
+		458F5D9029B06CFE00C591AC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F5D8F29B06CFE00C591AC /* Weather.swift */; };
 		45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */; };
 		45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC88FB29A60A4F005E7EE7 /* ContentView.swift */; };
 		45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FC88FD29A60A51005E7EE7 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		452F257329ADDBFE00C1CA50 /* ElevatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatorViewModel.swift; sourceTree = "<group>"; };
 		452F257529ADE47200C1CA50 /* ElevatorAndPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatorAndPeopleView.swift; sourceTree = "<group>"; };
 		452F257829ADF8F000C1CA50 /* SwingingGirl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwingingGirl.swift; sourceTree = "<group>"; };
+		458F5D8C29B03B5F00C591AC /* TwinkleStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleStar.swift; sourceTree = "<group>"; };
+		458F5D8F29B06CFE00C591AC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		45FC88F629A60A4F005E7EE7 /* SwiftUIAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FC88F929A60A4F005E7EE7 /* SwiftUIAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAnimationApp.swift; sourceTree = "<group>"; };
 		45FC88FB29A60A4F005E7EE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,8 +122,17 @@
 		458F5D8B29B03B0200C591AC /* 12. TwinkleStars */ = {
 			isa = PBXGroup;
 			children = (
+				458F5D8C29B03B5F00C591AC /* TwinkleStar.swift */,
 			);
 			path = "12. TwinkleStars";
+			sourceTree = "<group>";
+		};
+		458F5D8E29B06CE400C591AC /* 13. Weather */ = {
+			isa = PBXGroup;
+			children = (
+				458F5D8F29B06CFE00C591AC /* Weather.swift */,
+			);
+			path = "13. Weather";
 			sourceTree = "<group>";
 		};
 		45FC88ED29A60A4F005E7EE7 = {
@@ -156,6 +169,7 @@
 				452F256C29ACD36800C1CA50 /* 10. Elevator */,
 				452F257729ADF8D800C1CA50 /* 11. SwingingGirl */,
 				458F5D8B29B03B0200C591AC /* 12. TwinkleStars */,
+				458F5D8E29B06CE400C591AC /* 13. Weather */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -307,6 +321,7 @@
 			files = (
 				45FC88FC29A60A4F005E7EE7 /* ContentView.swift in Sources */,
 				452F256629AC6B5400C1CA50 /* PresentDismissTransition.swift in Sources */,
+				458F5D8D29B03B5F00C591AC /* TwinkleStar.swift in Sources */,
 				45FC891429A6FD05005E7EE7 /* PlaySound.swift in Sources */,
 				452F256B29ACCD9100C1CA50 /* ParallaxEffect.swift in Sources */,
 				45FC891029A6F4DB005E7EE7 /* RecordView.swift in Sources */,
@@ -320,6 +335,7 @@
 				45FC892C29A8E816005E7EE7 /* HueRotation2.swift in Sources */,
 				45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */,
 				452F257429ADDBFE00C1CA50 /* ElevatorViewModel.swift in Sources */,
+				458F5D9029B06CFE00C591AC /* Weather.swift in Sources */,
 				45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */,
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
 				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
