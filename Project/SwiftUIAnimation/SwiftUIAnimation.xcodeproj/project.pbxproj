@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451C27AB29B9888300C05B45 /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27AA29B9888300C05B45 /* GearView.swift */; };
+		451C27AD29B98B7800C05B45 /* WormGearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27AC29B98B7800C05B45 /* WormGearView.swift */; };
+		451C27AF29B9A0BB00C05B45 /* BeltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27AE29B9A0BB00C05B45 /* BeltView.swift */; };
+		451C27B129B9A39100C05B45 /* GearShaftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27B029B9A39100C05B45 /* GearShaftView.swift */; };
 		452F256629AC6B5400C1CA50 /* PresentDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */; };
 		452F256829AC6D7300C1CA50 /* CustomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */; };
 		452F256B29ACCD9100C1CA50 /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451C27AA29B9888300C05B45 /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
+		451C27AC29B98B7800C05B45 /* WormGearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormGearView.swift; sourceTree = "<group>"; };
+		451C27AE29B9A0BB00C05B45 /* BeltView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeltView.swift; sourceTree = "<group>"; };
+		451C27B029B9A39100C05B45 /* GearShaftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearShaftView.swift; sourceTree = "<group>"; };
 		452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDismissTransition.swift; sourceTree = "<group>"; };
 		452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsView.swift; sourceTree = "<group>"; };
 		452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
@@ -147,6 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				458F5D9629B0C84D00C591AC /* GearAndBelts.swift */,
+				451C27AA29B9888300C05B45 /* GearView.swift */,
+				451C27AC29B98B7800C05B45 /* WormGearView.swift */,
+				451C27AE29B9A0BB00C05B45 /* BeltView.swift */,
+				451C27B029B9A39100C05B45 /* GearShaftView.swift */,
 			);
 			path = "14. GearAndBelts";
 			sourceTree = "<group>";
@@ -348,10 +360,13 @@
 				452F257629ADE47200C1CA50 /* ElevatorAndPeopleView.swift in Sources */,
 				45FC891F29A89984005E7EE7 /* PetalView.swift in Sources */,
 				45FC892829A8DB61005E7EE7 /* SpriteAnimation.swift in Sources */,
+				451C27AD29B98B7800C05B45 /* WormGearView.swift in Sources */,
 				45FC891D29A712C5005E7EE7 /* BreathingFlower.swift in Sources */,
 				45FC890C29A6F33B005E7EE7 /* RecordPlayer.swift in Sources */,
 				45FC892C29A8E816005E7EE7 /* HueRotation2.swift in Sources */,
+				451C27B129B9A39100C05B45 /* GearShaftView.swift in Sources */,
 				45FC891229A6F632005E7EE7 /* ArmView.swift in Sources */,
+				451C27AF29B9A0BB00C05B45 /* BeltView.swift in Sources */,
 				452F257429ADDBFE00C1CA50 /* ElevatorViewModel.swift in Sources */,
 				458F5D9029B06CFE00C591AC /* Weather.swift in Sources */,
 				458F5D9729B0C84D00C591AC /* GearAndBelts.swift in Sources */,
@@ -359,6 +374,7 @@
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
 				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
 				458F5D9429B0740200C591AC /* WeatherPickerView.swift in Sources */,
+				451C27AB29B9888300C05B45 /* GearView.swift in Sources */,
 				452F257229ACD3D300C1CA50 /* Elevator.swift in Sources */,
 				45FC88FA29A60A4F005E7EE7 /* SwiftUIAnimationApp.swift in Sources */,
 				45FC892129A89EBE005E7EE7 /* SnowView.swift in Sources */,
