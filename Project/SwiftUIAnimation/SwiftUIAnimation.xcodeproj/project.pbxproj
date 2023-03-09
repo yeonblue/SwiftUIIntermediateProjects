@@ -11,6 +11,9 @@
 		451C27AD29B98B7800C05B45 /* WormGearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27AC29B98B7800C05B45 /* WormGearView.swift */; };
 		451C27AF29B9A0BB00C05B45 /* BeltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27AE29B9A0BB00C05B45 /* BeltView.swift */; };
 		451C27B129B9A39100C05B45 /* GearShaftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27B029B9A39100C05B45 /* GearShaftView.swift */; };
+		451C27B329B9AADB00C05B45 /* FanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27B229B9AADB00C05B45 /* FanView.swift */; };
+		451C27B629B9AFB100C05B45 /* OceanWaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C27B529B9AFB100C05B45 /* OceanWaves.swift */; };
+		451C27B829B9AFDC00C05B45 /* buoyBells.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 451C27B729B9AFD900C05B45 /* buoyBells.m4a */; };
 		452F256629AC6B5400C1CA50 /* PresentDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */; };
 		452F256829AC6D7300C1CA50 /* CustomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */; };
 		452F256B29ACCD9100C1CA50 /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */; };
@@ -50,6 +53,9 @@
 		451C27AC29B98B7800C05B45 /* WormGearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormGearView.swift; sourceTree = "<group>"; };
 		451C27AE29B9A0BB00C05B45 /* BeltView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeltView.swift; sourceTree = "<group>"; };
 		451C27B029B9A39100C05B45 /* GearShaftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearShaftView.swift; sourceTree = "<group>"; };
+		451C27B229B9AADB00C05B45 /* FanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanView.swift; sourceTree = "<group>"; };
+		451C27B529B9AFB100C05B45 /* OceanWaves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanWaves.swift; sourceTree = "<group>"; };
+		451C27B729B9AFD900C05B45 /* buoyBells.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = buoyBells.m4a; sourceTree = "<group>"; };
 		452F256529AC6B5400C1CA50 /* PresentDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDismissTransition.swift; sourceTree = "<group>"; };
 		452F256729AC6D7300C1CA50 /* CustomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsView.swift; sourceTree = "<group>"; };
 		452F256A29ACCD9100C1CA50 /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
@@ -96,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451C27B429B9AF7C00C05B45 /* 15. OceanWaves */ = {
+			isa = PBXGroup;
+			children = (
+				451C27B529B9AFB100C05B45 /* OceanWaves.swift */,
+				451C27B729B9AFD900C05B45 /* buoyBells.m4a */,
+			);
+			path = "15. OceanWaves";
+			sourceTree = "<group>";
+		};
 		452F256429AC6AEB00C1CA50 /* 8. PresentDismissTransitionNew Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +174,7 @@
 				451C27AC29B98B7800C05B45 /* WormGearView.swift */,
 				451C27AE29B9A0BB00C05B45 /* BeltView.swift */,
 				451C27B029B9A39100C05B45 /* GearShaftView.swift */,
+				451C27B229B9AADB00C05B45 /* FanView.swift */,
 			);
 			path = "14. GearAndBelts";
 			sourceTree = "<group>";
@@ -199,6 +215,7 @@
 				458F5D8B29B03B0200C591AC /* 12. TwinkleStars */,
 				458F5D8E29B06CE400C591AC /* 13. Weather */,
 				458F5D9529B0C83000C591AC /* 14. GearAndBelts */,
+				451C27B429B9AF7C00C05B45 /* 15. OceanWaves */,
 				45FC88FD29A60A51005E7EE7 /* Assets.xcassets */,
 				45FC88FF29A60A51005E7EE7 /* Preview Content */,
 			);
@@ -335,6 +352,7 @@
 			files = (
 				45FC890129A60A51005E7EE7 /* Preview Assets.xcassets in Resources */,
 				452F256F29ACD3B200C1CA50 /* elevatorChime.m4a in Resources */,
+				451C27B829B9AFDC00C05B45 /* buoyBells.m4a in Resources */,
 				45FC88FE29A60A51005E7EE7 /* Assets.xcassets in Resources */,
 				452F257029ACD3B500C1CA50 /* doorsOpenClose.m4a in Resources */,
 				45FC891629A6FED7005E7EE7 /* music.m4a in Resources */,
@@ -372,6 +390,8 @@
 				458F5D9729B0C84D00C591AC /* GearAndBelts.swift in Sources */,
 				45FC891929A70BC2005E7EE7 /* HueRotation.swift in Sources */,
 				45FC890929A6EF30005E7EE7 /* AnimatingCircles.swift in Sources */,
+				451C27B329B9AADB00C05B45 /* FanView.swift in Sources */,
+				451C27B629B9AFB100C05B45 /* OceanWaves.swift in Sources */,
 				45FC890E29A6F3B9005E7EE7 /* RecordPlayerBox.swift in Sources */,
 				458F5D9429B0740200C591AC /* WeatherPickerView.swift in Sources */,
 				451C27AB29B9888300C05B45 /* GearView.swift in Sources */,
