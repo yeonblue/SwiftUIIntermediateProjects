@@ -37,7 +37,9 @@ struct ContentView: View {
         Item(title: "12. TwinkleStar", view: TwinkleStar()),
         Item(title: "13. Weather", view: Weather()),
         Item(title: "14. GearAndBelts", view: GearAndBelts()),
-        Item(title: "15. OceanWaves", view: OceanWaves())
+        Item(title: "15. OceanWaves", view: OceanWaves()),
+        
+        Item(title: "16. AnimateStroke", view: AnimateStroke())
     ]
     
     var body: some View {
