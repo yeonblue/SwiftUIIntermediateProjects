@@ -40,12 +40,13 @@ struct ContentView: View {
         Item(title: "15. OceanWaves", view: OceanWaves()),
         
         Item(title: "16. AnimateStroke", view: AnimateStroke()),
-        Item(title: "17. ExpandButtonView", view: ExpandButtonView())
+        Item(title: "17. ExpandButtonView", view: ExpandButtonView()),
+        Item(title: "18. LightOnOff", view: LightOnOff())
     ]
     
     var body: some View {
         List {
-            ForEach(0..<Int(ceil(Double(items.count)/5))) { i in
+            ForEach(0..<Int(ceil(Double(items.count)/5)), id: \.self) { i in
                 Section(header: Text("\(i*5 + 1) ~ \(min((i+1) * 5, items.count))")) {
                     ForEach(items[i * 5..<min((i+1) * 5, items.count)]) { item in
                         NavigationLink {
