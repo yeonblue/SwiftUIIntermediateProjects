@@ -23,7 +23,7 @@ struct RootView: View {
         }
         .fullScreenCover(isPresented: $showSignInView) { // sheet와 달리 아래로 내릴 수 없음
             NavigationStack {
-                AuthenticationView()
+                AuthenticationView(showSignInView: $showSignInView)
             }
         }
     }

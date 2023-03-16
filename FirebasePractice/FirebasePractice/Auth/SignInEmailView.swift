@@ -13,26 +13,27 @@ final class SignInEmailViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     
-    func signIn() {
+    func signIn() async throws {
         guard !email.isEmpty, !password.isEmpty else {
             return
         }
         
-        Task {
-            do {
-                let returnUserData = try await AuthManager.shared.createUser(email: email, password: password)
-                print("Success")
-                print(returnUserData)
-            } catch {
-                print(error)
-            }
+        try await AuthManager.shared.createUser(email: email, password: password)
+    }
+    
+    func signUp() async throws {
+        guard !email.isEmpty, !password.isEmpty else {
+            return
         }
+        
+        let _ = try await AuthManager.shared.signInUser(email: email, password: password)
     }
 }
 
 struct SignInEmailView: View {
     
     @StateObject private var vm = SignInEmailViewModel()
+    @Binding var showSignInView: Bool
     
     var body: some View {
         VStack {
@@ -47,7 +48,23 @@ struct SignInEmailView: View {
                 .cornerRadius(10)
             
             Button {
-                vm.signIn()
+                Task {
+                    do {
+                        try await vm.signUp()
+                        showSignInView.toggle()
+                        return
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                    
+                    do {
+                        try await vm.signIn()
+                        showSignInView.toggle()
+                        return
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
             } label: {
                 Text("Sign In")
                     .font(.headline)
@@ -69,7 +86,7 @@ struct SignInEmailView: View {
 struct SignInEmailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            SignInEmailView()
+            SignInEmailView(showSignInView: .constant(true))
         }
     }
 }
