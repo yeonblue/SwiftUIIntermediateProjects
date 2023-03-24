@@ -25,6 +25,10 @@ final class AuthenticationViewModel: ObservableObject {
         let tokens = try await helper.startSignInWithAppleFlow()
         try await AuthManager.shared.signInWithApple(tokens: tokens)
     }
+    
+    func signInAnnoymous() async throws {
+        try await AuthManager.shared.signInAnnoymous()
+    }
 }
 
 struct AuthenticationView: View {
@@ -34,6 +38,26 @@ struct AuthenticationView: View {
     
     var body: some View {
         VStack {
+            
+            Button {
+                Task {
+                    do {
+                        try await vm.signInAnnoymous()
+                        showSignInView = false
+                    } catch {
+                        print(error)
+                    }
+                }
+            } label: {
+                Text("Sign In With Annoymously")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(minHeight: 55)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.orange)
+                    .cornerRadius(10)
+            }
+            
             NavigationLink {
                 SignInEmailView(showSignInView: $showSignInView)
             } label: {
