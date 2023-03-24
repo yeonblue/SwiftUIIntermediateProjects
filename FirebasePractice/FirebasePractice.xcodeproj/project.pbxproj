@@ -11,6 +11,7 @@
 		4520057C29CBE760001B09D6 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4520057B29CBE760001B09D6 /* GoogleSignInSwift */; };
 		4520058029CBEA42001B09D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520057F29CBEA42001B09D6 /* Utils.swift */; };
 		4520058229CBF8A3001B09D6 /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520058129CBF8A3001B09D6 /* SignInGoogleHelper.swift */; };
+		4520058529CD96E3001B09D6 /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520058429CD96E3001B09D6 /* SignInAppleHelper.swift */; };
 		45412FD829C2E65400B527FC /* FirebasePracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45412FD729C2E65400B527FC /* FirebasePracticeApp.swift */; };
 		45412FDA29C2E65400B527FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45412FD929C2E65400B527FC /* ContentView.swift */; };
 		45412FDC29C2E65700B527FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45412FDB29C2E65700B527FC /* Assets.xcassets */; };
@@ -30,6 +31,8 @@
 		4520057D29CBE795001B09D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4520057F29CBEA42001B09D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4520058129CBF8A3001B09D6 /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleHelper.swift; sourceTree = "<group>"; };
+		4520058329CC3DDD001B09D6 /* FirebasePractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebasePractice.entitlements; sourceTree = "<group>"; };
+		4520058429CD96E3001B09D6 /* SignInAppleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleHelper.swift; sourceTree = "<group>"; };
 		45412FD429C2E65400B527FC /* FirebasePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebasePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45412FD729C2E65400B527FC /* FirebasePracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePracticeApp.swift; sourceTree = "<group>"; };
 		45412FD929C2E65400B527FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		45412FD629C2E65400B527FC /* FirebasePractice */ = {
 			isa = PBXGroup;
 			children = (
+				4520058329CC3DDD001B09D6 /* FirebasePractice.entitlements */,
 				4520057D29CBE795001B09D6 /* Info.plist */,
 				45412FD729C2E65400B527FC /* FirebasePracticeApp.swift */,
 				45412FD929C2E65400B527FC /* ContentView.swift */,
@@ -123,6 +127,7 @@
 				45412FF429C3061300B527FC /* AuthManager.swift */,
 				45412FF829C30D7800B527FC /* SettingsView.swift */,
 				4520058129CBF8A3001B09D6 /* SignInGoogleHelper.swift */,
+				4520058429CD96E3001B09D6 /* SignInAppleHelper.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				45412FF129C303F300B527FC /* AuthenticationView.swift in Sources */,
 				45412FF329C304C200B527FC /* SignInEmailView.swift in Sources */,
 				45412FF529C3061300B527FC /* AuthManager.swift in Sources */,
+				4520058529CD96E3001B09D6 /* SignInAppleHelper.swift in Sources */,
 				4520058029CBEA42001B09D6 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebasePractice/FirebasePractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FirebasePractice/Preview Content\"";
@@ -373,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebasePractice/FirebasePractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FirebasePractice/Preview Content\"";

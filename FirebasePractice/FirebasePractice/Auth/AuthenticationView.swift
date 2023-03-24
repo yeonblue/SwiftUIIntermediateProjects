@@ -11,12 +11,19 @@ import GoogleSignInSwift
 
 @MainActor
 final class AuthenticationViewModel: ObservableObject {
-    
+
     func signInGoogle() async throws{
         
         let helper = SignInGoogleHelper()
         let tokens = try await helper.signIn()
         try await AuthManager.shared.signInWithGoogle(tokens: tokens)
+    }
+    
+    func signInApple() async throws {
+        
+        let helper = SignInAppleHelper()
+        let tokens = try await helper.startSignInWithAppleFlow()
+        try await AuthManager.shared.signInWithApple(tokens: tokens)
     }
 }
 
@@ -53,6 +60,20 @@ struct AuthenticationView: View {
                         }
                     }
                 })
+            Button {
+                Task {
+                    do {
+                        try await vm.signInApple()
+                        showSignInView = false
+                    } catch {
+                        print(error)
+                    }
+                }
+            } label: {
+                SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
+                    .allowsHitTesting(false)
+            }
+            .frame(height: 55)
             
             Spacer()
         }
